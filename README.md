@@ -3,7 +3,7 @@ Student ID Barcode Scanning and Verification System made by selected CS2D studen
 ## To-Do
 **Plan board on the whole process**
 
-https://trello.com/b/70oi2Quo/scholarship-management-system
+https://trello.com/b/bfNtUz1H/dcit50-finals-project
 
 *NOTE: Please create an Atlassian account to access the Trello board. The purpose of this is to make progress tracking easier.*
 
@@ -24,7 +24,7 @@ cd C:\Users\Windows\cs2d
 ```
 - Clone the repository using this command:
 ```
-git clone https://github.com/dev-rookj/student-scholarship-portal-system.git
+git clone https://github.com/dev-rookj/id-verification-system.git
 ```
 and the repository should be cloned to your device.
 
