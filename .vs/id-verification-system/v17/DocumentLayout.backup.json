@@ -1,9 +1,21 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Windows\\source\\git\\id-verification-system\\",
+  "WorkspaceRootPath": "C:\\kennydanel\\id-verification-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\kennydanel\\id-verification-system\\id-verification-system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\kennydanel\\id-verification-system\\id-verification-system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\kennydanel\\id-verification-system\\id-verification-system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\kennydanel\\id-verification-system\\id-verification-system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -14,15 +26,53 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Form1.cs",
+              "DocumentIndex": 1,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form2.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Form2.cs",
+              "ToolTip": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form2.cs",
+              "RelativeToolTip": "id-verification-system\\Form2.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:09:03.774Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form1.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Form1.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Form1.cs [Design]",
+              "ToolTip": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form1.cs",
+              "RelativeToolTip": "id-verification-system\\Form1.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAkwBsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:07:28.504Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form2.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Form2.cs",
+              "ToolTip": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form2.cs [Design]",
+              "RelativeToolTip": "id-verification-system\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-08T11:07:53.556Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form1.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Form1.cs",
+              "ToolTip": "C:\\kennydanel\\id-verification-system\\id-verification-system\\Form1.cs [Design]",
               "RelativeToolTip": "id-verification-system\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-06T03:03:25.933Z",

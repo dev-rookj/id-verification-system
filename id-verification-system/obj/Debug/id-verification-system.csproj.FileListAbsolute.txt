@@ -1,0 +1,11 @@
+C:\kennydanel\id-verification-system\id-verification-system\bin\Debug\id-verification-system.exe.config
+C:\kennydanel\id-verification-system\id-verification-system\bin\Debug\id-verification-system.exe
+C:\kennydanel\id-verification-system\id-verification-system\bin\Debug\id-verification-system.pdb
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.AssemblyReference.cache
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Form1.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Form2.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Properties.Resources.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.GenerateResource.cache
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.CoreCompileInputs.cache
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.exe
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.pdb

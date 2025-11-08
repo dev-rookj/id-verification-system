@@ -16,5 +16,16 @@ namespace id_verification_system
         {
             InitializeComponent();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form2 kupal = new Form2();
+            kupal.Show();
+            Hide();
+
+            kupal.kups = "TARANTADOOOO";
+            kupal.UpdateLabel("UHULOLLL");
+            kupal.Show();
+        }
     }
 }
