@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -15,17 +16,36 @@ namespace id_verification_system
         public Form1()
         {
             InitializeComponent();
+            time.Start();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void time_Tick(object sender, EventArgs e)
         {
-            Form2 kupal = new Form2();
-            kupal.Show();
-            Hide();
+            timeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
+        }
 
-            kupal.kups = "TARANTADOOOO";
-            kupal.UpdateLabel("UHULOLLL");
-            kupal.Show();
+        private void infoField_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                if (infoField.Text.Length == 9)
+                {
+                    infoText.Text = "Student No.: STUDENT_NUMBER\r\nName: STUDENT_NAME\r\n\r\nTime In: " + DateTime.Now.ToString("hh:mm tt").ToUpper() + "\r\nRemarks: REMARK\r\n";
+                    e.SuppressKeyPress = true;
+                }
+                else infoText.Text = "Invalid Barcode.";
+                e.SuppressKeyPress = true;
+
+                infoField.Text = "";
+                infoReset.Stop(); // to avoid timer overlapping
+                infoReset.Start();
+            }
+        }
+
+        private void infoReset_Tick(object sender, EventArgs e)
+        {
+            infoText.Text = "Scan your ID...";
+            infoReset.Stop();
         }
     }
 }
