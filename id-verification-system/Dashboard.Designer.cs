@@ -1,0 +1,466 @@
+﻿namespace id_verification_system
+{
+    partial class Dashboard
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Dashboard));
+            this.clockIcon = new System.Windows.Forms.PictureBox();
+            this.timeLabel = new System.Windows.Forms.Label();
+            this.time = new System.Windows.Forms.Timer(this.components);
+            this.header = new System.Windows.Forms.PictureBox();
+            this.curClassLabelBG = new System.Windows.Forms.PictureBox();
+            this.curClassBG = new System.Windows.Forms.PictureBox();
+            this.curClassLabel = new System.Windows.Forms.Label();
+            this.curClass = new System.Windows.Forms.Label();
+            this.curTimeLabelBG = new System.Windows.Forms.PictureBox();
+            this.curTimeLabel = new System.Windows.Forms.Label();
+            this.curTimeBG = new System.Windows.Forms.PictureBox();
+            this.curTime = new System.Windows.Forms.Label();
+            this.curStatusLabel = new System.Windows.Forms.Label();
+            this.curStatusLabelBG = new System.Windows.Forms.PictureBox();
+            this.curStatus = new System.Windows.Forms.Label();
+            this.curStatusBG = new System.Windows.Forms.PictureBox();
+            this.infoBG = new System.Windows.Forms.PictureBox();
+            this.infoFieldBG = new System.Windows.Forms.PictureBox();
+            this.infoField = new System.Windows.Forms.TextBox();
+            this.infoText = new System.Windows.Forms.Label();
+            this.infoReset = new System.Windows.Forms.Timer(this.components);
+            this.sbBG = new System.Windows.Forms.PictureBox();
+            this.sbTogBtn = new System.Windows.Forms.PictureBox();
+            this.sbDashboardBtn = new System.Windows.Forms.PictureBox();
+            this.sbStudentsBtn = new System.Windows.Forms.PictureBox();
+            this.sbCoursesBtn = new System.Windows.Forms.PictureBox();
+            this.sbRecordsBtn = new System.Windows.Forms.PictureBox();
+            this.sbLogoutBtn = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.header)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curClassLabelBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curClassBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curTimeLabelBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curTimeBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curStatusLabelBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curStatusBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoFieldBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbDashboardBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbStudentsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // clockIcon
+            // 
+            this.clockIcon.Image = ((System.Drawing.Image)(resources.GetObject("clockIcon.Image")));
+            this.clockIcon.Location = new System.Drawing.Point(89, 13);
+            this.clockIcon.Name = "clockIcon";
+            this.clockIcon.Size = new System.Drawing.Size(48, 44);
+            this.clockIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.clockIcon.TabIndex = 0;
+            this.clockIcon.TabStop = false;
+            // 
+            // timeLabel
+            // 
+            this.timeLabel.Font = new System.Drawing.Font("Arial", 22F);
+            this.timeLabel.Location = new System.Drawing.Point(143, 14);
+            this.timeLabel.Name = "timeLabel";
+            this.timeLabel.Size = new System.Drawing.Size(200, 43);
+            this.timeLabel.TabIndex = 1;
+            this.timeLabel.Text = "00:00PM";
+            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // time
+            // 
+            this.time.Tick += new System.EventHandler(this.time_Tick);
+            // 
+            // header
+            // 
+            this.header.Image = ((System.Drawing.Image)(resources.GetObject("header.Image")));
+            this.header.Location = new System.Drawing.Point(349, 14);
+            this.header.Name = "header";
+            this.header.Size = new System.Drawing.Size(570, 148);
+            this.header.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.header.TabIndex = 2;
+            this.header.TabStop = false;
+            // 
+            // curClassLabelBG
+            // 
+            this.curClassLabelBG.Image = ((System.Drawing.Image)(resources.GetObject("curClassLabelBG.Image")));
+            this.curClassLabelBG.Location = new System.Drawing.Point(183, 188);
+            this.curClassLabelBG.Name = "curClassLabelBG";
+            this.curClassLabelBG.Size = new System.Drawing.Size(224, 50);
+            this.curClassLabelBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.curClassLabelBG.TabIndex = 3;
+            this.curClassLabelBG.TabStop = false;
+            // 
+            // curClassBG
+            // 
+            this.curClassBG.Image = ((System.Drawing.Image)(resources.GetObject("curClassBG.Image")));
+            this.curClassBG.Location = new System.Drawing.Point(426, 177);
+            this.curClassBG.Name = "curClassBG";
+            this.curClassBG.Size = new System.Drawing.Size(729, 70);
+            this.curClassBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.curClassBG.TabIndex = 4;
+            this.curClassBG.TabStop = false;
+            // 
+            // curClassLabel
+            // 
+            this.curClassLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            this.curClassLabel.Font = new System.Drawing.Font("Arial", 18F);
+            this.curClassLabel.ForeColor = System.Drawing.Color.White;
+            this.curClassLabel.Location = new System.Drawing.Point(194, 194);
+            this.curClassLabel.Name = "curClassLabel";
+            this.curClassLabel.Size = new System.Drawing.Size(197, 36);
+            this.curClassLabel.TabIndex = 5;
+            this.curClassLabel.Text = "Current Class";
+            this.curClassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // curClass
+            // 
+            this.curClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
+            this.curClass.Font = new System.Drawing.Font("Arial", 18F);
+            this.curClass.ForeColor = System.Drawing.Color.White;
+            this.curClass.Location = new System.Drawing.Point(442, 194);
+            this.curClass.Name = "curClass";
+            this.curClass.Size = new System.Drawing.Size(693, 36);
+            this.curClass.TabIndex = 6;
+            this.curClass.Text = "[SUBJCODE] Subject Title";
+            this.curClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // curTimeLabelBG
+            // 
+            this.curTimeLabelBG.Image = ((System.Drawing.Image)(resources.GetObject("curTimeLabelBG.Image")));
+            this.curTimeLabelBG.Location = new System.Drawing.Point(184, 278);
+            this.curTimeLabelBG.Name = "curTimeLabelBG";
+            this.curTimeLabelBG.Size = new System.Drawing.Size(128, 50);
+            this.curTimeLabelBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.curTimeLabelBG.TabIndex = 7;
+            this.curTimeLabelBG.TabStop = false;
+            // 
+            // curTimeLabel
+            // 
+            this.curTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            this.curTimeLabel.Font = new System.Drawing.Font("Arial", 18F);
+            this.curTimeLabel.ForeColor = System.Drawing.Color.White;
+            this.curTimeLabel.Location = new System.Drawing.Point(194, 284);
+            this.curTimeLabel.Name = "curTimeLabel";
+            this.curTimeLabel.Size = new System.Drawing.Size(106, 36);
+            this.curTimeLabel.TabIndex = 8;
+            this.curTimeLabel.Text = "Time";
+            this.curTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // curTimeBG
+            // 
+            this.curTimeBG.Image = ((System.Drawing.Image)(resources.GetObject("curTimeBG.Image")));
+            this.curTimeBG.Location = new System.Drawing.Point(334, 268);
+            this.curTimeBG.Name = "curTimeBG";
+            this.curTimeBG.Size = new System.Drawing.Size(325, 70);
+            this.curTimeBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.curTimeBG.TabIndex = 9;
+            this.curTimeBG.TabStop = false;
+            // 
+            // curTime
+            // 
+            this.curTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
+            this.curTime.Font = new System.Drawing.Font("Arial", 18F);
+            this.curTime.ForeColor = System.Drawing.Color.White;
+            this.curTime.Location = new System.Drawing.Point(344, 286);
+            this.curTime.Name = "curTime";
+            this.curTime.Size = new System.Drawing.Size(306, 36);
+            this.curTime.TabIndex = 10;
+            this.curTime.Text = "Subject Time";
+            this.curTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // curStatusLabel
+            // 
+            this.curStatusLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            this.curStatusLabel.Font = new System.Drawing.Font("Arial", 18F);
+            this.curStatusLabel.ForeColor = System.Drawing.Color.White;
+            this.curStatusLabel.Location = new System.Drawing.Point(698, 284);
+            this.curStatusLabel.Name = "curStatusLabel";
+            this.curStatusLabel.Size = new System.Drawing.Size(106, 36);
+            this.curStatusLabel.TabIndex = 12;
+            this.curStatusLabel.Text = "Status";
+            this.curStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // curStatusLabelBG
+            // 
+            this.curStatusLabelBG.Image = ((System.Drawing.Image)(resources.GetObject("curStatusLabelBG.Image")));
+            this.curStatusLabelBG.Location = new System.Drawing.Point(688, 278);
+            this.curStatusLabelBG.Name = "curStatusLabelBG";
+            this.curStatusLabelBG.Size = new System.Drawing.Size(128, 50);
+            this.curStatusLabelBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.curStatusLabelBG.TabIndex = 11;
+            this.curStatusLabelBG.TabStop = false;
+            // 
+            // curStatus
+            // 
+            this.curStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
+            this.curStatus.Font = new System.Drawing.Font("Arial", 18F);
+            this.curStatus.ForeColor = System.Drawing.Color.White;
+            this.curStatus.Location = new System.Drawing.Point(840, 286);
+            this.curStatus.Name = "curStatus";
+            this.curStatus.Size = new System.Drawing.Size(306, 36);
+            this.curStatus.TabIndex = 14;
+            this.curStatus.Text = "Ongoing/Up Next";
+            this.curStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // curStatusBG
+            // 
+            this.curStatusBG.Image = ((System.Drawing.Image)(resources.GetObject("curStatusBG.Image")));
+            this.curStatusBG.Location = new System.Drawing.Point(830, 268);
+            this.curStatusBG.Name = "curStatusBG";
+            this.curStatusBG.Size = new System.Drawing.Size(325, 70);
+            this.curStatusBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.curStatusBG.TabIndex = 13;
+            this.curStatusBG.TabStop = false;
+            // 
+            // infoBG
+            // 
+            this.infoBG.Image = ((System.Drawing.Image)(resources.GetObject("infoBG.Image")));
+            this.infoBG.Location = new System.Drawing.Point(103, 353);
+            this.infoBG.Name = "infoBG";
+            this.infoBG.Size = new System.Drawing.Size(1052, 271);
+            this.infoBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.infoBG.TabIndex = 15;
+            this.infoBG.TabStop = false;
+            // 
+            // infoFieldBG
+            // 
+            this.infoFieldBG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
+            this.infoFieldBG.Image = ((System.Drawing.Image)(resources.GetObject("infoFieldBG.Image")));
+            this.infoFieldBG.Location = new System.Drawing.Point(445, 363);
+            this.infoFieldBG.Name = "infoFieldBG";
+            this.infoFieldBG.Size = new System.Drawing.Size(377, 60);
+            this.infoFieldBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.infoFieldBG.TabIndex = 16;
+            this.infoFieldBG.TabStop = false;
+            // 
+            // infoField
+            // 
+            this.infoField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
+            this.infoField.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.infoField.Font = new System.Drawing.Font("Arial", 18F);
+            this.infoField.Location = new System.Drawing.Point(462, 377);
+            this.infoField.Name = "infoField";
+            this.infoField.Size = new System.Drawing.Size(342, 28);
+            this.infoField.TabIndex = 17;
+            this.infoField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.infoField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoField_KeyDown);
+            // 
+            // infoText
+            // 
+            this.infoText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
+            this.infoText.Font = new System.Drawing.Font("Arial", 18F);
+            this.infoText.ForeColor = System.Drawing.Color.White;
+            this.infoText.Location = new System.Drawing.Point(357, 437);
+            this.infoText.Name = "infoText";
+            this.infoText.Size = new System.Drawing.Size(561, 172);
+            this.infoText.TabIndex = 18;
+            this.infoText.Text = "Scan your ID...";
+            this.infoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // infoReset
+            // 
+            this.infoReset.Interval = 7500;
+            this.infoReset.Tick += new System.EventHandler(this.infoReset_Tick);
+            // 
+            // sbBG
+            // 
+            this.sbBG.Image = ((System.Drawing.Image)(resources.GetObject("sbBG.Image")));
+            this.sbBG.Location = new System.Drawing.Point(0, 1);
+            this.sbBG.Name = "sbBG";
+            this.sbBG.Size = new System.Drawing.Size(71, 681);
+            this.sbBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbBG.TabIndex = 19;
+            this.sbBG.TabStop = false;
+            // 
+            // sbTogBtn
+            // 
+            this.sbTogBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.sbTogBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbTogBtn.Image")));
+            this.sbTogBtn.Location = new System.Drawing.Point(10, 18);
+            this.sbTogBtn.Name = "sbTogBtn";
+            this.sbTogBtn.Size = new System.Drawing.Size(50, 50);
+            this.sbTogBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbTogBtn.TabIndex = 20;
+            this.sbTogBtn.TabStop = false;
+            // 
+            // sbDashboardBtn
+            // 
+            this.sbDashboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.sbDashboardBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbDashboardBtn.Image")));
+            this.sbDashboardBtn.Location = new System.Drawing.Point(10, 121);
+            this.sbDashboardBtn.Name = "sbDashboardBtn";
+            this.sbDashboardBtn.Size = new System.Drawing.Size(50, 50);
+            this.sbDashboardBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbDashboardBtn.TabIndex = 21;
+            this.sbDashboardBtn.TabStop = false;
+            // 
+            // sbStudentsBtn
+            // 
+            this.sbStudentsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.sbStudentsBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbStudentsBtn.Image")));
+            this.sbStudentsBtn.Location = new System.Drawing.Point(10, 188);
+            this.sbStudentsBtn.Name = "sbStudentsBtn";
+            this.sbStudentsBtn.Size = new System.Drawing.Size(50, 50);
+            this.sbStudentsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbStudentsBtn.TabIndex = 22;
+            this.sbStudentsBtn.TabStop = false;
+            // 
+            // sbCoursesBtn
+            // 
+            this.sbCoursesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.sbCoursesBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbCoursesBtn.Image")));
+            this.sbCoursesBtn.Location = new System.Drawing.Point(10, 255);
+            this.sbCoursesBtn.Name = "sbCoursesBtn";
+            this.sbCoursesBtn.Size = new System.Drawing.Size(50, 50);
+            this.sbCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbCoursesBtn.TabIndex = 23;
+            this.sbCoursesBtn.TabStop = false;
+            // 
+            // sbRecordsBtn
+            // 
+            this.sbRecordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.sbRecordsBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbRecordsBtn.Image")));
+            this.sbRecordsBtn.Location = new System.Drawing.Point(10, 324);
+            this.sbRecordsBtn.Name = "sbRecordsBtn";
+            this.sbRecordsBtn.Size = new System.Drawing.Size(50, 50);
+            this.sbRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbRecordsBtn.TabIndex = 24;
+            this.sbRecordsBtn.TabStop = false;
+            // 
+            // sbLogoutBtn
+            // 
+            this.sbLogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.sbLogoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbLogoutBtn.Image")));
+            this.sbLogoutBtn.Location = new System.Drawing.Point(10, 619);
+            this.sbLogoutBtn.Name = "sbLogoutBtn";
+            this.sbLogoutBtn.Size = new System.Drawing.Size(50, 50);
+            this.sbLogoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.sbLogoutBtn.TabIndex = 25;
+            this.sbLogoutBtn.TabStop = false;
+            this.sbLogoutBtn.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
+            // Dashboard
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.sbTogBtn);
+            this.Controls.Add(this.sbDashboardBtn);
+            this.Controls.Add(this.sbStudentsBtn);
+            this.Controls.Add(this.sbCoursesBtn);
+            this.Controls.Add(this.sbRecordsBtn);
+            this.Controls.Add(this.sbLogoutBtn);
+            this.Controls.Add(this.sbBG);
+            this.Controls.Add(this.curClassLabel);
+            this.Controls.Add(this.curClassLabelBG);
+            this.Controls.Add(this.curClass);
+            this.Controls.Add(this.curClassBG);
+            this.Controls.Add(this.curTimeLabel);
+            this.Controls.Add(this.curTimeLabelBG);
+            this.Controls.Add(this.curTime);
+            this.Controls.Add(this.curTimeBG);
+            this.Controls.Add(this.curStatusLabel);
+            this.Controls.Add(this.curStatusLabelBG);
+            this.Controls.Add(this.curStatus);
+            this.Controls.Add(this.curStatusBG);
+            this.Controls.Add(this.infoText);
+            this.Controls.Add(this.infoField);
+            this.Controls.Add(this.infoFieldBG);
+            this.Controls.Add(this.infoBG);
+            this.Controls.Add(this.header);
+            this.Controls.Add(this.timeLabel);
+            this.Controls.Add(this.clockIcon);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.Name = "Dashboard";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "ScanClass";
+            ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.header)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curClassLabelBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curClassBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curTimeLabelBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curTimeBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curStatusLabelBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.curStatusBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoFieldBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbDashboardBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbStudentsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.PictureBox clockIcon;
+        private System.Windows.Forms.Label timeLabel;
+        private System.Windows.Forms.Timer time;
+        private System.Windows.Forms.PictureBox header;
+        private System.Windows.Forms.PictureBox curClassLabelBG;
+        private System.Windows.Forms.PictureBox curClassBG;
+        private System.Windows.Forms.Label curClassLabel;
+        private System.Windows.Forms.Label curClass;
+        private System.Windows.Forms.PictureBox curTimeLabelBG;
+        private System.Windows.Forms.Label curTimeLabel;
+        private System.Windows.Forms.PictureBox curTimeBG;
+        private System.Windows.Forms.Label curTime;
+        private System.Windows.Forms.Label curStatusLabel;
+        private System.Windows.Forms.PictureBox curStatusLabelBG;
+        private System.Windows.Forms.Label curStatus;
+        private System.Windows.Forms.PictureBox curStatusBG;
+        private System.Windows.Forms.PictureBox infoBG;
+        private System.Windows.Forms.PictureBox infoFieldBG;
+        private System.Windows.Forms.TextBox infoField;
+        private System.Windows.Forms.Label infoText;
+        private System.Windows.Forms.Timer infoReset;
+        private System.Windows.Forms.PictureBox sbBG;
+        private System.Windows.Forms.PictureBox sbTogBtn;
+        private System.Windows.Forms.PictureBox sbDashboardBtn;
+        private System.Windows.Forms.PictureBox sbStudentsBtn;
+        private System.Windows.Forms.PictureBox sbCoursesBtn;
+        private System.Windows.Forms.PictureBox sbRecordsBtn;
+        private System.Windows.Forms.PictureBox sbLogoutBtn;
+    }
+}
+
