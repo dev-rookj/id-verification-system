@@ -50,9 +50,14 @@ namespace id_verification_system
 
         private void adminLoginBtn_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            dashboard.Show();
-            this.Hide();
+            Login login = new Login();
+            login.Owner = this;
+            login.Show();
+        }
+
+        private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

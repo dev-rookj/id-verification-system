@@ -21,3 +21,4 @@ C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\De
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\id-verification-system.pdb
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.MainMenu.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Dashboard.resources
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Login.resources

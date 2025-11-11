@@ -37,7 +37,6 @@
             this.curClassLabelBG = new System.Windows.Forms.PictureBox();
             this.curClassBG = new System.Windows.Forms.PictureBox();
             this.curClassLabel = new System.Windows.Forms.Label();
-            this.curClass = new System.Windows.Forms.Label();
             this.curTimeLabelBG = new System.Windows.Forms.PictureBox();
             this.curTimeLabel = new System.Windows.Forms.Label();
             this.curTimeBG = new System.Windows.Forms.PictureBox();
@@ -52,6 +51,7 @@
             this.infoText = new System.Windows.Forms.Label();
             this.infoReset = new System.Windows.Forms.Timer(this.components);
             this.adminLoginBtn = new System.Windows.Forms.PictureBox();
+            this.curClass = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.header)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.curClassLabelBG)).BeginInit();
@@ -130,18 +130,6 @@
             this.curClassLabel.TabIndex = 5;
             this.curClassLabel.Text = "Current Class";
             this.curClassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // curClass
-            // 
-            this.curClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
-            this.curClass.Font = new System.Drawing.Font("Arial", 18F);
-            this.curClass.ForeColor = System.Drawing.Color.White;
-            this.curClass.Location = new System.Drawing.Point(349, 194);
-            this.curClass.Name = "curClass";
-            this.curClass.Size = new System.Drawing.Size(786, 36);
-            this.curClass.TabIndex = 6;
-            this.curClass.Text = "[SUBJCODE] Subject Title";
-            this.curClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // curTimeLabelBG
             // 
@@ -292,6 +280,18 @@
             this.adminLoginBtn.TabStop = false;
             this.adminLoginBtn.Click += new System.EventHandler(this.adminLoginBtn_Click);
             // 
+            // curClass
+            // 
+            this.curClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
+            this.curClass.Font = new System.Drawing.Font("Arial", 18F);
+            this.curClass.ForeColor = System.Drawing.Color.White;
+            this.curClass.Location = new System.Drawing.Point(349, 194);
+            this.curClass.Name = "curClass";
+            this.curClass.Size = new System.Drawing.Size(786, 36);
+            this.curClass.TabIndex = 6;
+            this.curClass.Text = "[SUBJCODE] Subject Title";
+            this.curClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // MainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -325,6 +325,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainMenu_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.header)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.curClassLabelBG)).EndInit();
@@ -350,7 +351,6 @@
         private System.Windows.Forms.PictureBox curClassLabelBG;
         private System.Windows.Forms.PictureBox curClassBG;
         private System.Windows.Forms.Label curClassLabel;
-        private System.Windows.Forms.Label curClass;
         private System.Windows.Forms.PictureBox curTimeLabelBG;
         private System.Windows.Forms.Label curTimeLabel;
         private System.Windows.Forms.PictureBox curTimeBG;
@@ -365,6 +365,7 @@
         private System.Windows.Forms.Label infoText;
         private System.Windows.Forms.Timer infoReset;
         private System.Windows.Forms.PictureBox adminLoginBtn;
+        private System.Windows.Forms.Label curClass;
     }
 }
 
