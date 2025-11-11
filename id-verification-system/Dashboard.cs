@@ -59,5 +59,11 @@ namespace id_verification_system
         {
             Application.Exit();
         }
+
+        private void sbStudentsBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Students().Show();
+        }
     }
 }
