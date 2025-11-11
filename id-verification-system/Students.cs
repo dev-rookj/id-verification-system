@@ -26,9 +26,9 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MainMenu mm = new MainMenu();
-            mm.Show();
-            this.Hide();
+            Logout logout = new Logout();
+            logout.ShowDialog();
+            Hide();
         }
 
         private void sbDashboardBtn_Click(object sender, EventArgs e)

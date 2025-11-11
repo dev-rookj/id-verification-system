@@ -2,8 +2,6 @@ C:\kennydanel\id-verification-system\id-verification-system\bin\Debug\id-verific
 C:\kennydanel\id-verification-system\id-verification-system\bin\Debug\id-verification-system.exe
 C:\kennydanel\id-verification-system\id-verification-system\bin\Debug\id-verification-system.pdb
 C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.AssemblyReference.cache
-C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Form1.resources
-C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Form2.resources
 C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Properties.Resources.resources
 C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.GenerateResource.cache
 C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.CoreCompileInputs.cache
@@ -23,3 +21,9 @@ C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\De
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Dashboard.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Login.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Students.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id-verification-system.exe.config
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Students.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Dashboard.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Login.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.MainMenu.resources
+C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Logout.resources
