@@ -136,7 +136,7 @@
             this.curClassLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
             this.curClassLabel.Font = new System.Drawing.Font("Arial", 18F);
             this.curClassLabel.ForeColor = System.Drawing.Color.White;
-            this.curClassLabel.Location = new System.Drawing.Point(158, 194);
+            this.curClassLabel.Location = new System.Drawing.Point(195, 194);
             this.curClassLabel.Name = "curClassLabel";
             this.curClassLabel.Size = new System.Drawing.Size(197, 36);
             this.curClassLabel.TabIndex = 5;
