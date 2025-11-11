@@ -246,9 +246,9 @@
             // infoBG
             // 
             this.infoBG.Image = ((System.Drawing.Image)(resources.GetObject("infoBG.Image")));
-            this.infoBG.Location = new System.Drawing.Point(184, 353);
+            this.infoBG.Location = new System.Drawing.Point(103, 353);
             this.infoBG.Name = "infoBG";
-            this.infoBG.Size = new System.Drawing.Size(971, 271);
+            this.infoBG.Size = new System.Drawing.Size(1052, 271);
             this.infoBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.infoBG.TabIndex = 15;
             this.infoBG.TabStop = false;
@@ -257,9 +257,9 @@
             // 
             this.infoFieldBG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.infoFieldBG.Image = ((System.Drawing.Image)(resources.GetObject("infoFieldBG.Image")));
-            this.infoFieldBG.Location = new System.Drawing.Point(526, 363);
+            this.infoFieldBG.Location = new System.Drawing.Point(445, 363);
             this.infoFieldBG.Name = "infoFieldBG";
-            this.infoFieldBG.Size = new System.Drawing.Size(296, 60);
+            this.infoFieldBG.Size = new System.Drawing.Size(377, 60);
             this.infoFieldBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.infoFieldBG.TabIndex = 16;
             this.infoFieldBG.TabStop = false;
@@ -269,9 +269,9 @@
             this.infoField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
             this.infoField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.infoField.Font = new System.Drawing.Font("Arial", 18F);
-            this.infoField.Location = new System.Drawing.Point(543, 377);
+            this.infoField.Location = new System.Drawing.Point(462, 377);
             this.infoField.Name = "infoField";
-            this.infoField.Size = new System.Drawing.Size(261, 28);
+            this.infoField.Size = new System.Drawing.Size(342, 28);
             this.infoField.TabIndex = 17;
             this.infoField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.infoField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoField_KeyDown);
@@ -281,9 +281,9 @@
             this.infoText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.infoText.Font = new System.Drawing.Font("Arial", 18F);
             this.infoText.ForeColor = System.Drawing.Color.White;
-            this.infoText.Location = new System.Drawing.Point(438, 437);
+            this.infoText.Location = new System.Drawing.Point(357, 437);
             this.infoText.Name = "infoText";
-            this.infoText.Size = new System.Drawing.Size(480, 172);
+            this.infoText.Size = new System.Drawing.Size(561, 172);
             this.infoText.TabIndex = 18;
             this.infoText.Text = "Scan your ID...";
             this.infoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
