@@ -24,30 +24,6 @@ namespace id_verification_system
             timeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
         }
 
-        private void infoField_KeyDown(object sender, KeyEventArgs e)
-        {
-            if(e.KeyCode == Keys.Enter)
-            {
-                if (infoField.Text.Length == 9)
-                {
-                    infoText.Text = "Student No.: STUDENT_NUMBER\r\nName: STUDENT_NAME\r\n\r\nTime In: " + DateTime.Now.ToString("hh:mm tt").ToUpper() + "\r\nRemarks: REMARK\r\n";
-                    e.SuppressKeyPress = true;
-                }
-                else infoText.Text = "Invalid Barcode.";
-                e.SuppressKeyPress = true;
-
-                infoField.Text = "";
-                infoReset.Stop(); // to avoid timer overlapping
-                infoReset.Start();
-            }
-        }
-
-        private void infoReset_Tick(object sender, EventArgs e)
-        {
-            infoText.Text = "Scan your ID...";
-            infoReset.Stop();
-        }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             MainMenu mm = new MainMenu();
@@ -55,9 +31,46 @@ namespace id_verification_system
             this.Hide();
         }
 
-        private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
+        private void sbDashboardBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Dashboard().Show();
+        }
+
+        private void Students_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void listMenu_DrawItem(object sender, DrawItemEventArgs e)
+        {
+            if (e.Index < 0) return;
+
+            // Get the item text
+            string text = listMenu.Items[e.Index].ToString();
+
+            // Decide background color
+            Color backColor;
+            Color foreColor;
+
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            {
+                backColor = Color.FromArgb(39, 98, 33);   // custom background for selected item
+                foreColor = Color.White;      // custom text color
+            }
+            else
+            {
+                backColor = listMenu.BackColor;
+                foreColor = listMenu.ForeColor;
+            }
+
+            // Fill background
+            using (SolidBrush bgBrush = new SolidBrush(backColor))
+                e.Graphics.FillRectangle(bgBrush, e.Bounds);
+
+            // Draw text
+            TextRenderer.DrawText(e.Graphics, text, e.Font, e.Bounds, foreColor, TextFormatFlags.Left);
+
         }
     }
 }
