@@ -52,6 +52,12 @@
     <Compile Include="Logout.Designer.cs">
       <DependentUpon>Logout.cs</DependentUpon>
     </Compile>
+    <Compile Include="Courses.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Courses.Designer.cs">
+      <DependentUpon>Courses.cs</DependentUpon>
+    </Compile>
     <Compile Include="Students.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Courses.resx">
+      <DependentUpon>Courses.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Students.resx">
       <DependentUpon>Students.cs</DependentUpon>

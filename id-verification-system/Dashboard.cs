@@ -66,5 +66,11 @@ namespace id_verification_system
             students.Show();
             Hide();
         }
+
+        private void sbCoursesBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Courses().Show();
+        }
     }
 }

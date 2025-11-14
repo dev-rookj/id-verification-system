@@ -347,6 +347,7 @@
             this.sbCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbCoursesBtn.TabIndex = 23;
             this.sbCoursesBtn.TabStop = false;
+            this.sbCoursesBtn.Click += new System.EventHandler(this.sbCoursesBtn_Click);
             // 
             // sbRecordsBtn
             // 

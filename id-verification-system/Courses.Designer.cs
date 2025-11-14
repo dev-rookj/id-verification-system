@@ -1,6 +1,6 @@
 ﻿namespace id_verification_system
 {
-    partial class Students
+    partial class Courses
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Students));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Courses));
             this.clockIcon = new System.Windows.Forms.PictureBox();
             this.timeLabel = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
@@ -123,6 +123,7 @@
             this.sbStudentsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbStudentsBtn.TabIndex = 22;
             this.sbStudentsBtn.TabStop = false;
+            this.sbStudentsBtn.Click += new System.EventHandler(this.sbStudentsBtn_Click);
             // 
             // sbCoursesBtn
             // 
@@ -134,7 +135,6 @@
             this.sbCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbCoursesBtn.TabIndex = 23;
             this.sbCoursesBtn.TabStop = false;
-            this.sbCoursesBtn.Click += new System.EventHandler(this.sbCoursesBtn_Click);
             // 
             // sbRecordsBtn
             // 
@@ -166,7 +166,7 @@
             this.listHeader.Name = "listHeader";
             this.listHeader.Size = new System.Drawing.Size(492, 50);
             this.listHeader.TabIndex = 26;
-            this.listHeader.Text = "STUDENTS LIST";
+            this.listHeader.Text = "COURSE LIST";
             this.listHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // listBG
@@ -194,39 +194,23 @@
             this.listMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.listMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.listMenu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.listMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
+            this.listMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.listMenu.ForeColor = System.Drawing.Color.White;
             this.listMenu.FormattingEnabled = true;
-            this.listMenu.ItemHeight = 35;
+            this.listMenu.ItemHeight = 50;
             this.listMenu.Items.AddRange(new object[] {
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur"});
+            "[DCIT50] Object Oriented Programming (LEC)",
+            "[GNED04] Mga Babasahin Hinggil sa Kasaysayan ng Pilipinas",
+            "[COSC60] Digital Logic",
+            "[MATH1] Analytic Geometry",
+            "[COSC55] Discrete Structures 2"});
             this.listMenu.Location = new System.Drawing.Point(114, 95);
             this.listMenu.Name = "listMenu";
-            this.listMenu.Size = new System.Drawing.Size(1112, 560);
+            this.listMenu.Size = new System.Drawing.Size(1112, 550);
             this.listMenu.TabIndex = 29;
             this.listMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listMenu_DrawItem);
             // 
-            // Students
+            // Courses
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -248,7 +232,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Students";
+            this.Name = "Courses";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";

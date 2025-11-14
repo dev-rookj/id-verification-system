@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace id_verification_system
 {
-    public partial class Students : Form
+    public partial class Courses : Form
     {
-        public Students()
+        public Courses()
         {
             InitializeComponent();
             time.Start();
@@ -70,12 +70,13 @@ namespace id_verification_system
 
             // Draw text
             TextRenderer.DrawText(e.Graphics, text, e.Font, e.Bounds, foreColor, TextFormatFlags.Left);
+
         }
 
-        private void sbCoursesBtn_Click(object sender, EventArgs e)
+        private void sbStudentsBtn_Click(object sender, EventArgs e)
         {
             Hide();
-            new Courses().Show();
+            new Students().Show();
         }
     }
 }
