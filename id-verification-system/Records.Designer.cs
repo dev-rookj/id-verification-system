@@ -1,6 +1,6 @@
 ﻿namespace id_verification_system
 {
-    partial class Students
+    partial class Records
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Students));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Records));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.clockIcon = new System.Windows.Forms.PictureBox();
             this.timeLabel = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
@@ -41,9 +44,13 @@
             this.sbRecordsBtn = new System.Windows.Forms.PictureBox();
             this.sbLogoutBtn = new System.Windows.Forms.PictureBox();
             this.listHeader = new System.Windows.Forms.Label();
-            this.listBG = new System.Windows.Forms.PictureBox();
-            this.enrollBtn = new System.Windows.Forms.PictureBox();
-            this.listMenu = new System.Windows.Forms.ListBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentNoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CourseNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemarksCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).BeginInit();
@@ -52,8 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // clockIcon
@@ -123,6 +129,7 @@
             this.sbStudentsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbStudentsBtn.TabIndex = 22;
             this.sbStudentsBtn.TabStop = false;
+            this.sbStudentsBtn.Click += new System.EventHandler(this.sbStudentsBtn_Click);
             // 
             // sbCoursesBtn
             // 
@@ -146,7 +153,6 @@
             this.sbRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbRecordsBtn.TabIndex = 24;
             this.sbRecordsBtn.TabStop = false;
-            this.sbRecordsBtn.Click += new System.EventHandler(this.sbRecordsBtn_Click);
             // 
             // sbLogoutBtn
             // 
@@ -167,76 +173,107 @@
             this.listHeader.Name = "listHeader";
             this.listHeader.Size = new System.Drawing.Size(492, 50);
             this.listHeader.TabIndex = 26;
-            this.listHeader.Text = "STUDENTS LIST";
+            this.listHeader.Text = "RECORD LOG";
             this.listHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listBG
+            // dataGridView1
             // 
-            this.listBG.Image = ((System.Drawing.Image)(resources.GetObject("listBG.Image")));
-            this.listBG.Location = new System.Drawing.Point(89, 82);
-            this.listBG.Name = "listBG";
-            this.listBG.Size = new System.Drawing.Size(1163, 587);
-            this.listBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.listBG.TabIndex = 27;
-            this.listBG.TabStop = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.DateCol,
+            this.TimeCol,
+            this.StudentNoCol,
+            this.StudentNameCol,
+            this.CourseNameCol,
+            this.RemarksCol});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.NullValue = "N/A";
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dataGridView1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            this.dataGridView1.Location = new System.Drawing.Point(89, 94);
+            this.dataGridView1.Name = "dataGridView1";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(1139, 559);
+            this.dataGridView1.TabIndex = 27;
             // 
-            // enrollBtn
+            // DateCol
             // 
-            this.enrollBtn.Image = ((System.Drawing.Image)(resources.GetObject("enrollBtn.Image")));
-            this.enrollBtn.Location = new System.Drawing.Point(1152, 18);
-            this.enrollBtn.Name = "enrollBtn";
-            this.enrollBtn.Size = new System.Drawing.Size(100, 50);
-            this.enrollBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.enrollBtn.TabIndex = 28;
-            this.enrollBtn.TabStop = false;
+            this.DateCol.HeaderText = "DATE";
+            this.DateCol.Name = "DateCol";
+            this.DateCol.ReadOnly = true;
+            this.DateCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // listMenu
+            // TimeCol
             // 
-            this.listMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
-            this.listMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listMenu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.listMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F);
-            this.listMenu.ForeColor = System.Drawing.Color.White;
-            this.listMenu.FormattingEnabled = true;
-            this.listMenu.ItemHeight = 35;
-            this.listMenu.Items.AddRange(new object[] {
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur"});
-            this.listMenu.Location = new System.Drawing.Point(114, 95);
-            this.listMenu.Name = "listMenu";
-            this.listMenu.Size = new System.Drawing.Size(1112, 560);
-            this.listMenu.TabIndex = 29;
-            this.listMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listMenu_DrawItem);
+            this.TimeCol.HeaderText = "TIME";
+            this.TimeCol.Name = "TimeCol";
+            this.TimeCol.ReadOnly = true;
+            this.TimeCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TimeCol.Width = 85;
             // 
-            // Students
+            // StudentNoCol
+            // 
+            this.StudentNoCol.HeaderText = "STUDENT NO.";
+            this.StudentNoCol.Name = "StudentNoCol";
+            this.StudentNoCol.ReadOnly = true;
+            this.StudentNoCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentNoCol.Width = 220;
+            // 
+            // StudentNameCol
+            // 
+            this.StudentNameCol.HeaderText = "STUDENT NAME";
+            this.StudentNameCol.Name = "StudentNameCol";
+            this.StudentNameCol.ReadOnly = true;
+            this.StudentNameCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentNameCol.Width = 250;
+            // 
+            // CourseNameCol
+            // 
+            this.CourseNameCol.HeaderText = "COURSE NAME";
+            this.CourseNameCol.Name = "CourseNameCol";
+            this.CourseNameCol.ReadOnly = true;
+            this.CourseNameCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CourseNameCol.Width = 350;
+            // 
+            // RemarksCol
+            // 
+            this.RemarksCol.HeaderText = "REMARKS";
+            this.RemarksCol.Name = "RemarksCol";
+            this.RemarksCol.ReadOnly = true;
+            this.RemarksCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.RemarksCol.Width = 130;
+            // 
+            // Records
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.listHeader);
-            this.Controls.Add(this.listMenu);
-            this.Controls.Add(this.enrollBtn);
-            this.Controls.Add(this.listBG);
             this.Controls.Add(this.sbTogBtn);
             this.Controls.Add(this.sbDashboardBtn);
             this.Controls.Add(this.sbStudentsBtn);
@@ -249,7 +286,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Students";
+            this.Name = "Records";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
@@ -262,8 +299,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,9 +317,13 @@
         private System.Windows.Forms.PictureBox sbRecordsBtn;
         private System.Windows.Forms.PictureBox sbLogoutBtn;
         private System.Windows.Forms.Label listHeader;
-        private System.Windows.Forms.PictureBox listBG;
-        private System.Windows.Forms.PictureBox enrollBtn;
-        private System.Windows.Forms.ListBox listMenu;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimeCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentNoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentNameCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CourseNameCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RemarksCol;
     }
 }
 

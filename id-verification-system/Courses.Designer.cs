@@ -146,6 +146,7 @@
             this.sbRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbRecordsBtn.TabIndex = 24;
             this.sbRecordsBtn.TabStop = false;
+            this.sbRecordsBtn.Click += new System.EventHandler(this.sbRecordsBtn_Click);
             // 
             // sbLogoutBtn
             // 

@@ -75,5 +75,11 @@ namespace id_verification_system
             Hide();
             new Students().Show();
         }
+
+        private void sbRecordsBtn_Click(object sender, EventArgs e)
+        {
+            Hide();
+            new Records().Show();
+        }
     }
 }
