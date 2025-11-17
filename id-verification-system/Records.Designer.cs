@@ -44,7 +44,7 @@
             this.sbRecordsBtn = new System.Windows.Forms.PictureBox();
             this.sbLogoutBtn = new System.Windows.Forms.PictureBox();
             this.listHeader = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.recordsTable = new System.Windows.Forms.DataGridView();
             this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentNoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +59,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordsTable)).BeginInit();
             this.SuspendLayout();
             // 
             // clockIcon
@@ -176,38 +176,44 @@
             this.listHeader.Text = "RECORD LOG";
             this.listHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // dataGridView1
+            // recordsTable
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.recordsTable.AllowUserToDeleteRows = false;
+            this.recordsTable.AllowUserToResizeColumns = false;
+            this.recordsTable.AllowUserToResizeRows = false;
+            this.recordsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            this.recordsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.recordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.recordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.recordsTable.ColumnHeadersHeight = 26;
+            this.recordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.recordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.DateCol,
             this.TimeCol,
             this.StudentNoCol,
             this.StudentNameCol,
             this.CourseNameCol,
             this.RemarksCol});
+            this.recordsTable.Cursor = System.Windows.Forms.Cursors.Default;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.NullValue = "-";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dataGridView1.GridColor = System.Drawing.Color.Black;
-            this.dataGridView1.Location = new System.Drawing.Point(89, 94);
-            this.dataGridView1.Name = "dataGridView1";
+            this.recordsTable.DefaultCellStyle = dataGridViewCellStyle2;
+            this.recordsTable.GridColor = System.Drawing.Color.Black;
+            this.recordsTable.Location = new System.Drawing.Point(89, 94);
+            this.recordsTable.Name = "recordsTable";
+            this.recordsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
@@ -215,10 +221,12 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.Size = new System.Drawing.Size(1137, 559);
-            this.dataGridView1.TabIndex = 27;
+            this.recordsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.recordsTable.RowHeadersVisible = false;
+            this.recordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.recordsTable.RowTemplate.Height = 26;
+            this.recordsTable.Size = new System.Drawing.Size(1163, 559);
+            this.recordsTable.TabIndex = 27;
             // 
             // DateCol
             // 
@@ -233,7 +241,7 @@
             this.TimeCol.Name = "TimeCol";
             this.TimeCol.ReadOnly = true;
             this.TimeCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TimeCol.Width = 85;
+            this.TimeCol.Width = 90;
             // 
             // StudentNoCol
             // 
@@ -273,7 +281,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.recordsTable);
             this.Controls.Add(this.listHeader);
             this.Controls.Add(this.sbTogBtn);
             this.Controls.Add(this.sbDashboardBtn);
@@ -292,6 +300,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Students_FormClosed);
+            this.Load += new System.EventHandler(this.Records_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).EndInit();
@@ -300,7 +309,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.recordsTable)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -318,7 +327,7 @@
         private System.Windows.Forms.PictureBox sbRecordsBtn;
         private System.Windows.Forms.PictureBox sbLogoutBtn;
         private System.Windows.Forms.Label listHeader;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView recordsTable;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentNoCol;

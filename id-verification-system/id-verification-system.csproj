@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Student_View.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Student_View.Designer.cs">
+      <DependentUpon>Student_View.cs</DependentUpon>
+    </Compile>
     <Compile Include="Logout.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +96,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Student_View.resx">
+      <DependentUpon>Student_View.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Logout.resx">
       <DependentUpon>Logout.cs</DependentUpon>
     </EmbeddedResource>

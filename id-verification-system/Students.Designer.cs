@@ -199,33 +199,12 @@
             this.listMenu.ForeColor = System.Drawing.Color.White;
             this.listMenu.FormattingEnabled = true;
             this.listMenu.ItemHeight = 35;
-            this.listMenu.Items.AddRange(new object[] {
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur",
-            "Abrenica, Aljur"});
             this.listMenu.Location = new System.Drawing.Point(114, 95);
             this.listMenu.Name = "listMenu";
             this.listMenu.Size = new System.Drawing.Size(1112, 560);
             this.listMenu.TabIndex = 29;
             this.listMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listMenu_DrawItem);
+            this.listMenu.DoubleClick += new System.EventHandler(this.listMenu_DoubleClick);
             // 
             // Students
             // 
@@ -254,6 +233,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Students_FormClosed);
+            this.Load += new System.EventHandler(this.Students_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).EndInit();
@@ -283,7 +263,7 @@
         private System.Windows.Forms.Label listHeader;
         private System.Windows.Forms.PictureBox listBG;
         private System.Windows.Forms.PictureBox enrollBtn;
-        private System.Windows.Forms.ListBox listMenu;
+        public System.Windows.Forms.ListBox listMenu;
     }
 }
 

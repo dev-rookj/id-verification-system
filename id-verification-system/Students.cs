@@ -26,7 +26,7 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new Logout().Show();
+            new Logout().ShowDialog();
         }
 
         private void sbDashboardBtn_Click(object sender, EventArgs e)
@@ -80,6 +80,19 @@ namespace id_verification_system
         {
             Hide();
             new Records().Show();
+        }
+
+        private void Students_Load(object sender, EventArgs e)
+        {
+            listMenu.Items.Add("niggas");
+        }
+
+        private void listMenu_DoubleClick(object sender, EventArgs e)
+        {
+            if (listMenu.SelectedItem != null)
+            {
+                new Student_View().ShowDialog();
+            }
         }
     }
 }

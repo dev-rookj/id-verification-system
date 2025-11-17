@@ -30,3 +30,4 @@ C:\kennydanel\id-verification-system\id-verification-system\obj\Debug\id_verific
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Logout.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Courses.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Records.resources
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Student_View.resources

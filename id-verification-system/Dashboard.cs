@@ -50,7 +50,7 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           new Logout().Show();
+           new Logout().ShowDialog();
         }
 
         private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)

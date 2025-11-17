@@ -52,7 +52,7 @@ namespace id_verification_system
         {
             Login login = new Login();
             login.Owner = this;
-            login.Show();
+            login.ShowDialog();
         }
 
         private void MainMenu_FormClosed(object sender, FormClosedEventArgs e)
