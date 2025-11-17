@@ -50,9 +50,7 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-           Logout logout = new Logout();
-           logout.ShowDialog();
-           Hide();
+           new Logout().Show();
         }
 
         private void Dashboard_FormClosed(object sender, FormClosedEventArgs e)
@@ -62,9 +60,9 @@ namespace id_verification_system
 
         private void sbStudentsBtn_Click(object sender, EventArgs e)
         {
-            Students students = new Students();
-            students.Show();
+            new Students().Show();
             Hide();
+
         }
 
         private void sbCoursesBtn_Click(object sender, EventArgs e)

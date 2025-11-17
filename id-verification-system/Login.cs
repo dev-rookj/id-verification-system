@@ -18,6 +18,24 @@ namespace id_verification_system
             InitializeComponent();
         }
 
+        private void VerifyLogin(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (userField.Text == "admin" && passField.Text == "pass")
+                {
+                    this.Owner.Hide();
+                    Hide();
+                    new Dashboard().Show();
+                }
+                else
+                {
+                    loginStatus.ForeColor = Color.Red;
+                    loginStatus.Text = "Invalid credentials.";
+                }
+            }
+        }
+
         private void loginBtn_MouseLeave(object sender, EventArgs e)
         {
             loginBtn.Image = Image.FromFile("assets/loginbtn.png");
@@ -51,6 +69,16 @@ namespace id_verification_system
                 loginStatus.ForeColor = Color.Red;
                 loginStatus.Text = "Invalid credentials.";
             }
+        }
+
+        private void userField_KeyDown(object sender, KeyEventArgs e)
+        {
+            VerifyLogin(e);
+        }
+
+        private void passField_KeyDown(object sender, KeyEventArgs e)
+        {
+            VerifyLogin(e);
         }
     }
 }

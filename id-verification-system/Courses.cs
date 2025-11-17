@@ -26,9 +26,7 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            Logout logout = new Logout();
-            logout.ShowDialog();
-            Hide();
+            new Logout().Show();
         }
 
         private void sbDashboardBtn_Click(object sender, EventArgs e)
@@ -70,7 +68,6 @@ namespace id_verification_system
 
             // Draw text
             TextRenderer.DrawText(e.Graphics, text, e.Font, e.Bounds, foreColor, TextFormatFlags.Left);
-
         }
 
         private void sbStudentsBtn_Click(object sender, EventArgs e)

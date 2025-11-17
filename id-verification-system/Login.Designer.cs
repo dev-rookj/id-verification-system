@@ -128,6 +128,7 @@
             this.userField.Name = "userField";
             this.userField.Size = new System.Drawing.Size(445, 28);
             this.userField.TabIndex = 9;
+            this.userField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.userField_KeyDown);
             // 
             // passField
             // 
@@ -139,6 +140,7 @@
             this.passField.Name = "passField";
             this.passField.Size = new System.Drawing.Size(445, 28);
             this.passField.TabIndex = 10;
+            this.passField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.passField_KeyDown);
             // 
             // Login
             // 

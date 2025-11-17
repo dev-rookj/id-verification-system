@@ -20,26 +20,13 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            MainMenu menu = new MainMenu();
-            menu.Show();
+            new MainMenu().Show();
             Hide();
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            Dashboard dashboard = new Dashboard();
-            Students students = new Students();
-
-            if (dashboard.Visible == true)
-            {
-                dashboard.Show();
-                Hide();
-            }else if (students.Visible == true)
-            {
-                students.Show();
-                Hide();
-            }
-           
+            Hide();
         }
     }
 }
