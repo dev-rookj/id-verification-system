@@ -81,5 +81,16 @@ namespace id_verification_system
             Hide();
             new Records().Show();
         }
+
+        private void listMenu_DoubleClick(object sender, EventArgs e)
+        {
+            Course_View cView = new Course_View();
+
+            if (listMenu.SelectedItem != null)
+            {
+                cView.courseName.Text = "Course Name: " + listMenu.SelectedItem.ToString();
+                cView.Show();
+            }
+        }
     }
 }

@@ -31,3 +31,4 @@ C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\De
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Courses.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Records.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Student_View.resources
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Course_View.resources

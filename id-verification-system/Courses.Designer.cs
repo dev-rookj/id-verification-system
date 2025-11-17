@@ -210,6 +210,7 @@
             this.listMenu.Size = new System.Drawing.Size(1112, 550);
             this.listMenu.TabIndex = 29;
             this.listMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listMenu_DrawItem);
+            this.listMenu.DoubleClick += new System.EventHandler(this.listMenu_DoubleClick);
             // 
             // Courses
             // 
@@ -267,7 +268,7 @@
         private System.Windows.Forms.Label listHeader;
         private System.Windows.Forms.PictureBox listBG;
         private System.Windows.Forms.PictureBox enrollBtn;
-        private System.Windows.Forms.ListBox listMenu;
+        public System.Windows.Forms.ListBox listMenu;
     }
 }
 
