@@ -1,6 +1,6 @@
 ﻿namespace id_verification_system
 {
-    partial class Courses
+    partial class sidebar
     {
         /// <summary>
         /// Required designer variable.
@@ -29,9 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Courses));
-            this.clockIcon = new System.Windows.Forms.PictureBox();
-            this.timeLabel = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(sidebar));
             this.time = new System.Windows.Forms.Timer(this.components);
             this.sbBG = new System.Windows.Forms.PictureBox();
             this.sbTogBtn = new System.Windows.Forms.PictureBox();
@@ -40,11 +38,6 @@
             this.sbCoursesBtn = new System.Windows.Forms.PictureBox();
             this.sbRecordsBtn = new System.Windows.Forms.PictureBox();
             this.sbLogoutBtn = new System.Windows.Forms.PictureBox();
-            this.listHeader = new System.Windows.Forms.Label();
-            this.listBG = new System.Windows.Forms.PictureBox();
-            this.enrollBtn = new System.Windows.Forms.PictureBox();
-            this.listMenu = new System.Windows.Forms.ListBox();
-            ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbDashboardBtn)).BeginInit();
@@ -52,29 +45,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollBtn)).BeginInit();
             this.SuspendLayout();
-            // 
-            // clockIcon
-            // 
-            this.clockIcon.Image = ((System.Drawing.Image)(resources.GetObject("clockIcon.Image")));
-            this.clockIcon.Location = new System.Drawing.Point(89, 13);
-            this.clockIcon.Name = "clockIcon";
-            this.clockIcon.Size = new System.Drawing.Size(48, 44);
-            this.clockIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.clockIcon.TabIndex = 0;
-            this.clockIcon.TabStop = false;
-            // 
-            // timeLabel
-            // 
-            this.timeLabel.Font = new System.Drawing.Font("Arial", 22F);
-            this.timeLabel.Location = new System.Drawing.Point(143, 14);
-            this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(200, 43);
-            this.timeLabel.TabIndex = 1;
-            this.timeLabel.Text = "00:00PM";
-            this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // time
             // 
@@ -123,7 +94,6 @@
             this.sbStudentsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbStudentsBtn.TabIndex = 22;
             this.sbStudentsBtn.TabStop = false;
-            this.sbStudentsBtn.Click += new System.EventHandler(this.sbStudentsBtn_Click);
             // 
             // sbCoursesBtn
             // 
@@ -135,12 +105,13 @@
             this.sbCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbCoursesBtn.TabIndex = 23;
             this.sbCoursesBtn.TabStop = false;
+            this.sbCoursesBtn.Click += new System.EventHandler(this.sbCoursesBtn_Click);
             // 
             // sbRecordsBtn
             // 
             this.sbRecordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbRecordsBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbRecordsBtn.Image")));
-            this.sbRecordsBtn.Location = new System.Drawing.Point(89, 347);
+            this.sbRecordsBtn.Location = new System.Drawing.Point(10, 324);
             this.sbRecordsBtn.Name = "sbRecordsBtn";
             this.sbRecordsBtn.Size = new System.Drawing.Size(50, 50);
             this.sbRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -160,68 +131,12 @@
             this.sbLogoutBtn.TabStop = false;
             this.sbLogoutBtn.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
-            // listHeader
-            // 
-            this.listHeader.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.listHeader.Location = new System.Drawing.Point(401, 29);
-            this.listHeader.Name = "listHeader";
-            this.listHeader.Size = new System.Drawing.Size(492, 50);
-            this.listHeader.TabIndex = 26;
-            this.listHeader.Text = "COURSE LIST";
-            this.listHeader.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // listBG
-            // 
-            this.listBG.Image = ((System.Drawing.Image)(resources.GetObject("listBG.Image")));
-            this.listBG.Location = new System.Drawing.Point(89, 82);
-            this.listBG.Name = "listBG";
-            this.listBG.Size = new System.Drawing.Size(1163, 587);
-            this.listBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.listBG.TabIndex = 27;
-            this.listBG.TabStop = false;
-            // 
-            // enrollBtn
-            // 
-            this.enrollBtn.Image = ((System.Drawing.Image)(resources.GetObject("enrollBtn.Image")));
-            this.enrollBtn.Location = new System.Drawing.Point(1152, 18);
-            this.enrollBtn.Name = "enrollBtn";
-            this.enrollBtn.Size = new System.Drawing.Size(100, 50);
-            this.enrollBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.enrollBtn.TabIndex = 28;
-            this.enrollBtn.TabStop = false;
-            // 
-            // listMenu
-            // 
-            this.listMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
-            this.listMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listMenu.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.listMenu.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            this.listMenu.ForeColor = System.Drawing.Color.White;
-            this.listMenu.FormattingEnabled = true;
-            this.listMenu.ItemHeight = 50;
-            this.listMenu.Items.AddRange(new object[] {
-            "[DCIT50] Object Oriented Programming (LEC)",
-            "[GNED04] Mga Babasahin Hinggil sa Kasaysayan ng Pilipinas",
-            "[COSC60] Digital Logic",
-            "[MATH1] Analytic Geometry",
-            "[COSC55] Discrete Structures 2"});
-            this.listMenu.Location = new System.Drawing.Point(114, 95);
-            this.listMenu.Name = "listMenu";
-            this.listMenu.Size = new System.Drawing.Size(1112, 550);
-            this.listMenu.TabIndex = 29;
-            this.listMenu.DrawItem += new System.Windows.Forms.DrawItemEventHandler(this.listMenu_DrawItem);
-            this.listMenu.DoubleClick += new System.EventHandler(this.listMenu_DoubleClick);
-            // 
-            // Courses
+            // sidebar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
-            this.Controls.Add(this.listHeader);
-            this.Controls.Add(this.listMenu);
-            this.Controls.Add(this.enrollBtn);
-            this.Controls.Add(this.listBG);
             this.Controls.Add(this.sbTogBtn);
             this.Controls.Add(this.sbDashboardBtn);
             this.Controls.Add(this.sbStudentsBtn);
@@ -229,17 +144,15 @@
             this.Controls.Add(this.sbRecordsBtn);
             this.Controls.Add(this.sbLogoutBtn);
             this.Controls.Add(this.sbBG);
-            this.Controls.Add(this.timeLabel);
-            this.Controls.Add(this.clockIcon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Courses";
+            this.Name = "sidebar";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Students_FormClosed);
-            ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).EndInit();
+            this.Load += new System.EventHandler(this.Students_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbDashboardBtn)).EndInit();
@@ -247,16 +160,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbCoursesBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.listBG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.PictureBox clockIcon;
-        private System.Windows.Forms.Label timeLabel;
         private System.Windows.Forms.Timer time;
         private System.Windows.Forms.PictureBox sbBG;
         private System.Windows.Forms.PictureBox sbTogBtn;
@@ -265,10 +173,6 @@
         private System.Windows.Forms.PictureBox sbCoursesBtn;
         private System.Windows.Forms.PictureBox sbRecordsBtn;
         private System.Windows.Forms.PictureBox sbLogoutBtn;
-        private System.Windows.Forms.Label listHeader;
-        private System.Windows.Forms.PictureBox listBG;
-        private System.Windows.Forms.PictureBox enrollBtn;
-        public System.Windows.Forms.ListBox listMenu;
     }
 }
 

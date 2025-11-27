@@ -3,12 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Windows\\source\\git\\id-verification-system\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\sidebar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -19,20 +39,8 @@
       "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\students.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,20 +62,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 1,
+              "Title": "sidebar.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\sidebar.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\sidebar.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\sidebar.cs",
+              "RelativeToolTip": "id-verification-system\\sidebar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T15:11:26.376Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "sidebar.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\sidebar.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\sidebar.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\sidebar.cs [Design]",
+              "RelativeToolTip": "id-verification-system\\sidebar.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-27T15:10:54.123Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "Course_View.cs",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Course_View.cs",
               "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs",
               "RelativeToolTip": "id-verification-system\\Course_View.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-17T11:18:38.176Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Course_View.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Course_View.cs",
@@ -79,7 +112,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "Students.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Students.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Students.cs",
@@ -91,20 +124,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "Students.cs",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Students.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Students.cs",
               "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Students.cs",
               "RelativeToolTip": "id-verification-system\\Students.cs",
-              "ViewState": "AgIAAEgAAAAAAAAAAAA6wFsAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAiwFsAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T09:15:05.988Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 7,
               "Title": "Courses.cs [Design]",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Courses.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Courses.cs",
@@ -116,7 +149,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Courses.cs",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Courses.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Courses.cs",
@@ -141,7 +174,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Records.cs",
               "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Records.cs",
               "RelativeDocumentMoniker": "id-verification-system\\Records.cs",
