@@ -30,9 +30,9 @@
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Records));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
             this.clockIcon = new System.Windows.Forms.PictureBox();
             this.timeLabel = new System.Windows.Forms.Label();
             this.time = new System.Windows.Forms.Timer(this.components);
@@ -51,6 +51,18 @@
             this.StudentNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CourseNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sidePanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.spRecordsBtn = new System.Windows.Forms.PictureBox();
+            this.spCoursesBtn = new System.Windows.Forms.PictureBox();
+            this.spBackBtn = new System.Windows.Forms.PictureBox();
+            this.spStudentBtn = new System.Windows.Forms.PictureBox();
+            this.spUser = new System.Windows.Forms.Label();
+            this.spDashboardBtn = new System.Windows.Forms.PictureBox();
+            this.spUserIcon = new System.Windows.Forms.PictureBox();
+            this.spLogo = new System.Windows.Forms.PictureBox();
+            this.spContainer = new System.Windows.Forms.PictureBox();
+            this.spBG = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).BeginInit();
@@ -60,6 +72,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordsTable)).BeginInit();
+            this.sidePanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spRecordsBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spCoursesBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spBackBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spStudentBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spDashboardBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spUserIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spLogo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spContainer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spBG)).BeginInit();
             this.SuspendLayout();
             // 
             // clockIcon
@@ -106,6 +128,7 @@
             this.sbTogBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbTogBtn.TabIndex = 20;
             this.sbTogBtn.TabStop = false;
+            this.sbTogBtn.Click += new System.EventHandler(this.sbTogBtn_Click);
             // 
             // sbDashboardBtn
             // 
@@ -184,13 +207,13 @@
             this.recordsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.recordsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.recordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            this.recordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            this.recordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.recordsTable.ColumnHeadersHeight = 26;
             this.recordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.recordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -201,27 +224,27 @@
             this.CourseNameCol,
             this.RemarksCol});
             this.recordsTable.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.NullValue = "-";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.recordsTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle20.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle20.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle20.NullValue = "-";
+            dataGridViewCellStyle20.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle20.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle20.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.recordsTable.DefaultCellStyle = dataGridViewCellStyle20;
             this.recordsTable.GridColor = System.Drawing.Color.Black;
             this.recordsTable.Location = new System.Drawing.Point(89, 94);
             this.recordsTable.Name = "recordsTable";
             this.recordsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recordsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle21.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            dataGridViewCellStyle21.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle21.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle21.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle21.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recordsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle21;
             this.recordsTable.RowHeadersVisible = false;
             this.recordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.recordsTable.RowTemplate.Height = 26;
@@ -275,12 +298,160 @@
             this.RemarksCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.RemarksCol.Width = 130;
             // 
+            // sidePanel
+            // 
+            this.sidePanel.BackColor = System.Drawing.Color.Transparent;
+            this.sidePanel.Controls.Add(this.label1);
+            this.sidePanel.Controls.Add(this.spRecordsBtn);
+            this.sidePanel.Controls.Add(this.spCoursesBtn);
+            this.sidePanel.Controls.Add(this.spBackBtn);
+            this.sidePanel.Controls.Add(this.spStudentBtn);
+            this.sidePanel.Controls.Add(this.spUser);
+            this.sidePanel.Controls.Add(this.spDashboardBtn);
+            this.sidePanel.Controls.Add(this.spUserIcon);
+            this.sidePanel.Controls.Add(this.spLogo);
+            this.sidePanel.Controls.Add(this.spContainer);
+            this.sidePanel.Controls.Add(this.spBG);
+            this.sidePanel.ForeColor = System.Drawing.Color.Transparent;
+            this.sidePanel.Location = new System.Drawing.Point(0, 0);
+            this.sidePanel.Name = "sidePanel";
+            this.sidePanel.Size = new System.Drawing.Size(336, 681);
+            this.sidePanel.TabIndex = 38;
+            this.sidePanel.Visible = false;
+            // 
+            // label1
+            // 
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Underline);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(128, 597);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(73, 34);
+            this.label1.TabIndex = 36;
+            this.label1.Text = "Logout";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // spRecordsBtn
+            // 
+            this.spRecordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.spRecordsBtn.Image = ((System.Drawing.Image)(resources.GetObject("spRecordsBtn.Image")));
+            this.spRecordsBtn.Location = new System.Drawing.Point(58, 366);
+            this.spRecordsBtn.Name = "spRecordsBtn";
+            this.spRecordsBtn.Size = new System.Drawing.Size(214, 56);
+            this.spRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spRecordsBtn.TabIndex = 35;
+            this.spRecordsBtn.TabStop = false;
+            // 
+            // spCoursesBtn
+            // 
+            this.spCoursesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.spCoursesBtn.Image = ((System.Drawing.Image)(resources.GetObject("spCoursesBtn.Image")));
+            this.spCoursesBtn.Location = new System.Drawing.Point(58, 301);
+            this.spCoursesBtn.Name = "spCoursesBtn";
+            this.spCoursesBtn.Size = new System.Drawing.Size(214, 56);
+            this.spCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spCoursesBtn.TabIndex = 34;
+            this.spCoursesBtn.TabStop = false;
+            this.spCoursesBtn.Click += new System.EventHandler(this.sbCoursesBtn_Click);
+            // 
+            // spBackBtn
+            // 
+            this.spBackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.spBackBtn.Image = ((System.Drawing.Image)(resources.GetObject("spBackBtn.Image")));
+            this.spBackBtn.Location = new System.Drawing.Point(265, 28);
+            this.spBackBtn.Name = "spBackBtn";
+            this.spBackBtn.Size = new System.Drawing.Size(50, 50);
+            this.spBackBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spBackBtn.TabIndex = 28;
+            this.spBackBtn.TabStop = false;
+            this.spBackBtn.Click += new System.EventHandler(this.spBackBtn_Click);
+            // 
+            // spStudentBtn
+            // 
+            this.spStudentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.spStudentBtn.Image = ((System.Drawing.Image)(resources.GetObject("spStudentBtn.Image")));
+            this.spStudentBtn.Location = new System.Drawing.Point(58, 236);
+            this.spStudentBtn.Name = "spStudentBtn";
+            this.spStudentBtn.Size = new System.Drawing.Size(214, 56);
+            this.spStudentBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spStudentBtn.TabIndex = 33;
+            this.spStudentBtn.TabStop = false;
+            this.spStudentBtn.Click += new System.EventHandler(this.sbStudentsBtn_Click);
+            // 
+            // spUser
+            // 
+            this.spUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.spUser.Font = new System.Drawing.Font("Arial", 14F);
+            this.spUser.ForeColor = System.Drawing.Color.White;
+            this.spUser.Location = new System.Drawing.Point(86, 100);
+            this.spUser.Name = "spUser";
+            this.spUser.Size = new System.Drawing.Size(202, 34);
+            this.spUser.TabIndex = 30;
+            this.spUser.Text = "username";
+            this.spUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // spDashboardBtn
+            // 
+            this.spDashboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
+            this.spDashboardBtn.Image = ((System.Drawing.Image)(resources.GetObject("spDashboardBtn.Image")));
+            this.spDashboardBtn.Location = new System.Drawing.Point(58, 171);
+            this.spDashboardBtn.Name = "spDashboardBtn";
+            this.spDashboardBtn.Size = new System.Drawing.Size(214, 56);
+            this.spDashboardBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spDashboardBtn.TabIndex = 32;
+            this.spDashboardBtn.TabStop = false;
+            this.spDashboardBtn.Click += new System.EventHandler(this.sbDashboardBtn_Click);
+            // 
+            // spUserIcon
+            // 
+            this.spUserIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.spUserIcon.Image = ((System.Drawing.Image)(resources.GetObject("spUserIcon.Image")));
+            this.spUserIcon.Location = new System.Drawing.Point(44, 99);
+            this.spUserIcon.Name = "spUserIcon";
+            this.spUserIcon.Size = new System.Drawing.Size(35, 35);
+            this.spUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spUserIcon.TabIndex = 29;
+            this.spUserIcon.TabStop = false;
+            // 
+            // spLogo
+            // 
+            this.spLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.spLogo.Image = ((System.Drawing.Image)(resources.GetObject("spLogo.Image")));
+            this.spLogo.Location = new System.Drawing.Point(18, 20);
+            this.spLogo.Name = "spLogo";
+            this.spLogo.Size = new System.Drawing.Size(233, 62);
+            this.spLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spLogo.TabIndex = 27;
+            this.spLogo.TabStop = false;
+            // 
+            // spContainer
+            // 
+            this.spContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
+            this.spContainer.Image = ((System.Drawing.Image)(resources.GetObject("spContainer.Image")));
+            this.spContainer.Location = new System.Drawing.Point(44, 156);
+            this.spContainer.Name = "spContainer";
+            this.spContainer.Size = new System.Drawing.Size(244, 485);
+            this.spContainer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spContainer.TabIndex = 31;
+            this.spContainer.TabStop = false;
+            // 
+            // spBG
+            // 
+            this.spBG.Image = ((System.Drawing.Image)(resources.GetObject("spBG.Image")));
+            this.spBG.Location = new System.Drawing.Point(0, 0);
+            this.spBG.Name = "spBG";
+            this.spBG.Size = new System.Drawing.Size(336, 681);
+            this.spBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.spBG.TabIndex = 26;
+            this.spBG.TabStop = false;
+            // 
             // Records
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(1264, 681);
+            this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.recordsTable);
             this.Controls.Add(this.listHeader);
             this.Controls.Add(this.sbTogBtn);
@@ -310,6 +481,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.recordsTable)).EndInit();
+            this.sidePanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spRecordsBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spCoursesBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spBackBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spStudentBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spDashboardBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spUserIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spLogo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spContainer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.spBG)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -334,6 +515,18 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentNameCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CourseNameCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn RemarksCol;
+        private System.Windows.Forms.Panel sidePanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.PictureBox spRecordsBtn;
+        private System.Windows.Forms.PictureBox spCoursesBtn;
+        private System.Windows.Forms.PictureBox spBackBtn;
+        private System.Windows.Forms.PictureBox spStudentBtn;
+        private System.Windows.Forms.Label spUser;
+        private System.Windows.Forms.PictureBox spDashboardBtn;
+        private System.Windows.Forms.PictureBox spUserIcon;
+        private System.Windows.Forms.PictureBox spLogo;
+        private System.Windows.Forms.PictureBox spContainer;
+        private System.Windows.Forms.PictureBox spBG;
     }
 }
 

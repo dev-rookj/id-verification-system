@@ -92,5 +92,39 @@ namespace id_verification_system
                 cView.Show();
             }
         }
+
+        private void spBackBtn_Click(object sender, EventArgs e)
+        {
+            if (sidePanel.Visible)
+            {
+                sidePanel.Visible = false;
+
+                foreach (Control ctrl in this.Controls)
+                {
+                    ctrl.Enabled = true;
+                }
+            }
+        }
+
+        private void sbTogBtn_Click(object sender, EventArgs e)
+        {
+            if (!sidePanel.Visible)
+            {
+                sidePanel.Visible = true;
+
+                foreach (Control ctrl in this.Controls)
+                {
+                    if (ctrl != sidePanel)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+            }
+        }
+
+        private void enrollBtn_Click(object sender, EventArgs e)
+        {
+            new Add_Course().ShowDialog();
+        }
     }
 }

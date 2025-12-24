@@ -17,5 +17,10 @@ namespace id_verification_system
         {
             InitializeComponent();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            new Edit_Course().ShowDialog();
+        }
     }
 }

@@ -33,6 +33,8 @@
             this.courseName = new System.Windows.Forms.Label();
             this.courseTime = new System.Windows.Forms.Label();
             this.courseInstructor = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // infoLabel
@@ -78,12 +80,24 @@
             this.courseInstructor.Text = "Instructor: -";
             this.courseInstructor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(689, 455);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(147, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Course_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(848, 517);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.courseName);
             this.Controls.Add(this.courseTime);
             this.Controls.Add(this.courseInstructor);
@@ -96,6 +110,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -106,6 +121,7 @@
         public System.Windows.Forms.Label courseName;
         public System.Windows.Forms.Label courseTime;
         public System.Windows.Forms.Label courseInstructor;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -17,11 +17,135 @@ namespace id_verification_system
         {
             InitializeComponent();
             time.Start();
+            course();
+        }
+
+        public void course()
+        {
+            DateTime datetime = DateTime.Now;
+            DayOfWeek day = datetime.DayOfWeek;
+
+            switch (day)
+            {
+                case DayOfWeek.Monday:
+                    curClass.Text = "NO CLASSES";
+                    curTime.Text = "NO CLASSES";
+                    curStatus.Text = "NO CLASSES";
+
+                    break;
+
+                case DayOfWeek.Tuesday:
+                    if (datetime.Hour == 14 && datetime.Hour < 16 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "PATHFIT 3: PHYSICAL ACTIVITIES TOWWARDS HEALTH AND FITNESS I";
+                        curTime.Text = "2:00PM - 4:00PM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 16 && datetime.Hour < 18 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "INSY 50: FUNDAMENTALS OF INFORMATION SYSTEM";
+                        curTime.Text = "4:00PM - 6:00PM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else
+                    {
+                        curClass.Text = "NO CLASSES";
+                    }
+                    break;
+
+                case DayOfWeek.Wednesday:
+                    if (datetime.Hour == 9 && datetime.Hour < 11 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "COSC 55: DISCRETE STRUCTURES II";
+                        curTime.Text = "9:00AM - 11:00AM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 12 && datetime.Hour < 14 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "DCIT 50: OBJECT ORIENTED PROGRAMMING (LECTURE)";
+                        curTime.Text = "12:00PM - 2:00AM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 14 && datetime.Hour < 16 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "DCIT 50: OBJECT ORIENTED PROGRAMMING (LABORATORY)";
+                        curTime.Text = "2:00PM - 4:00PM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 16 && datetime.Hour < 18 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "GNED 04: MGA BABASAHIN HINGGIL SA KASAYSAYAN NG PILIPINAS";
+                        curTime.Text = "4:00PM - 6:00PM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else
+                    {
+                        curClass.Text = "NO CLASSES";
+                    }
+                    break;
+
+                case DayOfWeek.Thursday:
+                    curClass.Text = "NO CLASSES";
+                    curTime.Text = "NO CLASSES";
+                    curStatus.Text = "NO CLASSES";
+                    break;
+
+                case DayOfWeek.Friday:
+                    if (datetime.Hour == 7 && datetime.Hour < 9 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "MATH 1: ANALYTIC GEOMETRY";
+                        curTime.Text = "7:00AM - 9:00AM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 9 && datetime.Hour < 11 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "DCIT 24: INFORMATION MANAGEMENT (LECTURE)";
+                        curTime.Text = "9:00AM - 11:00AM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 12 && datetime.Hour < 14 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "DCIT 24: INFORMATION MANAGEMENT (LABORATORY)";
+                        curTime.Text = "12:00PM - 2:00PM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else
+                    {
+                        curClass.Text = "NO CLASSES";
+                    }
+                    break;
+
+                case DayOfWeek.Saturday:
+                    if (datetime.Hour == 7 && datetime.Hour < 9 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "COSC 60: DIGITAL LOGICC  DESIGN (LECTURE)";
+                        curTime.Text = "7:00AM - 9:00AM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else if (datetime.Hour == 9 && datetime.Hour < 11 && datetime.Minute <= 59)
+                    {
+                        curClass.Text = "COSC 60: DIGITAL LOGIC DESIGN (LABORATORY)";
+                        curTime.Text = "9:00AM - 11:00AM";
+                        curStatus.Text = "ONGOING";
+                    }
+                    else
+                    {
+                        curClass.Text = "NO CLASSES";
+                    }
+                    break;
+
+                case DayOfWeek.Sunday:
+                    curClass.Text = "NO CLASSES";
+                    curTime.Text = "NO CLASSES";
+                    curStatus.Text = "NO CLASSES";
+                    break;
+            }
         }
 
         private void time_Tick(object sender, EventArgs e)
         {
             timeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
+            course();
         }
 
         private void infoField_KeyDown(object sender, KeyEventArgs e)
@@ -75,6 +199,37 @@ namespace id_verification_system
         {
             Hide();
             new Records().Show();
+        }
+
+        private void sbTogBtn_Click(object sender, EventArgs e)
+        {
+            if(!sidePanel.Visible)
+            {
+                sidePanel.Visible = true;
+
+                foreach (Control ctrl in this.Controls)
+                {
+                    if (ctrl != sidePanel)
+                    {
+                        ctrl.Enabled = false;
+                    }
+                }
+            }
+        }
+
+        private void spBackBtn_Click(object sender, EventArgs e)
+        {
+            if (sidePanel.Visible)
+            {
+                sidePanel.Visible = false;
+
+                foreach (Control ctrl in this.Controls)
+                {
+                    ctrl.Enabled = true;
+                }
+
+                infoField.Focus();
+            }
         }
     }
 }
