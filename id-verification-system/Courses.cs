@@ -19,6 +19,21 @@ namespace id_verification_system
             time.Start();
         }
 
+        List<Course> courseList = new List<Course>();
+
+        public class Course
+        {
+            public string courseName { get; set; }
+            public string insName { get; set; }
+            public string timeSlot { get; set; }
+
+            public override string ToString()
+            {
+                return courseName;
+            }
+        }
+
+
         private void time_Tick(object sender, EventArgs e)
         {
             timeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
@@ -84,13 +99,13 @@ namespace id_verification_system
 
         private void listMenu_DoubleClick(object sender, EventArgs e)
         {
-            Course_View cView = new Course_View();
+            if (listMenu.SelectedItem == null) return;
 
-            if (listMenu.SelectedItem != null)
-            {
-                cView.courseName.Text = "Course Name: " + listMenu.SelectedItem.ToString();
-                cView.Show();
-            }
+            Course selectedCourse = (Course)listMenu.SelectedItem;
+
+            // PASS the selected course to the constructor
+            Course_View cView = new Course_View(selectedCourse);
+            cView.Show();
         }
 
         private void spBackBtn_Click(object sender, EventArgs e)
@@ -124,7 +139,14 @@ namespace id_verification_system
 
         private void enrollBtn_Click(object sender, EventArgs e)
         {
-            new Add_Course().ShowDialog();
+            Add_Course add = new Add_Course();
+
+            if (add.ShowDialog() == DialogResult.OK)
+            {
+                Course newCourse = add.NewCourse;
+                courseList.Add(newCourse);
+                listMenu.Items.Add(newCourse); // lalabas sa course list
+            }
         }
     }
 }
