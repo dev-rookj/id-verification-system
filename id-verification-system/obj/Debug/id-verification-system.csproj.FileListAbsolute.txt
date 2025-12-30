@@ -59,3 +59,15 @@ C:\Users\Zymonne Dwayne\OneDrive\Desktop\cspd\id-verification-system\id-verifica
 C:\Users\Zymonne Dwayne\OneDrive\Desktop\cspd\id-verification-system\id-verification-system\obj\Debug\id-verification-system.pdb
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Enroll_Student.resources
 C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Edit_Student.resources
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\systemDB.db
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\Dapper.dll
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\System.Data.SQLite.dll
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\Dapper.xml
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\System.Data.SQLite.xml
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id-verif.396A22EA.Up2Date
