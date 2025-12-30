@@ -34,7 +34,9 @@
             this.infoStudNum = new System.Windows.Forms.Label();
             this.infoName = new System.Windows.Forms.Label();
             this.infoAge = new System.Windows.Forms.Label();
+            this.infoEdit = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.infoPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoEdit)).BeginInit();
             this.SuspendLayout();
             // 
             // infoLabel
@@ -65,7 +67,7 @@
             this.infoStudNum.Name = "infoStudNum";
             this.infoStudNum.Size = new System.Drawing.Size(262, 40);
             this.infoStudNum.TabIndex = 2;
-            this.infoStudNum.Text = "Student No.: 202410647";
+            this.infoStudNum.Text = "Student No.: 202410000";
             this.infoStudNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infoName
@@ -88,12 +90,24 @@
             this.infoAge.Text = "Age: 69";
             this.infoAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // infoEdit
+            // 
+            this.infoEdit.Image = ((System.Drawing.Image)(resources.GetObject("infoEdit.Image")));
+            this.infoEdit.Location = new System.Drawing.Point(689, 455);
+            this.infoEdit.Name = "infoEdit";
+            this.infoEdit.Size = new System.Drawing.Size(147, 50);
+            this.infoEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.infoEdit.TabIndex = 6;
+            this.infoEdit.TabStop = false;
+            this.infoEdit.Click += new System.EventHandler(this.infoEdit_Click);
+            // 
             // Student_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(848, 517);
+            this.Controls.Add(this.infoEdit);
             this.Controls.Add(this.infoStudNum);
             this.Controls.Add(this.infoName);
             this.Controls.Add(this.infoAge);
@@ -108,6 +122,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
             ((System.ComponentModel.ISupportInitialize)(this.infoPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoEdit)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -119,6 +134,7 @@
         private System.Windows.Forms.Label infoStudNum;
         private System.Windows.Forms.Label infoName;
         private System.Windows.Forms.Label infoAge;
+        private System.Windows.Forms.PictureBox infoEdit;
     }
 }
 

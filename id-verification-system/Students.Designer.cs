@@ -212,6 +212,7 @@
             this.enrollBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.enrollBtn.TabIndex = 28;
             this.enrollBtn.TabStop = false;
+            this.enrollBtn.Click += new System.EventHandler(this.enrollBtn_Click);
             // 
             // listMenu
             // 

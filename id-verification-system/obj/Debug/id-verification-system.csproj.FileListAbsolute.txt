@@ -57,3 +57,5 @@ C:\Users\Zymonne Dwayne\OneDrive\Desktop\cspd\id-verification-system\id-verifica
 C:\Users\Zymonne Dwayne\OneDrive\Desktop\cspd\id-verification-system\id-verification-system\obj\Debug\id-verification-system.csproj.CoreCompileInputs.cache
 C:\Users\Zymonne Dwayne\OneDrive\Desktop\cspd\id-verification-system\id-verification-system\obj\Debug\id-verification-system.exe
 C:\Users\Zymonne Dwayne\OneDrive\Desktop\cspd\id-verification-system\id-verification-system\obj\Debug\id-verification-system.pdb
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Enroll_Student.resources
+C:\Users\Windows\source\git\id-verification-system\id-verification-system\obj\Debug\id_verification_system.Edit_Student.resources

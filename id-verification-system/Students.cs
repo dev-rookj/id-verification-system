@@ -123,5 +123,10 @@ namespace id_verification_system
                 }
             }
         }
+
+        private void enrollBtn_Click(object sender, EventArgs e)
+        {
+            new Enroll_Student().ShowDialog();
+        }
     }
 }
