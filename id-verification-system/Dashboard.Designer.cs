@@ -102,10 +102,9 @@
             // clockIcon
             // 
             this.clockIcon.Image = ((System.Drawing.Image)(resources.GetObject("clockIcon.Image")));
-            this.clockIcon.Location = new System.Drawing.Point(119, 16);
-            this.clockIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.clockIcon.Location = new System.Drawing.Point(89, 13);
             this.clockIcon.Name = "clockIcon";
-            this.clockIcon.Size = new System.Drawing.Size(64, 54);
+            this.clockIcon.Size = new System.Drawing.Size(48, 44);
             this.clockIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.clockIcon.TabIndex = 0;
             this.clockIcon.TabStop = false;
@@ -113,10 +112,9 @@
             // timeLabel
             // 
             this.timeLabel.Font = new System.Drawing.Font("Arial", 22F);
-            this.timeLabel.Location = new System.Drawing.Point(191, 17);
-            this.timeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.timeLabel.Location = new System.Drawing.Point(143, 14);
             this.timeLabel.Name = "timeLabel";
-            this.timeLabel.Size = new System.Drawing.Size(267, 53);
+            this.timeLabel.Size = new System.Drawing.Size(200, 43);
             this.timeLabel.TabIndex = 1;
             this.timeLabel.Text = "00:00PM";
             this.timeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -128,10 +126,9 @@
             // header
             // 
             this.header.Image = ((System.Drawing.Image)(resources.GetObject("header.Image")));
-            this.header.Location = new System.Drawing.Point(465, 17);
-            this.header.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.header.Location = new System.Drawing.Point(349, 14);
             this.header.Name = "header";
-            this.header.Size = new System.Drawing.Size(760, 182);
+            this.header.Size = new System.Drawing.Size(570, 148);
             this.header.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.header.TabIndex = 2;
             this.header.TabStop = false;
@@ -139,10 +136,9 @@
             // curClassLabelBG
             // 
             this.curClassLabelBG.Image = ((System.Drawing.Image)(resources.GetObject("curClassLabelBG.Image")));
-            this.curClassLabelBG.Location = new System.Drawing.Point(244, 231);
-            this.curClassLabelBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.curClassLabelBG.Location = new System.Drawing.Point(183, 188);
             this.curClassLabelBG.Name = "curClassLabelBG";
-            this.curClassLabelBG.Size = new System.Drawing.Size(299, 62);
+            this.curClassLabelBG.Size = new System.Drawing.Size(224, 50);
             this.curClassLabelBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.curClassLabelBG.TabIndex = 3;
             this.curClassLabelBG.TabStop = false;
@@ -150,10 +146,9 @@
             // curClassBG
             // 
             this.curClassBG.Image = ((System.Drawing.Image)(resources.GetObject("curClassBG.Image")));
-            this.curClassBG.Location = new System.Drawing.Point(568, 218);
-            this.curClassBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.curClassBG.Location = new System.Drawing.Point(426, 177);
             this.curClassBG.Name = "curClassBG";
-            this.curClassBG.Size = new System.Drawing.Size(972, 86);
+            this.curClassBG.Size = new System.Drawing.Size(729, 70);
             this.curClassBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.curClassBG.TabIndex = 4;
             this.curClassBG.TabStop = false;
@@ -163,10 +158,9 @@
             this.curClassLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
             this.curClassLabel.Font = new System.Drawing.Font("Arial", 18F);
             this.curClassLabel.ForeColor = System.Drawing.Color.White;
-            this.curClassLabel.Location = new System.Drawing.Point(260, 239);
-            this.curClassLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.curClassLabel.Location = new System.Drawing.Point(195, 194);
             this.curClassLabel.Name = "curClassLabel";
-            this.curClassLabel.Size = new System.Drawing.Size(263, 44);
+            this.curClassLabel.Size = new System.Drawing.Size(197, 36);
             this.curClassLabel.TabIndex = 5;
             this.curClassLabel.Text = "Current Class";
             this.curClassLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -176,10 +170,9 @@
             this.curClass.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.curClass.Font = new System.Drawing.Font("Arial", 18F);
             this.curClass.ForeColor = System.Drawing.Color.White;
-            this.curClass.Location = new System.Drawing.Point(589, 239);
-            this.curClass.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.curClass.Location = new System.Drawing.Point(442, 194);
             this.curClass.Name = "curClass";
-            this.curClass.Size = new System.Drawing.Size(924, 44);
+            this.curClass.Size = new System.Drawing.Size(693, 36);
             this.curClass.TabIndex = 6;
             this.curClass.Text = "[SUBJCODE] Subject Title";
             this.curClass.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -187,10 +180,9 @@
             // curTimeLabelBG
             // 
             this.curTimeLabelBG.Image = ((System.Drawing.Image)(resources.GetObject("curTimeLabelBG.Image")));
-            this.curTimeLabelBG.Location = new System.Drawing.Point(245, 342);
-            this.curTimeLabelBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.curTimeLabelBG.Location = new System.Drawing.Point(184, 278);
             this.curTimeLabelBG.Name = "curTimeLabelBG";
-            this.curTimeLabelBG.Size = new System.Drawing.Size(171, 62);
+            this.curTimeLabelBG.Size = new System.Drawing.Size(128, 50);
             this.curTimeLabelBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.curTimeLabelBG.TabIndex = 7;
             this.curTimeLabelBG.TabStop = false;
@@ -200,10 +192,9 @@
             this.curTimeLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
             this.curTimeLabel.Font = new System.Drawing.Font("Arial", 18F);
             this.curTimeLabel.ForeColor = System.Drawing.Color.White;
-            this.curTimeLabel.Location = new System.Drawing.Point(259, 350);
-            this.curTimeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.curTimeLabel.Location = new System.Drawing.Point(194, 284);
             this.curTimeLabel.Name = "curTimeLabel";
-            this.curTimeLabel.Size = new System.Drawing.Size(141, 44);
+            this.curTimeLabel.Size = new System.Drawing.Size(106, 36);
             this.curTimeLabel.TabIndex = 8;
             this.curTimeLabel.Text = "Time";
             this.curTimeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -211,10 +202,9 @@
             // curTimeBG
             // 
             this.curTimeBG.Image = ((System.Drawing.Image)(resources.GetObject("curTimeBG.Image")));
-            this.curTimeBG.Location = new System.Drawing.Point(445, 330);
-            this.curTimeBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.curTimeBG.Location = new System.Drawing.Point(334, 268);
             this.curTimeBG.Name = "curTimeBG";
-            this.curTimeBG.Size = new System.Drawing.Size(433, 86);
+            this.curTimeBG.Size = new System.Drawing.Size(325, 70);
             this.curTimeBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.curTimeBG.TabIndex = 9;
             this.curTimeBG.TabStop = false;
@@ -224,10 +214,9 @@
             this.curTime.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.curTime.Font = new System.Drawing.Font("Arial", 18F);
             this.curTime.ForeColor = System.Drawing.Color.White;
-            this.curTime.Location = new System.Drawing.Point(459, 352);
-            this.curTime.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.curTime.Location = new System.Drawing.Point(344, 286);
             this.curTime.Name = "curTime";
-            this.curTime.Size = new System.Drawing.Size(408, 44);
+            this.curTime.Size = new System.Drawing.Size(306, 36);
             this.curTime.TabIndex = 10;
             this.curTime.Text = "Subject Time";
             this.curTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -237,10 +226,9 @@
             this.curStatusLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
             this.curStatusLabel.Font = new System.Drawing.Font("Arial", 18F);
             this.curStatusLabel.ForeColor = System.Drawing.Color.White;
-            this.curStatusLabel.Location = new System.Drawing.Point(931, 350);
-            this.curStatusLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.curStatusLabel.Location = new System.Drawing.Point(698, 284);
             this.curStatusLabel.Name = "curStatusLabel";
-            this.curStatusLabel.Size = new System.Drawing.Size(141, 44);
+            this.curStatusLabel.Size = new System.Drawing.Size(106, 36);
             this.curStatusLabel.TabIndex = 12;
             this.curStatusLabel.Text = "Status";
             this.curStatusLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -248,10 +236,9 @@
             // curStatusLabelBG
             // 
             this.curStatusLabelBG.Image = ((System.Drawing.Image)(resources.GetObject("curStatusLabelBG.Image")));
-            this.curStatusLabelBG.Location = new System.Drawing.Point(917, 342);
-            this.curStatusLabelBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.curStatusLabelBG.Location = new System.Drawing.Point(688, 278);
             this.curStatusLabelBG.Name = "curStatusLabelBG";
-            this.curStatusLabelBG.Size = new System.Drawing.Size(171, 62);
+            this.curStatusLabelBG.Size = new System.Drawing.Size(128, 50);
             this.curStatusLabelBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.curStatusLabelBG.TabIndex = 11;
             this.curStatusLabelBG.TabStop = false;
@@ -261,10 +248,9 @@
             this.curStatus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.curStatus.Font = new System.Drawing.Font("Arial", 18F);
             this.curStatus.ForeColor = System.Drawing.Color.White;
-            this.curStatus.Location = new System.Drawing.Point(1120, 352);
-            this.curStatus.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.curStatus.Location = new System.Drawing.Point(840, 286);
             this.curStatus.Name = "curStatus";
-            this.curStatus.Size = new System.Drawing.Size(408, 44);
+            this.curStatus.Size = new System.Drawing.Size(306, 36);
             this.curStatus.TabIndex = 14;
             this.curStatus.Text = "Ongoing/Up Next";
             this.curStatus.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -272,10 +258,9 @@
             // curStatusBG
             // 
             this.curStatusBG.Image = ((System.Drawing.Image)(resources.GetObject("curStatusBG.Image")));
-            this.curStatusBG.Location = new System.Drawing.Point(1107, 330);
-            this.curStatusBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.curStatusBG.Location = new System.Drawing.Point(830, 268);
             this.curStatusBG.Name = "curStatusBG";
-            this.curStatusBG.Size = new System.Drawing.Size(433, 86);
+            this.curStatusBG.Size = new System.Drawing.Size(325, 70);
             this.curStatusBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.curStatusBG.TabIndex = 13;
             this.curStatusBG.TabStop = false;
@@ -283,10 +268,9 @@
             // infoBG
             // 
             this.infoBG.Image = ((System.Drawing.Image)(resources.GetObject("infoBG.Image")));
-            this.infoBG.Location = new System.Drawing.Point(245, 434);
-            this.infoBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.infoBG.Location = new System.Drawing.Point(184, 353);
             this.infoBG.Name = "infoBG";
-            this.infoBG.Size = new System.Drawing.Size(1295, 334);
+            this.infoBG.Size = new System.Drawing.Size(971, 271);
             this.infoBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.infoBG.TabIndex = 15;
             this.infoBG.TabStop = false;
@@ -295,10 +279,9 @@
             // 
             this.infoFieldBG.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.infoFieldBG.Image = ((System.Drawing.Image)(resources.GetObject("infoFieldBG.Image")));
-            this.infoFieldBG.Location = new System.Drawing.Point(701, 447);
-            this.infoFieldBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.infoFieldBG.Location = new System.Drawing.Point(526, 363);
             this.infoFieldBG.Name = "infoFieldBG";
-            this.infoFieldBG.Size = new System.Drawing.Size(395, 74);
+            this.infoFieldBG.Size = new System.Drawing.Size(296, 60);
             this.infoFieldBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.infoFieldBG.TabIndex = 16;
             this.infoFieldBG.TabStop = false;
@@ -308,10 +291,9 @@
             this.infoField.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
             this.infoField.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.infoField.Font = new System.Drawing.Font("Arial", 18F);
-            this.infoField.Location = new System.Drawing.Point(724, 464);
-            this.infoField.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.infoField.Location = new System.Drawing.Point(543, 377);
             this.infoField.Name = "infoField";
-            this.infoField.Size = new System.Drawing.Size(348, 35);
+            this.infoField.Size = new System.Drawing.Size(261, 28);
             this.infoField.TabIndex = 17;
             this.infoField.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.infoField.KeyDown += new System.Windows.Forms.KeyEventHandler(this.infoField_KeyDown);
@@ -321,10 +303,9 @@
             this.infoText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(117)))), ((int)(((byte)(194)))), ((int)(((byte)(108)))));
             this.infoText.Font = new System.Drawing.Font("Arial", 18F);
             this.infoText.ForeColor = System.Drawing.Color.White;
-            this.infoText.Location = new System.Drawing.Point(584, 538);
-            this.infoText.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.infoText.Location = new System.Drawing.Point(438, 437);
             this.infoText.Name = "infoText";
-            this.infoText.Size = new System.Drawing.Size(640, 212);
+            this.infoText.Size = new System.Drawing.Size(480, 172);
             this.infoText.TabIndex = 18;
             this.infoText.Text = "Scan your ID...";
             this.infoText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -338,9 +319,8 @@
             // 
             this.sbBG.Image = ((System.Drawing.Image)(resources.GetObject("sbBG.Image")));
             this.sbBG.Location = new System.Drawing.Point(0, 1);
-            this.sbBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sbBG.Name = "sbBG";
-            this.sbBG.Size = new System.Drawing.Size(95, 838);
+            this.sbBG.Size = new System.Drawing.Size(71, 681);
             this.sbBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbBG.TabIndex = 19;
             this.sbBG.TabStop = false;
@@ -349,10 +329,9 @@
             // 
             this.sbTogBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbTogBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbTogBtn.Image")));
-            this.sbTogBtn.Location = new System.Drawing.Point(13, 22);
-            this.sbTogBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbTogBtn.Location = new System.Drawing.Point(10, 18);
             this.sbTogBtn.Name = "sbTogBtn";
-            this.sbTogBtn.Size = new System.Drawing.Size(67, 62);
+            this.sbTogBtn.Size = new System.Drawing.Size(50, 50);
             this.sbTogBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbTogBtn.TabIndex = 20;
             this.sbTogBtn.TabStop = false;
@@ -362,10 +341,9 @@
             // 
             this.sbDashboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbDashboardBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbDashboardBtn.Image")));
-            this.sbDashboardBtn.Location = new System.Drawing.Point(13, 149);
-            this.sbDashboardBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbDashboardBtn.Location = new System.Drawing.Point(10, 121);
             this.sbDashboardBtn.Name = "sbDashboardBtn";
-            this.sbDashboardBtn.Size = new System.Drawing.Size(67, 62);
+            this.sbDashboardBtn.Size = new System.Drawing.Size(50, 50);
             this.sbDashboardBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbDashboardBtn.TabIndex = 21;
             this.sbDashboardBtn.TabStop = false;
@@ -374,10 +352,9 @@
             // 
             this.sbStudentsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbStudentsBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbStudentsBtn.Image")));
-            this.sbStudentsBtn.Location = new System.Drawing.Point(13, 231);
-            this.sbStudentsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbStudentsBtn.Location = new System.Drawing.Point(10, 188);
             this.sbStudentsBtn.Name = "sbStudentsBtn";
-            this.sbStudentsBtn.Size = new System.Drawing.Size(67, 62);
+            this.sbStudentsBtn.Size = new System.Drawing.Size(50, 50);
             this.sbStudentsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbStudentsBtn.TabIndex = 22;
             this.sbStudentsBtn.TabStop = false;
@@ -387,10 +364,9 @@
             // 
             this.sbCoursesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbCoursesBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbCoursesBtn.Image")));
-            this.sbCoursesBtn.Location = new System.Drawing.Point(13, 314);
-            this.sbCoursesBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbCoursesBtn.Location = new System.Drawing.Point(10, 255);
             this.sbCoursesBtn.Name = "sbCoursesBtn";
-            this.sbCoursesBtn.Size = new System.Drawing.Size(67, 62);
+            this.sbCoursesBtn.Size = new System.Drawing.Size(50, 50);
             this.sbCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbCoursesBtn.TabIndex = 23;
             this.sbCoursesBtn.TabStop = false;
@@ -400,10 +376,9 @@
             // 
             this.sbRecordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbRecordsBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbRecordsBtn.Image")));
-            this.sbRecordsBtn.Location = new System.Drawing.Point(13, 399);
-            this.sbRecordsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbRecordsBtn.Location = new System.Drawing.Point(10, 324);
             this.sbRecordsBtn.Name = "sbRecordsBtn";
-            this.sbRecordsBtn.Size = new System.Drawing.Size(67, 62);
+            this.sbRecordsBtn.Size = new System.Drawing.Size(50, 50);
             this.sbRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbRecordsBtn.TabIndex = 24;
             this.sbRecordsBtn.TabStop = false;
@@ -413,10 +388,9 @@
             // 
             this.sbLogoutBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.sbLogoutBtn.Image = ((System.Drawing.Image)(resources.GetObject("sbLogoutBtn.Image")));
-            this.sbLogoutBtn.Location = new System.Drawing.Point(13, 762);
-            this.sbLogoutBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.sbLogoutBtn.Location = new System.Drawing.Point(10, 619);
             this.sbLogoutBtn.Name = "sbLogoutBtn";
-            this.sbLogoutBtn.Size = new System.Drawing.Size(67, 62);
+            this.sbLogoutBtn.Size = new System.Drawing.Size(50, 50);
             this.sbLogoutBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.sbLogoutBtn.TabIndex = 25;
             this.sbLogoutBtn.TabStop = false;
@@ -438,9 +412,8 @@
             this.sidePanel.Controls.Add(this.spBG);
             this.sidePanel.ForeColor = System.Drawing.Color.Transparent;
             this.sidePanel.Location = new System.Drawing.Point(0, 0);
-            this.sidePanel.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.sidePanel.Name = "sidePanel";
-            this.sidePanel.Size = new System.Drawing.Size(448, 838);
+            this.sidePanel.Size = new System.Drawing.Size(336, 681);
             this.sidePanel.TabIndex = 37;
             this.sidePanel.Visible = false;
             // 
@@ -449,10 +422,9 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
             this.label1.Font = new System.Drawing.Font("Arial", 14F, System.Drawing.FontStyle.Underline);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(171, 735);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(128, 597);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(97, 42);
+            this.label1.Size = new System.Drawing.Size(73, 34);
             this.label1.TabIndex = 36;
             this.label1.Text = "Logout";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -462,10 +434,9 @@
             // 
             this.spRecordsBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
             this.spRecordsBtn.Image = ((System.Drawing.Image)(resources.GetObject("spRecordsBtn.Image")));
-            this.spRecordsBtn.Location = new System.Drawing.Point(77, 450);
-            this.spRecordsBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spRecordsBtn.Location = new System.Drawing.Point(58, 366);
             this.spRecordsBtn.Name = "spRecordsBtn";
-            this.spRecordsBtn.Size = new System.Drawing.Size(285, 69);
+            this.spRecordsBtn.Size = new System.Drawing.Size(214, 56);
             this.spRecordsBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spRecordsBtn.TabIndex = 35;
             this.spRecordsBtn.TabStop = false;
@@ -474,10 +445,9 @@
             // 
             this.spCoursesBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
             this.spCoursesBtn.Image = ((System.Drawing.Image)(resources.GetObject("spCoursesBtn.Image")));
-            this.spCoursesBtn.Location = new System.Drawing.Point(77, 370);
-            this.spCoursesBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spCoursesBtn.Location = new System.Drawing.Point(58, 301);
             this.spCoursesBtn.Name = "spCoursesBtn";
-            this.spCoursesBtn.Size = new System.Drawing.Size(285, 69);
+            this.spCoursesBtn.Size = new System.Drawing.Size(214, 56);
             this.spCoursesBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spCoursesBtn.TabIndex = 34;
             this.spCoursesBtn.TabStop = false;
@@ -487,10 +457,9 @@
             // 
             this.spBackBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.spBackBtn.Image = ((System.Drawing.Image)(resources.GetObject("spBackBtn.Image")));
-            this.spBackBtn.Location = new System.Drawing.Point(353, 34);
-            this.spBackBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spBackBtn.Location = new System.Drawing.Point(265, 28);
             this.spBackBtn.Name = "spBackBtn";
-            this.spBackBtn.Size = new System.Drawing.Size(67, 62);
+            this.spBackBtn.Size = new System.Drawing.Size(50, 50);
             this.spBackBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spBackBtn.TabIndex = 28;
             this.spBackBtn.TabStop = false;
@@ -500,10 +469,9 @@
             // 
             this.spStudentBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
             this.spStudentBtn.Image = ((System.Drawing.Image)(resources.GetObject("spStudentBtn.Image")));
-            this.spStudentBtn.Location = new System.Drawing.Point(77, 290);
-            this.spStudentBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spStudentBtn.Location = new System.Drawing.Point(58, 236);
             this.spStudentBtn.Name = "spStudentBtn";
-            this.spStudentBtn.Size = new System.Drawing.Size(285, 69);
+            this.spStudentBtn.Size = new System.Drawing.Size(214, 56);
             this.spStudentBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spStudentBtn.TabIndex = 33;
             this.spStudentBtn.TabStop = false;
@@ -514,10 +482,9 @@
             this.spUser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.spUser.Font = new System.Drawing.Font("Arial", 14F);
             this.spUser.ForeColor = System.Drawing.Color.White;
-            this.spUser.Location = new System.Drawing.Point(115, 123);
-            this.spUser.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.spUser.Location = new System.Drawing.Point(86, 100);
             this.spUser.Name = "spUser";
-            this.spUser.Size = new System.Drawing.Size(269, 42);
+            this.spUser.Size = new System.Drawing.Size(202, 34);
             this.spUser.TabIndex = 30;
             this.spUser.Text = "admin";
             this.spUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -526,10 +493,9 @@
             // 
             this.spDashboardBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
             this.spDashboardBtn.Image = ((System.Drawing.Image)(resources.GetObject("spDashboardBtn.Image")));
-            this.spDashboardBtn.Location = new System.Drawing.Point(77, 210);
-            this.spDashboardBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spDashboardBtn.Location = new System.Drawing.Point(58, 171);
             this.spDashboardBtn.Name = "spDashboardBtn";
-            this.spDashboardBtn.Size = new System.Drawing.Size(285, 69);
+            this.spDashboardBtn.Size = new System.Drawing.Size(214, 56);
             this.spDashboardBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spDashboardBtn.TabIndex = 32;
             this.spDashboardBtn.TabStop = false;
@@ -538,10 +504,9 @@
             // 
             this.spUserIcon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.spUserIcon.Image = ((System.Drawing.Image)(resources.GetObject("spUserIcon.Image")));
-            this.spUserIcon.Location = new System.Drawing.Point(59, 122);
-            this.spUserIcon.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spUserIcon.Location = new System.Drawing.Point(44, 99);
             this.spUserIcon.Name = "spUserIcon";
-            this.spUserIcon.Size = new System.Drawing.Size(47, 43);
+            this.spUserIcon.Size = new System.Drawing.Size(35, 35);
             this.spUserIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spUserIcon.TabIndex = 29;
             this.spUserIcon.TabStop = false;
@@ -550,10 +515,9 @@
             // 
             this.spLogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.spLogo.Image = ((System.Drawing.Image)(resources.GetObject("spLogo.Image")));
-            this.spLogo.Location = new System.Drawing.Point(24, 25);
-            this.spLogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spLogo.Location = new System.Drawing.Point(18, 20);
             this.spLogo.Name = "spLogo";
-            this.spLogo.Size = new System.Drawing.Size(311, 76);
+            this.spLogo.Size = new System.Drawing.Size(233, 62);
             this.spLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spLogo.TabIndex = 27;
             this.spLogo.TabStop = false;
@@ -562,10 +526,9 @@
             // 
             this.spContainer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(208)))), ((int)(((byte)(149)))));
             this.spContainer.Image = ((System.Drawing.Image)(resources.GetObject("spContainer.Image")));
-            this.spContainer.Location = new System.Drawing.Point(59, 192);
-            this.spContainer.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.spContainer.Location = new System.Drawing.Point(44, 156);
             this.spContainer.Name = "spContainer";
-            this.spContainer.Size = new System.Drawing.Size(325, 597);
+            this.spContainer.Size = new System.Drawing.Size(244, 485);
             this.spContainer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spContainer.TabIndex = 31;
             this.spContainer.TabStop = false;
@@ -574,19 +537,18 @@
             // 
             this.spBG.Image = ((System.Drawing.Image)(resources.GetObject("spBG.Image")));
             this.spBG.Location = new System.Drawing.Point(0, 0);
-            this.spBG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.spBG.Name = "spBG";
-            this.spBG.Size = new System.Drawing.Size(448, 838);
+            this.spBG.Size = new System.Drawing.Size(336, 681);
             this.spBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spBG.TabIndex = 26;
             this.spBG.TabStop = false;
             // 
             // Dashboard
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            this.ClientSize = new System.Drawing.Size(1685, 838);
+            this.ClientSize = new System.Drawing.Size(1264, 681);
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.sbTogBtn);
             this.Controls.Add(this.sbDashboardBtn);
@@ -616,8 +578,8 @@
             this.Controls.Add(this.clockIcon);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
+            this.MinimumSize = new System.Drawing.Size(1280, 720);
             this.Name = "Dashboard";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
