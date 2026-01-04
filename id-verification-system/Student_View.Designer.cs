@@ -67,7 +67,7 @@
             this.infoStudNum.Name = "infoStudNum";
             this.infoStudNum.Size = new System.Drawing.Size(262, 40);
             this.infoStudNum.TabIndex = 2;
-            this.infoStudNum.Text = "Student No.: 202410000";
+            this.infoStudNum.Text = "Student No.: ";
             this.infoStudNum.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infoName
@@ -77,7 +77,7 @@
             this.infoName.Name = "infoName";
             this.infoName.Size = new System.Drawing.Size(303, 40);
             this.infoName.TabIndex = 3;
-            this.infoName.Text = "Name: Abrenica, Aljur";
+            this.infoName.Text = "Name: ";
             this.infoName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infoAge
@@ -87,7 +87,7 @@
             this.infoAge.Name = "infoAge";
             this.infoAge.Size = new System.Drawing.Size(303, 40);
             this.infoAge.TabIndex = 4;
-            this.infoAge.Text = "Age: 69";
+            this.infoAge.Text = "Age:";
             this.infoAge.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // infoEdit
@@ -121,6 +121,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
+            this.Load += new System.EventHandler(this.Student_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infoPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoEdit)).EndInit();
             this.ResumeLayout(false);
@@ -130,11 +131,11 @@
         #endregion
 
         private System.Windows.Forms.Label infoLabel;
-        private System.Windows.Forms.PictureBox infoPhoto;
-        private System.Windows.Forms.Label infoStudNum;
-        private System.Windows.Forms.Label infoName;
-        private System.Windows.Forms.Label infoAge;
         private System.Windows.Forms.PictureBox infoEdit;
+        public System.Windows.Forms.PictureBox infoPhoto;
+        public System.Windows.Forms.Label infoStudNum;
+        public System.Windows.Forms.Label infoName;
+        public System.Windows.Forms.Label infoAge;
     }
 }
 

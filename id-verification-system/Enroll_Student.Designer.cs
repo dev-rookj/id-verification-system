@@ -45,6 +45,7 @@
             this.stPhotoBG = new System.Windows.Forms.PictureBox();
             this.stSelectPhoto = new System.Windows.Forms.OpenFileDialog();
             this.stPhotoBtn = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.stIDLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stIDBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.stNameLabel)).BeginInit();
@@ -169,17 +170,18 @@
             this.saveBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.saveBtn.TabIndex = 17;
             this.saveBtn.TabStop = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // stPhotoDirectory
             // 
             this.stPhotoDirectory.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
             this.stPhotoDirectory.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.stPhotoDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.stPhotoDirectory.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F);
             this.stPhotoDirectory.ForeColor = System.Drawing.Color.White;
-            this.stPhotoDirectory.Location = new System.Drawing.Point(468, 361);
+            this.stPhotoDirectory.Location = new System.Drawing.Point(468, 368);
             this.stPhotoDirectory.Name = "stPhotoDirectory";
             this.stPhotoDirectory.ReadOnly = true;
-            this.stPhotoDirectory.Size = new System.Drawing.Size(274, 37);
+            this.stPhotoDirectory.Size = new System.Drawing.Size(274, 22);
             this.stPhotoDirectory.TabIndex = 20;
             // 
             // stPhotoLabel
@@ -211,7 +213,7 @@
             // 
             this.stPhotoBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
             this.stPhotoBtn.Image = ((System.Drawing.Image)(resources.GetObject("stPhotoBtn.Image")));
-            this.stPhotoBtn.Location = new System.Drawing.Point(335, 361);
+            this.stPhotoBtn.Location = new System.Drawing.Point(335, 350);
             this.stPhotoBtn.Name = "stPhotoBtn";
             this.stPhotoBtn.Size = new System.Drawing.Size(121, 37);
             this.stPhotoBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -219,12 +221,25 @@
             this.stPhotoBtn.TabStop = false;
             this.stPhotoBtn.Click += new System.EventHandler(this.stPhotoBtn_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
+            this.label1.Font = new System.Drawing.Font("Arial", 9F);
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(332, 395);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(125, 15);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "*Image should be 1:1";
+            // 
             // Enroll_Student
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(848, 517);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.saveBtn);
             this.Controls.Add(this.stID);
             this.Controls.Add(this.stIDLabel);
@@ -281,6 +296,7 @@
         private System.Windows.Forms.PictureBox stPhotoBG;
         private System.Windows.Forms.OpenFileDialog stSelectPhoto;
         private System.Windows.Forms.PictureBox stPhotoBtn;
+        private System.Windows.Forms.Label label1;
     }
 }
 

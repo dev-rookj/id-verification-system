@@ -169,6 +169,7 @@
             this.saveBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.saveBtn.TabIndex = 17;
             this.saveBtn.TabStop = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // stPhotoDirectory
             // 

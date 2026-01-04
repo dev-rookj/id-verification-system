@@ -32,6 +32,11 @@ namespace id_verification_system
                 stPhotoDirectory.Text = "Photo uploaded!";
             }
         }
+
+        private void saveBtn_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

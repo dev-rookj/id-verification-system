@@ -485,7 +485,7 @@
             this.spUser.Name = "spUser";
             this.spUser.Size = new System.Drawing.Size(202, 34);
             this.spUser.TabIndex = 30;
-            this.spUser.Text = "username";
+            this.spUser.Text = "admin";
             this.spUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // spDashboardBtn
