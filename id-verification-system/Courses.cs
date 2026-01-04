@@ -41,7 +41,15 @@ namespace id_verification_system
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            new Logout().ShowDialog();
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MainMenu menu = new MainMenu();
+                menu.Show();
+
+                this.Hide();
+            }
         }
 
         private void sbDashboardBtn_Click(object sender, EventArgs e)
@@ -146,6 +154,19 @@ namespace id_verification_system
                 Course newCourse = add.NewCourse;
                 courseList.Add(newCourse);
                 listMenu.Items.Add(newCourse); // lalabas sa course list
+            }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
+            {
+                MainMenu menu = new MainMenu();
+                menu.Show();
+
+                this.Hide();
             }
         }
     }
