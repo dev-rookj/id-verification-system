@@ -144,7 +144,63 @@ namespace id_verification_system
 
         private void infoEdit_Click(object sender, EventArgs e)
         {
-            new Edit_Student().ShowDialog();
+            // Release any lock from infoPhoto before opening Edit_Student
+            if (infoPhoto.Image != null)
+            {
+                infoPhoto.Image.Dispose();
+                infoPhoto.Image = null;
+            }
+
+            if (string.IsNullOrEmpty(currentStudentId))
+            {
+                MessageBox.Show("No student selected to edit.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string studentAge = "";
+            string photoPath = "";
+
+            try
+            {
+                string connString = "Data Source=systemDB.db;";
+                using (SQLiteConnection conn = new SQLiteConnection(connString))
+                {
+                    conn.Open();
+                    string query = "SELECT age, photo_directory FROM students WHERE student_id = @Id";
+                    using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@Id", currentStudentId);
+                        using (SQLiteDataReader reader = cmd.ExecuteReader())
+                        {
+                            if (reader.Read())
+                            {
+                                studentAge = reader["age"].ToString();
+                                photoPath = reader["photo_directory"].ToString();
+                            }
+                        }
+                    }
+                }
+
+                // Open Edit_Student form with current info
+                Edit_Student editForm = new Edit_Student(currentStudentId, currentStudentName, studentAge, photoPath);
+                editForm.ShowDialog();
+
+                string updatedPhotoPath = Path.Combine(Application.StartupPath, $"photos\\{currentStudentId}.jpg");
+                if (File.Exists(updatedPhotoPath))
+                {
+                    // Load without locking the file
+                    using (FileStream fs = new FileStream(updatedPhotoPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+                    using (Image img = Image.FromStream(fs))
+                    {
+                        infoPhoto.Image = new Bitmap(img);
+                    }
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error loading student info: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void Student_View_Load(object sender, EventArgs e)
