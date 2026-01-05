@@ -60,7 +60,6 @@ namespace id_verification_system
             {
                 MainMenu menu = new MainMenu();
                 menu.Show();
-
                 this.Hide();
             }
         }
@@ -125,7 +124,7 @@ namespace id_verification_system
 
         private void listMenu_DoubleClick(object sender, EventArgs e)
         {
-            if (listMenu.SelectedItem != null)
+            /*if (listMenu.SelectedItem != null)
             {
                 // Split "ID - Name" back into parts
                 string selectedItem = listMenu.SelectedItem.ToString();
@@ -137,8 +136,21 @@ namespace id_verification_system
                 // Pass ID (safer than name) to Student_View
                 Student_View viewForm = new Student_View(studentId);
                 viewForm.ShowDialog();
-            }
+            }*/
 
+            if (listMenu.SelectedItem == null) return;
+
+            string selected = listMenu.SelectedItem.ToString();
+            string[] parts = selected.Split(new[] { '-' }, 2);
+
+            if (parts.Length < 2) return;
+
+            string selectedId = parts[0].Trim();
+            string selectedName = parts[1].Trim();
+
+            // Pass ID and Name into Student_View
+            Student_View view = new Student_View(selectedId, selectedName);
+            view.ShowDialog();
         }
 
         private void spBackBtn_Click(object sender, EventArgs e)
@@ -186,6 +198,12 @@ namespace id_verification_system
 
                 this.Hide();
             }
+        }
+
+        private void refreshBtn_Click(object sender, EventArgs e)
+        {
+            LoadStudents();
+            listMenu.Refresh();
         }
     }
 }

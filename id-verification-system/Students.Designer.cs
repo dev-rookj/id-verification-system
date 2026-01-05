@@ -56,6 +56,7 @@
             this.spLogo = new System.Windows.Forms.PictureBox();
             this.spContainer = new System.Windows.Forms.PictureBox();
             this.spBG = new System.Windows.Forms.PictureBox();
+            this.refreshBtn = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).BeginInit();
@@ -76,6 +77,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spContainer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spBG)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // clockIcon
@@ -378,6 +380,17 @@
             this.spBG.TabIndex = 26;
             this.spBG.TabStop = false;
             // 
+            // refreshBtn
+            // 
+            this.refreshBtn.Image = ((System.Drawing.Image)(resources.GetObject("refreshBtn.Image")));
+            this.refreshBtn.Location = new System.Drawing.Point(1026, 18);
+            this.refreshBtn.Name = "refreshBtn";
+            this.refreshBtn.Size = new System.Drawing.Size(100, 50);
+            this.refreshBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.refreshBtn.TabIndex = 39;
+            this.refreshBtn.TabStop = false;
+            this.refreshBtn.Click += new System.EventHandler(this.refreshBtn_Click);
+            // 
             // Students
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -387,6 +400,7 @@
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.listHeader);
             this.Controls.Add(this.listMenu);
+            this.Controls.Add(this.refreshBtn);
             this.Controls.Add(this.enrollBtn);
             this.Controls.Add(this.listBG);
             this.Controls.Add(this.sbTogBtn);
@@ -428,6 +442,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.spLogo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spContainer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spBG)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.refreshBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -460,6 +475,7 @@
         private System.Windows.Forms.PictureBox spLogo;
         private System.Windows.Forms.PictureBox spContainer;
         private System.Windows.Forms.PictureBox spBG;
+        private System.Windows.Forms.PictureBox refreshBtn;
     }
 }
 

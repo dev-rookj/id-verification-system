@@ -79,11 +79,19 @@ namespace id_verification_system
             int studentAge = int.Parse(stAge.Text);
             string studentPhoto = stSelectPhoto.FileName;
 
+            if (string.IsNullOrWhiteSpace(stID.Text) ||
+           string.IsNullOrWhiteSpace(stName.Text) ||
+           string.IsNullOrWhiteSpace(stAge.Text) ||
+           string.IsNullOrWhiteSpace(stPhotoDirectory.Text))
+            {
+                MessageBox.Show("Please fill up all fields.");
+                return;
+            }
+
             InsertStudent(studentID, studentName, studentAge, studentPhoto);
-            MessageBox.Show("Student enrolled successfully!");
+            MessageBox.Show("Student record added successfully. Click the refresh button to see the updated list.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             this.Hide();
-
             new Students().LoadStudents();
         }
     }

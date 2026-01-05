@@ -35,8 +35,10 @@
             this.infoName = new System.Windows.Forms.Label();
             this.infoAge = new System.Windows.Forms.Label();
             this.infoEdit = new System.Windows.Forms.PictureBox();
+            this.infoDrop = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.infoPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoEdit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoDrop)).BeginInit();
             this.SuspendLayout();
             // 
             // infoLabel
@@ -93,13 +95,24 @@
             // infoEdit
             // 
             this.infoEdit.Image = ((System.Drawing.Image)(resources.GetObject("infoEdit.Image")));
-            this.infoEdit.Location = new System.Drawing.Point(689, 455);
+            this.infoEdit.Location = new System.Drawing.Point(573, 455);
             this.infoEdit.Name = "infoEdit";
-            this.infoEdit.Size = new System.Drawing.Size(147, 50);
+            this.infoEdit.Size = new System.Drawing.Size(120, 50);
             this.infoEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.infoEdit.TabIndex = 6;
             this.infoEdit.TabStop = false;
             this.infoEdit.Click += new System.EventHandler(this.infoEdit_Click);
+            // 
+            // infoDrop
+            // 
+            this.infoDrop.Image = ((System.Drawing.Image)(resources.GetObject("infoDrop.Image")));
+            this.infoDrop.Location = new System.Drawing.Point(716, 455);
+            this.infoDrop.Name = "infoDrop";
+            this.infoDrop.Size = new System.Drawing.Size(120, 50);
+            this.infoDrop.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.infoDrop.TabIndex = 7;
+            this.infoDrop.TabStop = false;
+            this.infoDrop.Click += new System.EventHandler(this.infoDrop_Click);
             // 
             // Student_View
             // 
@@ -107,6 +120,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(848, 517);
+            this.Controls.Add(this.infoDrop);
             this.Controls.Add(this.infoEdit);
             this.Controls.Add(this.infoStudNum);
             this.Controls.Add(this.infoName);
@@ -124,6 +138,7 @@
             this.Load += new System.EventHandler(this.Student_View_Load);
             ((System.ComponentModel.ISupportInitialize)(this.infoPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoEdit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.infoDrop)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -136,6 +151,7 @@
         public System.Windows.Forms.Label infoStudNum;
         public System.Windows.Forms.Label infoName;
         public System.Windows.Forms.Label infoAge;
+        private System.Windows.Forms.PictureBox infoDrop;
     }
 }
 
