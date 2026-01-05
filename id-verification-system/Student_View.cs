@@ -205,7 +205,7 @@ namespace id_verification_system
 
         private void Student_View_Load(object sender, EventArgs e)
         {
-            LoadStudentInfo(currentStudentName);
+            LoadStudentInfo(currentStudentId);
         }
 
         private void infoDrop_Click(object sender, EventArgs e)
