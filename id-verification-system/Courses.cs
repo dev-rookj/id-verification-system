@@ -112,7 +112,7 @@ namespace id_verification_system
             Course selectedCourse = (Course)listMenu.SelectedItem;
 
             // PASS the selected course to the constructor
-            Course_View cView = new Course_View(selectedCourse);
+            Course_View cView = new Course_View();
             cView.Show();
         }
 
@@ -145,18 +145,6 @@ namespace id_verification_system
             }
         }
 
-        private void enrollBtn_Click(object sender, EventArgs e)
-        {
-            Add_Course add = new Add_Course();
-
-            if (add.ShowDialog() == DialogResult.OK)
-            {
-                Course newCourse = add.NewCourse;
-                courseList.Add(newCourse);
-                listMenu.Items.Add(newCourse); // lalabas sa course list
-            }
-        }
-
         private void label1_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Are you sure you want to logout?", "Are you sure?", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -168,6 +156,11 @@ namespace id_verification_system
 
                 this.Hide();
             }
+        }
+
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            new Add_Course().ShowDialog();
         }
     }
 }

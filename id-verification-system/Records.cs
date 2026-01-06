@@ -62,15 +62,7 @@ namespace id_verification_system
 
         private void Records_Load(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 30; i++)
-            {
-                recordsTable.Rows.Add("11/17/2025",
-                "14:05:30",
-                202410647,
-                "Abrenica, Aljur",
-                "[DCIT50] Object Oriented Programming",
-                "LATE");
-            }
+            // load
         }
 
         private void spBackBtn_Click(object sender, EventArgs e)

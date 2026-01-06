@@ -65,6 +65,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Edit_Course.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Edit_Course.Designer.cs">
+      <DependentUpon>Edit_Course.cs</DependentUpon>
+    </Compile>
     <Compile Include="db-config.cs" />
     <Compile Include="Edit_Student.cs">
       <SubType>Form</SubType>
@@ -77,12 +83,6 @@
     </Compile>
     <Compile Include="Enroll_Student.Designer.cs">
       <DependentUpon>Enroll_Student.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Edit_Course.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Edit_Course.Designer.cs">
-      <DependentUpon>Edit_Course.cs</DependentUpon>
     </Compile>
     <Compile Include="Add_Course.cs">
       <SubType>Form</SubType>
@@ -152,14 +152,14 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Edit_Course.resx">
+      <DependentUpon>Edit_Course.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Edit_Student.resx">
       <DependentUpon>Edit_Student.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Enroll_Student.resx">
       <DependentUpon>Enroll_Student.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Edit_Course.resx">
-      <DependentUpon>Edit_Course.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Add_Course.resx">
       <DependentUpon>Add_Course.cs</DependentUpon>

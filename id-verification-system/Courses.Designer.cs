@@ -42,7 +42,7 @@
             this.sbLogoutBtn = new System.Windows.Forms.PictureBox();
             this.listHeader = new System.Windows.Forms.Label();
             this.listBG = new System.Windows.Forms.PictureBox();
-            this.enrollBtn = new System.Windows.Forms.PictureBox();
+            this.addBtn = new System.Windows.Forms.PictureBox();
             this.listMenu = new System.Windows.Forms.ListBox();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -65,7 +65,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBG)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollBtn)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addBtn)).BeginInit();
             this.sidePanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.spRecordsBtn)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.spCoursesBtn)).BeginInit();
@@ -203,16 +203,16 @@
             this.listBG.TabIndex = 27;
             this.listBG.TabStop = false;
             // 
-            // enrollBtn
+            // addBtn
             // 
-            this.enrollBtn.Image = ((System.Drawing.Image)(resources.GetObject("enrollBtn.Image")));
-            this.enrollBtn.Location = new System.Drawing.Point(1152, 18);
-            this.enrollBtn.Name = "enrollBtn";
-            this.enrollBtn.Size = new System.Drawing.Size(100, 50);
-            this.enrollBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.enrollBtn.TabIndex = 28;
-            this.enrollBtn.TabStop = false;
-            this.enrollBtn.Click += new System.EventHandler(this.enrollBtn_Click);
+            this.addBtn.Image = ((System.Drawing.Image)(resources.GetObject("addBtn.Image")));
+            this.addBtn.Location = new System.Drawing.Point(1152, 18);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(100, 50);
+            this.addBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.addBtn.TabIndex = 28;
+            this.addBtn.TabStop = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // listMenu
             // 
@@ -223,12 +223,6 @@
             this.listMenu.ForeColor = System.Drawing.Color.White;
             this.listMenu.FormattingEnabled = true;
             this.listMenu.ItemHeight = 50;
-            this.listMenu.Items.AddRange(new object[] {
-            "[DCIT50] Object Oriented Programming (LEC)",
-            "[GNED04] Mga Babasahin Hinggil sa Kasaysayan ng Pilipinas",
-            "[COSC60] Digital Logic",
-            "[MATH1] Analytic Geometry",
-            "[COSC55] Discrete Structures 2"});
             this.listMenu.Location = new System.Drawing.Point(114, 95);
             this.listMenu.Name = "listMenu";
             this.listMenu.Size = new System.Drawing.Size(1112, 500);
@@ -395,7 +389,7 @@
             this.Controls.Add(this.sidePanel);
             this.Controls.Add(this.listHeader);
             this.Controls.Add(this.listMenu);
-            this.Controls.Add(this.enrollBtn);
+            this.Controls.Add(this.addBtn);
             this.Controls.Add(this.listBG);
             this.Controls.Add(this.sbTogBtn);
             this.Controls.Add(this.sbDashboardBtn);
@@ -424,7 +418,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.sbRecordsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbLogoutBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.listBG)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.enrollBtn)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.addBtn)).EndInit();
             this.sidePanel.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.spRecordsBtn)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spCoursesBtn)).EndInit();
@@ -453,7 +447,7 @@
         private System.Windows.Forms.PictureBox sbLogoutBtn;
         private System.Windows.Forms.Label listHeader;
         private System.Windows.Forms.PictureBox listBG;
-        private System.Windows.Forms.PictureBox enrollBtn;
+        private System.Windows.Forms.PictureBox addBtn;
         public System.Windows.Forms.ListBox listMenu;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Label label1;

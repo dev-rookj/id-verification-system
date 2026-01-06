@@ -164,9 +164,9 @@
             // saveBtn
             // 
             this.saveBtn.Image = ((System.Drawing.Image)(resources.GetObject("saveBtn.Image")));
-            this.saveBtn.Location = new System.Drawing.Point(344, 432);
+            this.saveBtn.Location = new System.Drawing.Point(347, 432);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(144, 75);
+            this.saveBtn.Size = new System.Drawing.Size(150, 48);
             this.saveBtn.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.saveBtn.TabIndex = 17;
             this.saveBtn.TabStop = false;
