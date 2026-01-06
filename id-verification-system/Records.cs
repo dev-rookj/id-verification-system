@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -17,6 +18,34 @@ namespace id_verification_system
         {
             InitializeComponent();
             time.Start();
+            LoadRecords();
+        }
+
+        private void LoadRecords()
+        {
+            recordsTable.Rows.Clear();
+
+            string connString = "Data Source=systemDB.db;";
+            using (var conn = new SQLiteConnection(connString))
+            {
+                conn.Open();
+                string q = "SELECT record_date, record_time, student_id, student_name, course_name, remarks FROM records ORDER BY record_id DESC";
+                using (var cmd = new SQLiteCommand(q, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        recordsTable.Rows.Add(
+                            reader.GetString(0), // DateCol
+                            reader.GetString(1), // TimeCol
+                            reader.GetString(2), // StudentNoCol
+                            reader.GetString(3), // StudentNameCol
+                            reader.GetString(4), // CourseNameCol
+                            reader.GetString(5)  // RemarksCol
+                        );
+                    }
+                }
+            }
         }
 
         private void time_Tick(object sender, EventArgs e)

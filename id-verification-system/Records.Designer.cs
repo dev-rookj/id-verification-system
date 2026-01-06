@@ -45,12 +45,6 @@
             this.sbLogoutBtn = new System.Windows.Forms.PictureBox();
             this.listHeader = new System.Windows.Forms.Label();
             this.recordsTable = new System.Windows.Forms.DataGridView();
-            this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentNoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.StudentNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CourseNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.RemarksCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sidePanel = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.spRecordsBtn = new System.Windows.Forms.PictureBox();
@@ -63,6 +57,12 @@
             this.spLogo = new System.Windows.Forms.PictureBox();
             this.spContainer = new System.Windows.Forms.PictureBox();
             this.spBG = new System.Windows.Forms.PictureBox();
+            this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentNoCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.StudentNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CourseNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.RemarksCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).BeginInit();
@@ -252,60 +252,6 @@
             this.recordsTable.Size = new System.Drawing.Size(1163, 559);
             this.recordsTable.TabIndex = 27;
             // 
-            // DateCol
-            // 
-            this.DateCol.HeaderText = "DATE";
-            this.DateCol.MinimumWidth = 6;
-            this.DateCol.Name = "DateCol";
-            this.DateCol.ReadOnly = true;
-            this.DateCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.DateCol.Width = 125;
-            // 
-            // TimeCol
-            // 
-            this.TimeCol.HeaderText = "TIME";
-            this.TimeCol.MinimumWidth = 6;
-            this.TimeCol.Name = "TimeCol";
-            this.TimeCol.ReadOnly = true;
-            this.TimeCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.TimeCol.Width = 90;
-            // 
-            // StudentNoCol
-            // 
-            this.StudentNoCol.HeaderText = "STUDENT NO.";
-            this.StudentNoCol.MinimumWidth = 6;
-            this.StudentNoCol.Name = "StudentNoCol";
-            this.StudentNoCol.ReadOnly = true;
-            this.StudentNoCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.StudentNoCol.Width = 220;
-            // 
-            // StudentNameCol
-            // 
-            this.StudentNameCol.HeaderText = "STUDENT NAME";
-            this.StudentNameCol.MinimumWidth = 6;
-            this.StudentNameCol.Name = "StudentNameCol";
-            this.StudentNameCol.ReadOnly = true;
-            this.StudentNameCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.StudentNameCol.Width = 250;
-            // 
-            // CourseNameCol
-            // 
-            this.CourseNameCol.HeaderText = "COURSE NAME";
-            this.CourseNameCol.MinimumWidth = 6;
-            this.CourseNameCol.Name = "CourseNameCol";
-            this.CourseNameCol.ReadOnly = true;
-            this.CourseNameCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.CourseNameCol.Width = 350;
-            // 
-            // RemarksCol
-            // 
-            this.RemarksCol.HeaderText = "REMARKS";
-            this.RemarksCol.MinimumWidth = 6;
-            this.RemarksCol.Name = "RemarksCol";
-            this.RemarksCol.ReadOnly = true;
-            this.RemarksCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.RemarksCol.Width = 130;
-            // 
             // sidePanel
             // 
             this.sidePanel.BackColor = System.Drawing.Color.Transparent;
@@ -396,7 +342,7 @@
             this.spUser.Name = "spUser";
             this.spUser.Size = new System.Drawing.Size(202, 34);
             this.spUser.TabIndex = 30;
-            this.spUser.Text = "s";
+            this.spUser.Text = "admin";
             this.spUser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // spDashboardBtn
@@ -453,6 +399,60 @@
             this.spBG.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.spBG.TabIndex = 26;
             this.spBG.TabStop = false;
+            // 
+            // DateCol
+            // 
+            this.DateCol.HeaderText = "DATE";
+            this.DateCol.MinimumWidth = 6;
+            this.DateCol.Name = "DateCol";
+            this.DateCol.ReadOnly = true;
+            this.DateCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DateCol.Width = 125;
+            // 
+            // TimeCol
+            // 
+            this.TimeCol.HeaderText = "TIME";
+            this.TimeCol.MinimumWidth = 6;
+            this.TimeCol.Name = "TimeCol";
+            this.TimeCol.ReadOnly = true;
+            this.TimeCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.TimeCol.Width = 90;
+            // 
+            // StudentNoCol
+            // 
+            this.StudentNoCol.HeaderText = "STUDENT NO.";
+            this.StudentNoCol.MinimumWidth = 6;
+            this.StudentNoCol.Name = "StudentNoCol";
+            this.StudentNoCol.ReadOnly = true;
+            this.StudentNoCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentNoCol.Width = 200;
+            // 
+            // StudentNameCol
+            // 
+            this.StudentNameCol.HeaderText = "STUDENT NAME";
+            this.StudentNameCol.MinimumWidth = 6;
+            this.StudentNameCol.Name = "StudentNameCol";
+            this.StudentNameCol.ReadOnly = true;
+            this.StudentNameCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.StudentNameCol.Width = 250;
+            // 
+            // CourseNameCol
+            // 
+            this.CourseNameCol.HeaderText = "COURSE NAME";
+            this.CourseNameCol.MinimumWidth = 6;
+            this.CourseNameCol.Name = "CourseNameCol";
+            this.CourseNameCol.ReadOnly = true;
+            this.CourseNameCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.CourseNameCol.Width = 350;
+            // 
+            // RemarksCol
+            // 
+            this.RemarksCol.HeaderText = "REMARKS";
+            this.RemarksCol.MinimumWidth = 6;
+            this.RemarksCol.Name = "RemarksCol";
+            this.RemarksCol.ReadOnly = true;
+            this.RemarksCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.RemarksCol.Width = 130;
             // 
             // Records
             // 
@@ -519,12 +519,6 @@
         private System.Windows.Forms.PictureBox sbLogoutBtn;
         private System.Windows.Forms.Label listHeader;
         private System.Windows.Forms.DataGridView recordsTable;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TimeCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentNoCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn StudentNameCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CourseNameCol;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RemarksCol;
         private System.Windows.Forms.Panel sidePanel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox spRecordsBtn;
@@ -537,6 +531,12 @@
         private System.Windows.Forms.PictureBox spLogo;
         private System.Windows.Forms.PictureBox spContainer;
         private System.Windows.Forms.PictureBox spBG;
+        private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TimeCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentNoCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn StudentNameCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CourseNameCol;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RemarksCol;
     }
 }
 

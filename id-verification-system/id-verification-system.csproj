@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CourseUtils.cs" />
+    <Compile Include="DashboardUtils.cs" />
     <Compile Include="Edit_Course.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,6 +98,7 @@
     <Compile Include="Course_View.Designer.cs">
       <DependentUpon>Course_View.cs</DependentUpon>
     </Compile>
+    <Compile Include="RecordUtils.cs" />
     <Compile Include="sidebar.cs">
       <SubType>Form</SubType>
     </Compile>

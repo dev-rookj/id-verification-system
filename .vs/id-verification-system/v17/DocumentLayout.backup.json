@@ -3,40 +3,36 @@
   "WorkspaceRootPath": "C:\\Users\\Windows\\source\\git\\id-verification-system\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\student_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\student_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\edit_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\edit_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\recordutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\recordutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\edit_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\edit_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\dashboardutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\dashboardutils.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\add_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\add_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\records.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\add_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\add_course.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\mainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\courses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\course_view.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|c:\\users\\windows\\source\\git\\id-verification-system\\id-verification-system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1DAE74CB-C6CE-4C56-94FD-6BD2F25A33ED}|id-verification-system\\id-verification-system.csproj|solutionrelative:id-verification-system\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -58,114 +54,103 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Student_View.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Student_View.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Student_View.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Student_View.cs [Design]",
-              "RelativeToolTip": "id-verification-system\\Student_View.cs [Design]",
+              "DocumentIndex": 5,
+              "Title": "Records.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Records.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Records.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Records.cs*",
+              "RelativeToolTip": "id-verification-system\\Records.cs*",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAAABsAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T19:37:04.336Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2026-01-06T21:15:41.431Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Edit_Course.cs",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Edit_Course.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Edit_Course.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Edit_Course.cs",
-              "RelativeToolTip": "id-verification-system\\Edit_Course.cs",
-              "ViewState": "AgIAAFcAAAAAAAAAAAAcwHUAAAAaAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "DashboardUtils.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\DashboardUtils.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\DashboardUtils.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\DashboardUtils.cs",
+              "RelativeToolTip": "id-verification-system\\DashboardUtils.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T16:28:21.496Z",
+              "WhenOpened": "2026-01-06T21:10:08.59Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Edit_Course.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Edit_Course.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Edit_Course.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Edit_Course.cs [Design]",
-              "RelativeToolTip": "id-verification-system\\Edit_Course.cs [Design]",
+              "Title": "RecordUtils.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\RecordUtils.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\RecordUtils.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\RecordUtils.cs",
+              "RelativeToolTip": "id-verification-system\\RecordUtils.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwCkAAABIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T16:28:19.792Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Add_Course.cs",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Add_Course.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Add_Course.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Add_Course.cs",
-              "RelativeToolTip": "id-verification-system\\Add_Course.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAAUwH4AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T00:54:28.127Z",
+              "WhenOpened": "2026-01-06T20:54:58.775Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Add_Course.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Add_Course.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Add_Course.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Add_Course.cs [Design]",
-              "RelativeToolTip": "id-verification-system\\Add_Course.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "Records.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Records.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Records.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Records.cs [Design]*",
+              "RelativeToolTip": "id-verification-system\\Records.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T00:54:26.155Z",
+              "WhenOpened": "2026-01-06T20:38:13.714Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Courses.cs",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Courses.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Courses.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Courses.cs",
-              "RelativeToolTip": "id-verification-system\\Courses.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAYwDYAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Dashboard.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Dashboard.cs",
+              "RelativeToolTip": "id-verification-system\\Dashboard.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAcwIEAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T00:53:27.725Z",
+              "WhenOpened": "2026-01-06T20:11:10.537Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Courses.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Courses.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Courses.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Courses.cs [Design]",
-              "RelativeToolTip": "id-verification-system\\Courses.cs [Design]",
+              "Title": "MainMenu.cs",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\MainMenu.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\MainMenu.cs",
+              "RelativeToolTip": "id-verification-system\\MainMenu.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAkwF4AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-04T17:04:30.978Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Course_View.cs",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Course_View.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs",
-              "RelativeToolTip": "id-verification-system\\Course_View.cs",
-              "ViewState": "AgIAACcAAAAAAAAAAAAIwEEAAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T00:54:42.167Z",
+              "WhenOpened": "2026-01-06T20:02:47.278Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Course_View.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs",
-              "RelativeDocumentMoniker": "id-verification-system\\Course_View.cs",
-              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Course_View.cs [Design]",
-              "RelativeToolTip": "id-verification-system\\Course_View.cs [Design]",
+              "DocumentIndex": 6,
+              "Title": "MainMenu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\MainMenu.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\MainMenu.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\MainMenu.cs [Design]",
+              "RelativeToolTip": "id-verification-system\\MainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-01-06T00:54:37.398Z",
+              "WhenOpened": "2026-01-06T19:50:04.867Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Dashboard.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Dashboard.cs",
+              "RelativeDocumentMoniker": "id-verification-system\\Dashboard.cs",
+              "ToolTip": "C:\\Users\\Windows\\source\\git\\id-verification-system\\id-verification-system\\Dashboard.cs [Design]",
+              "RelativeToolTip": "id-verification-system\\Dashboard.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-01-06T19:48:03.281Z",
               "EditorCaption": " [Design]"
             }
           ]

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -17,152 +18,140 @@ namespace id_verification_system
         {
             InitializeComponent();
             time.Start();
-            course();
         }
 
-        public void course()
+        private void UpdateCurrentClass(DateTime now)
         {
-            DateTime datetime = DateTime.Now;
-            DayOfWeek day = datetime.DayOfWeek;
-
-            switch (day)
+            string connString = "Data Source=systemDB.db;";
+            using (var conn = new SQLiteConnection(connString))
             {
-                case DayOfWeek.Monday:
-                    curClass.Text = "NO CLASSES";
-                    curTime.Text = "NO CLASSES";
-                    curStatus.Text = "NO CLASSES";
+                conn.Open();
+                string q = @"SELECT course_code, course_name, start_time, end_time, major_subject, sched_type
+                     FROM courses
+                     WHERE day_of_the_week=@Day";
+                using (var cmd = new SQLiteCommand(q, conn))
+                {
+                    cmd.Parameters.AddWithValue("@Day", now.DayOfWeek.ToString());
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string code = reader.GetString(0);
+                            string name = reader.GetString(1);
+                            string start24 = reader.GetString(2);
+                            string end24 = reader.GetString(3);
+                            bool isMajor = reader.GetBoolean(4);
+                            string schedType = reader.IsDBNull(5) ? "" : reader.GetString(5);
 
-                    break;
+                            DateTime start = DateTime.ParseExact(start24, "HH:mm", null);
+                            DateTime end = DateTime.ParseExact(end24, "HH:mm", null);
 
-                case DayOfWeek.Tuesday:
-                    if (datetime.Hour == 14 && datetime.Hour < 16 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "PATHFIT 3: PHYSICAL ACTIVITIES TOWWARDS HEALTH AND FITNESS I";
-                        curTime.Text = "2:00PM - 4:00PM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else if (datetime.Hour == 16 && datetime.Hour < 18 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "INSY 50: FUNDAMENTALS OF INFORMATION SYSTEM";
-                        curTime.Text = "4:00PM - 6:00PM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else
-                    {
-                        curClass.Text = "NO CLASSES";
-                    }
-                    break;
+                            // Show class 10 minutes before start
+                            if (now >= start.AddMinutes(-10) && now <= end)
+                            {
+                                // curClass format: [CODE] COURSE NAME (+ indicator if major)
+                                string indicator = "";
+                                if (isMajor && !string.IsNullOrEmpty(schedType))
+                                {
+                                    indicator = schedType.Equals("lecture", StringComparison.OrdinalIgnoreCase) ? "(LEC)" : "(LAB)";
+                                }
+                                curClass.Text = $"[{code}] {name} {indicator}";
 
-                case DayOfWeek.Wednesday:
-                    if (datetime.Hour == 9 && datetime.Hour < 11 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "COSC 55: DISCRETE STRUCTURES II";
-                        curTime.Text = "9:00AM - 11:00AM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else if (datetime.Hour == 12 && datetime.Hour < 14 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "DCIT 50: OBJECT ORIENTED PROGRAMMING (LECTURE)";
-                        curTime.Text = "12:00PM - 2:00AM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else if (datetime.Hour == 14 && datetime.Hour < 16 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "DCIT 50: OBJECT ORIENTED PROGRAMMING (LABORATORY)";
-                        curTime.Text = "2:00PM - 4:00PM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else if (datetime.Hour == 16 && datetime.Hour < 18 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "GNED 04: MGA BABASAHIN HINGGIL SA KASAYSAYAN NG PILIPINAS";
-                        curTime.Text = "4:00PM - 6:00PM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else
-                    {
-                        curClass.Text = "NO CLASSES";
-                    }
-                    break;
+                                // curTime format: STARTTIME - ENDTIME
+                                curTime.Text = $"{start:hh\\:mm tt} - {end:hh\\:mm tt}";
 
-                case DayOfWeek.Thursday:
-                    curClass.Text = "NO CLASSES";
-                    curTime.Text = "NO CLASSES";
-                    curStatus.Text = "NO CLASSES";
-                    break;
+                                // curStatus: Up Next if not started yet, Ongoing if started
+                                if (now < start)
+                                    curStatus.Text = "UP NEXT";
+                                else
+                                    curStatus.Text = "ONGOING";
 
-                case DayOfWeek.Friday:
-                    if (datetime.Hour == 7 && datetime.Hour < 9 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "MATH 1: ANALYTIC GEOMETRY";
-                        curTime.Text = "7:00AM - 9:00AM";
-                        curStatus.Text = "ONGOING";
+                                return; // stop after first match
+                            }
+                        }
                     }
-                    else if (datetime.Hour == 9 && datetime.Hour < 11 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "DCIT 24: INFORMATION MANAGEMENT (LECTURE)";
-                        curTime.Text = "9:00AM - 11:00AM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else if (datetime.Hour == 12 && datetime.Hour < 14 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "DCIT 24: INFORMATION MANAGEMENT (LABORATORY)";
-                        curTime.Text = "12:00PM - 2:00PM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else
-                    {
-                        curClass.Text = "NO CLASSES";
-                    }
-                    break;
+                }
+            }
 
-                case DayOfWeek.Saturday:
-                    if (datetime.Hour == 7 && datetime.Hour < 9 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "COSC 60: DIGITAL LOGICC  DESIGN (LECTURE)";
-                        curTime.Text = "7:00AM - 9:00AM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else if (datetime.Hour == 9 && datetime.Hour < 11 && datetime.Minute <= 59)
-                    {
-                        curClass.Text = "COSC 60: DIGITAL LOGIC DESIGN (LABORATORY)";
-                        curTime.Text = "9:00AM - 11:00AM";
-                        curStatus.Text = "ONGOING";
-                    }
-                    else
-                    {
-                        curClass.Text = "NO CLASSES";
-                    }
-                    break;
+            // If no class matches, clear labels
+            curClass.Text = "VACANT";
+            curTime.Text = "";
+            curStatus.Text = "";
+        }
 
-                case DayOfWeek.Sunday:
-                    curClass.Text = "NO CLASSES";
-                    curTime.Text = "NO CLASSES";
-                    curStatus.Text = "NO CLASSES";
-                    break;
+        private void DisplayStudentInfo(string studentId)
+        {
+            string connString = "Data Source=systemDB.db;";
+
+            using (SQLiteConnection conn = new SQLiteConnection(connString))
+            {
+                conn.Open();
+
+                string query = "SELECT student_id, name FROM students WHERE student_id = @id";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                {
+                    cmd.Parameters.AddWithValue("@id", studentId);
+
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            string id = reader["student_id"].ToString();
+                            string name = reader["name"].ToString();
+
+                            infoText.Text = $"Student No.: {id}\r\nName: {name}\r\n\r\nTime In: " + DateTime.Now.ToString("hh:mm tt").ToUpper() + "\r\nRemarks: REMARK\r\n";
+                        }
+                        else
+                        {
+                            infoText.Text = "Invalid Barcode.";
+                        }
+
+                        infoField.Text = "";
+                        infoReset.Stop(); // to avoid timer overlapping
+                        infoReset.Start();
+
+                    }
+                }
             }
         }
 
         private void time_Tick(object sender, EventArgs e)
         {
-            timeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
-            course();
+            DateTime now = DateTime.Now;
+            timeLabel.Text = now.ToString("hh:mm:ss tt");
+
+            UpdateCurrentClass(now);
         }
 
         private void infoField_KeyDown(object sender, KeyEventArgs e)
         {
-            if(e.KeyCode == Keys.Enter)
+            if (e.KeyCode == Keys.Enter)
             {
-                if (infoField.Text.Length == 9)
-                {
-                    infoText.Text = "Student No.: STUDENT_NUMBER\r\nName: STUDENT_NAME\r\n\r\nTime In: " + DateTime.Now.ToString("hh:mm tt").ToUpper() + "\r\nRemarks: REMARK\r\n";
-                    e.SuppressKeyPress = true;
-                }
-                else infoText.Text = "Invalid Barcode.";
                 e.SuppressKeyPress = true;
+                string scannedId = infoField.Text.Trim();
+                infoField.Clear();
 
-                infoField.Text = "";
-                infoReset.Stop(); // to avoid timer overlapping
-                infoReset.Start();
+                DateTime now = DateTime.Now;
+                var currentClass = DashboardUtils.GetCurrentClass(now);
+
+                if (currentClass.curClass == "No class scheduled")
+                {
+                    MessageBox.Show("No class is ongoing or up next.");
+                    return;
+                }
+
+                string studentName = DashboardUtils.LookupStudentName(scannedId);
+
+                // Check if student exists
+                if (studentName == "Unknown Student")
+                {
+                    infoText.Text = "Invalid Barcode.";
+                    return;
+                }
+
+                DateTime classStart = DashboardUtils.ParseStartTime(currentClass.curTime);
+
+                RecordUtils.SaveRecord(scannedId, studentName, currentClass.curClass, now, classStart, infoText, infoReset);
             }
         }
 
