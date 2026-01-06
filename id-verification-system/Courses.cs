@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SQLite;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Emit;
@@ -17,22 +18,30 @@ namespace id_verification_system
         {
             InitializeComponent();
             time.Start();
+            RefreshCourseList();
         }
-
-        List<Course> courseList = new List<Course>();
-
-        public class Course
+        private void RefreshCourseList()
         {
-            public string courseName { get; set; }
-            public string insName { get; set; }
-            public string timeSlot { get; set; }
+            listMenu.Items.Clear();
 
-            public override string ToString()
+            string connString = "Data Source=systemDB.db;";
+            using (var conn = new SQLiteConnection(connString))
             {
-                return courseName;
+                conn.Open();
+                string q = "SELECT course_code, course_name FROM courses ORDER BY course_code;";
+                using (var cmd = new SQLiteCommand(q, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string code = reader.GetString(0);
+                        string name = reader.GetString(1);
+
+                        listMenu.Items.Add($"[{code}] {name}");
+                    }
+                }
             }
         }
-
 
         private void time_Tick(object sender, EventArgs e)
         {
@@ -105,17 +114,6 @@ namespace id_verification_system
             new Records().Show();
         }
 
-        private void listMenu_DoubleClick(object sender, EventArgs e)
-        {
-            if (listMenu.SelectedItem == null) return;
-
-            Course selectedCourse = (Course)listMenu.SelectedItem;
-
-            // PASS the selected course to the constructor
-            Course_View cView = new Course_View();
-            cView.Show();
-        }
-
         private void spBackBtn_Click(object sender, EventArgs e)
         {
             if (sidePanel.Visible)
@@ -160,7 +158,40 @@ namespace id_verification_system
 
         private void addBtn_Click(object sender, EventArgs e)
         {
-            new Add_Course().ShowDialog();
+            using (var addForm = new Add_Course())
+            {
+                if (addForm.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshCourseList();
+                }
+            }
+        }
+
+        private void Courses_Load(object sender, EventArgs e)
+        {
+            RefreshCourseList();
+        }
+
+        private void listMenu_DoubleClick(object sender, EventArgs e)
+        {
+            if (listMenu.SelectedItem == null) return;
+
+            string selected = listMenu.SelectedItem.ToString();
+
+            int startBracket = selected.IndexOf('[');
+            int endBracket = selected.IndexOf(']');
+            if (startBracket == -1 || endBracket == -1) return;
+
+            string selectedCode = selected.Substring(startBracket + 1, endBracket - startBracket - 1).Trim();
+            string selectedName = selected.Substring(endBracket + 1).Trim();
+
+            using (var view = new Course_View(selectedCode, selectedName))
+            {
+                if (view.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshCourseList();
+                }
+            }
         }
     }
 }

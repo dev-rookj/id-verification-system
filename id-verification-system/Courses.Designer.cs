@@ -409,6 +409,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Students_FormClosed);
+            this.Load += new System.EventHandler(this.Courses_Load);
             ((System.ComponentModel.ISupportInitialize)(this.clockIcon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.sbTogBtn)).EndInit();

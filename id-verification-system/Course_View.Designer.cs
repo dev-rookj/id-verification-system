@@ -31,13 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Course_View));
             this.infoLabel = new System.Windows.Forms.Label();
             this.courseName = new System.Windows.Forms.Label();
-            this.courseTime = new System.Windows.Forms.Label();
+            this.courseSchedule = new System.Windows.Forms.Label();
             this.courseInstructor = new System.Windows.Forms.Label();
             this.courseClose = new System.Windows.Forms.Label();
             this.courseDelete = new System.Windows.Forms.PictureBox();
             this.courseEdit = new System.Windows.Forms.PictureBox();
             this.courseCode = new System.Windows.Forms.Label();
-            this.courseDOTW = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.courseDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseEdit)).BeginInit();
             this.SuspendLayout();
@@ -63,17 +62,17 @@
             this.courseName.Text = "Course Name: -";
             this.courseName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // courseTime
+            // courseSchedule
             // 
-            this.courseTime.Font = new System.Drawing.Font("Arial", 18F);
-            this.courseTime.Location = new System.Drawing.Point(98, 279);
-            this.courseTime.Name = "courseTime";
-            this.courseTime.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseTime.Size = new System.Drawing.Size(714, 51);
-            this.courseTime.TabIndex = 3;
-            this.courseTime.Text = "Time Slot: -";
-            this.courseTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.courseTime.Click += new System.EventHandler(this.courseTime_Click);
+            this.courseSchedule.Font = new System.Drawing.Font("Arial", 18F);
+            this.courseSchedule.Location = new System.Drawing.Point(98, 279);
+            this.courseSchedule.Name = "courseSchedule";
+            this.courseSchedule.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.courseSchedule.Size = new System.Drawing.Size(714, 51);
+            this.courseSchedule.TabIndex = 3;
+            this.courseSchedule.Text = "Schedule: -";
+            this.courseSchedule.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.courseSchedule.Click += new System.EventHandler(this.courseTime_Click);
             // 
             // courseInstructor
             // 
@@ -96,6 +95,7 @@
             this.courseClose.TabIndex = 30;
             this.courseClose.Text = "X";
             this.courseClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.courseClose.Click += new System.EventHandler(this.courseClose_Click);
             // 
             // courseDelete
             // 
@@ -106,6 +106,7 @@
             this.courseDelete.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.courseDelete.TabIndex = 32;
             this.courseDelete.TabStop = false;
+            this.courseDelete.Click += new System.EventHandler(this.courseDelete_Click);
             // 
             // courseEdit
             // 
@@ -116,6 +117,7 @@
             this.courseEdit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.courseEdit.TabIndex = 31;
             this.courseEdit.TabStop = false;
+            this.courseEdit.Click += new System.EventHandler(this.courseEdit_Click);
             // 
             // courseCode
             // 
@@ -128,30 +130,18 @@
             this.courseCode.Text = "Course Code: -";
             this.courseCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // courseDOTW
-            // 
-            this.courseDOTW.Font = new System.Drawing.Font("Arial", 18F);
-            this.courseDOTW.Location = new System.Drawing.Point(98, 330);
-            this.courseDOTW.Name = "courseDOTW";
-            this.courseDOTW.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseDOTW.Size = new System.Drawing.Size(714, 51);
-            this.courseDOTW.TabIndex = 34;
-            this.courseDOTW.Text = "Day of the Week: -";
-            this.courseDOTW.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // Course_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(929, 596);
-            this.Controls.Add(this.courseDOTW);
             this.Controls.Add(this.courseCode);
             this.Controls.Add(this.courseDelete);
             this.Controls.Add(this.courseEdit);
             this.Controls.Add(this.courseClose);
             this.Controls.Add(this.courseName);
-            this.Controls.Add(this.courseTime);
+            this.Controls.Add(this.courseSchedule);
             this.Controls.Add(this.courseInstructor);
             this.Controls.Add(this.infoLabel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -162,6 +152,7 @@
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ScanClass";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Course_View_FormClosing);
             ((System.ComponentModel.ISupportInitialize)(this.courseDelete)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseEdit)).EndInit();
             this.ResumeLayout(false);
@@ -172,13 +163,12 @@
 
         private System.Windows.Forms.Label infoLabel;
         public System.Windows.Forms.Label courseName;
-        public System.Windows.Forms.Label courseTime;
+        public System.Windows.Forms.Label courseSchedule;
         public System.Windows.Forms.Label courseInstructor;
         private System.Windows.Forms.Label courseClose;
         private System.Windows.Forms.PictureBox courseDelete;
         private System.Windows.Forms.PictureBox courseEdit;
         public System.Windows.Forms.Label courseCode;
-        public System.Windows.Forms.Label courseDOTW;
     }
 }
 

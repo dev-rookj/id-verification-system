@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Add_Course));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Edit_Course));
             this.cLabel = new System.Windows.Forms.Label();
             this.cCourseNameLabel = new System.Windows.Forms.PictureBox();
             this.cCourseNameBG = new System.Windows.Forms.PictureBox();
@@ -45,9 +45,9 @@
             this.cEndLabel = new System.Windows.Forms.PictureBox();
             this.cStart = new System.Windows.Forms.MaskedTextBox();
             this.cEnd = new System.Windows.Forms.MaskedTextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cSave = new System.Windows.Forms.PictureBox();
+            this.cDOTW = new System.Windows.Forms.ComboBox();
+            this.cDOTWLabel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.cCourseNameLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cCourseNameBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cCourseCodeBG)).BeginInit();
@@ -58,8 +58,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cStartBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cEndBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cEndLabel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cSave)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDOTWLabel)).BeginInit();
             this.SuspendLayout();
             // 
             // cLabel
@@ -69,7 +69,7 @@
             this.cLabel.Name = "cLabel";
             this.cLabel.Size = new System.Drawing.Size(824, 40);
             this.cLabel.TabIndex = 0;
-            this.cLabel.Text = "ADD COURSE";
+            this.cLabel.Text = "EDIT COURSE";
             this.cLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // cCourseNameLabel
@@ -230,50 +230,54 @@
             this.cEnd.Size = new System.Drawing.Size(177, 28);
             this.cEnd.TabIndex = 32;
             // 
-            // pictureBox1
+            // cSave
             // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(347, 432);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(150, 48);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 33;
-            this.pictureBox1.TabStop = false;
+            this.cSave.Image = ((System.Drawing.Image)(resources.GetObject("cSave.Image")));
+            this.cSave.Location = new System.Drawing.Point(347, 432);
+            this.cSave.Name = "cSave";
+            this.cSave.Size = new System.Drawing.Size(150, 48);
+            this.cSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cSave.TabIndex = 33;
+            this.cSave.TabStop = false;
+            this.cSave.Click += new System.EventHandler(this.cSave_Click);
             // 
-            // pictureBox2
+            // cDOTW
             // 
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(179, 361);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(156, 49);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox2.TabIndex = 34;
-            this.pictureBox2.TabStop = false;
+            this.cDOTW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
+            this.cDOTW.Font = new System.Drawing.Font("Arial", 25F);
+            this.cDOTW.ForeColor = System.Drawing.Color.White;
+            this.cDOTW.FormattingEnabled = true;
+            this.cDOTW.Items.AddRange(new object[] {
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"});
+            this.cDOTW.Location = new System.Drawing.Point(373, 364);
+            this.cDOTW.Name = "cDOTW";
+            this.cDOTW.Size = new System.Drawing.Size(328, 46);
+            this.cDOTW.TabIndex = 37;
             // 
-            // comboBox1
+            // cDOTWLabel
             // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 25F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "nigga",
-            "nigga",
-            "nigga"});
-            this.comboBox1.Location = new System.Drawing.Point(350, 364);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(328, 46);
-            this.comboBox1.TabIndex = 35;
+            this.cDOTWLabel.Image = ((System.Drawing.Image)(resources.GetObject("cDOTWLabel.Image")));
+            this.cDOTWLabel.Location = new System.Drawing.Point(140, 361);
+            this.cDOTWLabel.Name = "cDOTWLabel";
+            this.cDOTWLabel.Size = new System.Drawing.Size(218, 49);
+            this.cDOTWLabel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cDOTWLabel.TabIndex = 36;
+            this.cDOTWLabel.TabStop = false;
             // 
-            // Add_Course
+            // Edit_Course
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(848, 517);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.pictureBox2);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.cSave);
+            this.Controls.Add(this.cDOTW);
+            this.Controls.Add(this.cDOTWLabel);
             this.Controls.Add(this.cEnd);
             this.Controls.Add(this.cEndBG);
             this.Controls.Add(this.cEndLabel);
@@ -294,7 +298,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Add_Course";
+            this.Name = "Edit_Course";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
@@ -309,8 +313,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.cStartBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cEndBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cEndLabel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cSave)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cDOTWLabel)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,9 +338,9 @@
         private System.Windows.Forms.PictureBox cEndLabel;
         private System.Windows.Forms.MaskedTextBox cStart;
         private System.Windows.Forms.MaskedTextBox cEnd;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.PictureBox cSave;
+        private System.Windows.Forms.ComboBox cDOTW;
+        private System.Windows.Forms.PictureBox cDOTWLabel;
     }
 }
 
