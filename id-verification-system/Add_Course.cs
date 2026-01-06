@@ -15,7 +15,7 @@ namespace id_verification_system
     public partial class Add_Course : Form
     {
         // Accepts "hh:mm AM/PM" and returns "HH:mm" for DB storage.
-        private string To24Hour(string input)
+        public static string To24Hour(string input)
         {
             if (DateTime.TryParseExact(input.Trim(),
                 new[] { "h:mm tt", "hh:mm tt" },
@@ -28,19 +28,27 @@ namespace id_verification_system
             throw new FormatException("Invalid time format. Use HH:MM AM/PM.");
         }
 
-        // Ensures end is strictly after start.
-        private bool IsEndAfterStart(string start24, string end24)
+        public static bool IsEndAfterStart(string start24, string end24)
         {
             TimeSpan s = TimeSpan.Parse(start24);
             TimeSpan e = TimeSpan.Parse(end24);
             return e > s;
         }
+        public static bool IsValidAmPm(string masked)
+        {
+            if (string.IsNullOrWhiteSpace(masked) || masked.Length < 2) return false;
+            string suffix = masked.Substring(masked.Length - 2);
+            return suffix == "AM" || suffix == "PM";
+        }
+
         public Add_Course()
         {
             InitializeComponent();
 
             cStart.ValidatingType = typeof(DateTime);
             cEnd.ValidatingType = typeof(DateTime);
+
+            cSchedType.Visible = cIsMajorSubject.Checked;
         }
 
         private bool CourseCodeExists(string code)
@@ -61,92 +69,72 @@ namespace id_verification_system
 
         private void cSave_Click(object sender, EventArgs e)
         {
-            // Basic validations
             string code = cCourseCode.Text.Trim();
             string name = cCourseName.Text.Trim();
             string instructor = cInstructor.Text.Trim();
             string startRaw = cStart.Text.Trim();
             string endRaw = cEnd.Text.Trim();
             string day = cDOTW.SelectedItem as string;
+            bool isMajor = cIsMajorSubject.Checked;
+            string schedType = isMajor ? cSchedType.SelectedItem?.ToString() : null;
 
             if (string.IsNullOrWhiteSpace(code) || string.IsNullOrWhiteSpace(name) ||
                 string.IsNullOrWhiteSpace(instructor) || string.IsNullOrWhiteSpace(day))
             {
-                MessageBox.Show("Please complete all fields.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Please complete all fields.");
                 return;
             }
 
-            // Enforce AM/PM only
-            string startSuffix = startRaw.Substring(startRaw.Length - 2);
-            string endSuffix = endRaw.Substring(endRaw.Length - 2);
-            if (!("AM".Equals(startSuffix) || "PM".Equals(startSuffix)) ||
-                !("AM".Equals(endSuffix) || "PM".Equals(endSuffix)))
+            if (isMajor && string.IsNullOrEmpty(schedType))
             {
-                MessageBox.Show("Time must end with AM or PM.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Select Lecture or Laboratory for major subjects.");
                 return;
             }
 
-            string start24, end24;
-            try
+            if (!CourseUtils.IsValidAmPm(startRaw) || !CourseUtils.IsValidAmPm(endRaw))
             {
-                start24 = To24Hour(startRaw);
-                end24 = To24Hour(endRaw);
-            }
-            catch (FormatException ex)
-            {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Time must end with AM or PM.");
                 return;
             }
 
-            if (CourseCodeExists(code))
+            string start24 = CourseUtils.To24Hour(startRaw);
+            string end24 = CourseUtils.To24Hour(endRaw);
+
+            if (start24 == end24 || !CourseUtils.IsEndAfterStart(start24, end24))
             {
-                MessageBox.Show("Course code already exists. Please use a unique code.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Invalid schedule times.");
                 return;
             }
 
-            // Time validation
-            if (start24 == end24)
+            string connString = "Data Source=systemDB.db;";
+            using (var conn = new SQLiteConnection(connString))
             {
-                MessageBox.Show("Start and end time cannot be the same.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-            if (!IsEndAfterStart(start24, end24))
-            {
-                MessageBox.Show("Start time must be earlier than end time.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
-
-            // Insert into DB
-            try
-            {
-                string connString = "Data Source=systemDB.db;";
-                using (var conn = new SQLiteConnection(connString))
+                conn.Open();
+                string q = @"INSERT INTO courses
+            (course_code, course_name, instructor, start_time, end_time, day_of_the_week, major_subject, sched_type)
+            VALUES (@Code, @Name, @Instructor, @Start, @End, @Day, @Major, @SchedType)";
+                using (var cmd = new SQLiteCommand(q, conn))
                 {
-                    conn.Open();
-                    string q = @"INSERT INTO courses
-                         (course_code, course_name, instructor, start_time, end_time, day_of_the_week)
-                         VALUES (@Code, @Name, @Instructor, @Start, @End, @Day)";
-                    using (var cmd = new SQLiteCommand(q, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@Code", code);
-                        cmd.Parameters.AddWithValue("@Name", name);
-                        cmd.Parameters.AddWithValue("@Instructor", instructor);
-                        cmd.Parameters.AddWithValue("@Start", start24);
-                        cmd.Parameters.AddWithValue("@End", end24);
-                        cmd.Parameters.AddWithValue("@Day", day);
+                    cmd.Parameters.AddWithValue("@Code", code);
+                    cmd.Parameters.AddWithValue("@Name", name);
+                    cmd.Parameters.AddWithValue("@Instructor", instructor);
+                    cmd.Parameters.AddWithValue("@Start", start24);
+                    cmd.Parameters.AddWithValue("@End", end24);
+                    cmd.Parameters.AddWithValue("@Day", day);
+                    cmd.Parameters.AddWithValue("@Major", isMajor ? 1 : 0);
+                    cmd.Parameters.AddWithValue("@SchedType", schedType);
 
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.ExecuteNonQuery();
                 }
+            }
 
-                MessageBox.Show("Course added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.DialogResult = DialogResult.OK;
-                this.Close();
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error adding course: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
+            this.DialogResult = DialogResult.OK;
+            this.Close();
+        }
+
+        private void cIsMajorSubject_CheckedChanged(object sender, EventArgs e)
+        {
+            cSchedType.Visible = cIsMajorSubject.Checked;
         }
     }
 }

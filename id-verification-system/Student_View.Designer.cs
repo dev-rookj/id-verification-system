@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Student_View));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
             this.infoLabel = new System.Windows.Forms.Label();
             this.infoPhoto = new System.Windows.Forms.PictureBox();
             this.infoStudNum = new System.Windows.Forms.Label();
@@ -40,14 +40,14 @@
             this.infoEdit = new System.Windows.Forms.PictureBox();
             this.infoDrop = new System.Windows.Forms.PictureBox();
             this.recordsTable = new System.Windows.Forms.DataGridView();
-            this.infoClose = new System.Windows.Forms.Label();
-            this.infoRecentLabel = new System.Windows.Forms.Label();
-            this.infoFilterLabel = new System.Windows.Forms.PictureBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.DateCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TimeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CourseNameCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RemarksCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.infoClose = new System.Windows.Forms.Label();
+            this.infoRecentLabel = new System.Windows.Forms.Label();
+            this.infoFilterLabel = new System.Windows.Forms.PictureBox();
+            this.infoFilter = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.infoPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.infoDrop)).BeginInit();
@@ -136,13 +136,13 @@
             this.recordsTable.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.recordsTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.recordsTable.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            this.recordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle16.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            this.recordsTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             this.recordsTable.ColumnHeadersHeight = 26;
             this.recordsTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.recordsTable.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -151,80 +151,33 @@
             this.CourseNameCol,
             this.RemarksCol});
             this.recordsTable.Cursor = System.Windows.Forms.Cursors.Default;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.NullValue = "-";
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.recordsTable.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle17.NullValue = "-";
+            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(39)))), ((int)(((byte)(98)))), ((int)(((byte)(33)))));
+            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.recordsTable.DefaultCellStyle = dataGridViewCellStyle17;
             this.recordsTable.GridColor = System.Drawing.Color.Black;
             this.recordsTable.Location = new System.Drawing.Point(19, 221);
             this.recordsTable.Name = "recordsTable";
             this.recordsTable.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.recordsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
+            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.recordsTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle18;
             this.recordsTable.RowHeadersVisible = false;
             this.recordsTable.RowHeadersWidth = 51;
             this.recordsTable.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.recordsTable.RowTemplate.Height = 26;
             this.recordsTable.Size = new System.Drawing.Size(910, 345);
             this.recordsTable.TabIndex = 28;
-            // 
-            // infoClose
-            // 
-            this.infoClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
-            this.infoClose.ForeColor = System.Drawing.Color.Red;
-            this.infoClose.Location = new System.Drawing.Point(902, 9);
-            this.infoClose.Name = "infoClose";
-            this.infoClose.Size = new System.Drawing.Size(31, 26);
-            this.infoClose.TabIndex = 29;
-            this.infoClose.Text = "X";
-            this.infoClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.infoClose.Click += new System.EventHandler(this.infoClose_Click);
-            // 
-            // infoRecentLabel
-            // 
-            this.infoRecentLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
-            this.infoRecentLabel.Location = new System.Drawing.Point(12, 178);
-            this.infoRecentLabel.Name = "infoRecentLabel";
-            this.infoRecentLabel.Size = new System.Drawing.Size(215, 40);
-            this.infoRecentLabel.TabIndex = 30;
-            this.infoRecentLabel.Text = "Most recent logs";
-            this.infoRecentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // infoFilterLabel
-            // 
-            this.infoFilterLabel.Image = ((System.Drawing.Image)(resources.GetObject("infoFilterLabel.Image")));
-            this.infoFilterLabel.Location = new System.Drawing.Point(233, 176);
-            this.infoFilterLabel.Name = "infoFilterLabel";
-            this.infoFilterLabel.Size = new System.Drawing.Size(177, 39);
-            this.infoFilterLabel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.infoFilterLabel.TabIndex = 31;
-            this.infoFilterLabel.TabStop = false;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(180)))), ((int)(((byte)(80)))));
-            this.comboBox1.Font = new System.Drawing.Font("Arial", 19F);
-            this.comboBox1.ForeColor = System.Drawing.Color.White;
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "nigga",
-            "nigga",
-            "nigga"});
-            this.comboBox1.Location = new System.Drawing.Point(417, 176);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(512, 36);
-            this.comboBox1.TabIndex = 32;
             // 
             // DateCol
             // 
@@ -262,6 +215,51 @@
             this.RemarksCol.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.RemarksCol.Width = 158;
             // 
+            // infoClose
+            // 
+            this.infoClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Bold);
+            this.infoClose.ForeColor = System.Drawing.Color.Red;
+            this.infoClose.Location = new System.Drawing.Point(902, 9);
+            this.infoClose.Name = "infoClose";
+            this.infoClose.Size = new System.Drawing.Size(31, 26);
+            this.infoClose.TabIndex = 29;
+            this.infoClose.Text = "X";
+            this.infoClose.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.infoClose.Click += new System.EventHandler(this.infoClose_Click);
+            // 
+            // infoRecentLabel
+            // 
+            this.infoRecentLabel.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
+            this.infoRecentLabel.Location = new System.Drawing.Point(12, 178);
+            this.infoRecentLabel.Name = "infoRecentLabel";
+            this.infoRecentLabel.Size = new System.Drawing.Size(215, 40);
+            this.infoRecentLabel.TabIndex = 30;
+            this.infoRecentLabel.Text = "Most recent logs";
+            this.infoRecentLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // infoFilterLabel
+            // 
+            this.infoFilterLabel.Image = ((System.Drawing.Image)(resources.GetObject("infoFilterLabel.Image")));
+            this.infoFilterLabel.Location = new System.Drawing.Point(233, 176);
+            this.infoFilterLabel.Name = "infoFilterLabel";
+            this.infoFilterLabel.Size = new System.Drawing.Size(177, 39);
+            this.infoFilterLabel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.infoFilterLabel.TabIndex = 31;
+            this.infoFilterLabel.TabStop = false;
+            // 
+            // infoFilter
+            // 
+            this.infoFilter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
+            this.infoFilter.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.infoFilter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.infoFilter.Font = new System.Drawing.Font("Arial", 19F);
+            this.infoFilter.ForeColor = System.Drawing.Color.White;
+            this.infoFilter.FormattingEnabled = true;
+            this.infoFilter.Location = new System.Drawing.Point(417, 176);
+            this.infoFilter.Name = "infoFilter";
+            this.infoFilter.Size = new System.Drawing.Size(512, 36);
+            this.infoFilter.TabIndex = 32;
+            // 
             // Student_View
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -269,7 +267,7 @@
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(945, 635);
             this.ControlBox = false;
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.infoFilter);
             this.Controls.Add(this.infoFilterLabel);
             this.Controls.Add(this.infoRecentLabel);
             this.Controls.Add(this.infoClose);
@@ -312,7 +310,7 @@
         private System.Windows.Forms.Label infoClose;
         private System.Windows.Forms.Label infoRecentLabel;
         private System.Windows.Forms.PictureBox infoFilterLabel;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox infoFilter;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn TimeCol;
         private System.Windows.Forms.DataGridViewTextBoxColumn CourseNameCol;

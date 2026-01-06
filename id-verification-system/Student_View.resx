@@ -275,7 +275,7 @@
   <data name="infoEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAc0AAAC6CAYAAADMFRbQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAHyhJREFUeF7t3W+sXVd553FIfX2vfa/d2HV8azDBwTEJJgkEB5oETC8t0AD5c9vi
+        EAAACxABrSO9dQAAHyhJREFUeF7t3W+sXVd553FIfX2vfa/d2HV8azDBwTEJJgkEB5oETC8t0AD5c9vi
         JnHyIuoMzEsSzbxKkYI00aC+aRr6oiCloiIjyBSFiATLVGppAxKtBG0itVQqVVPaqmU6rVRVJfOi88Lz
         /FbWs/PsddY+9xzfc33+7O+WPlr7/9nnXMwva+21137NJKd7ntk8dvbc5gP3fW3zMSufue/c5t/c/7XN
         f7XlCwAAjCLnxgtnn9v8Q/PrZ5/dfOABy5cLFy681qLmtV4G8zPZF7n8/uc2P6WALL84AAAT89zmi2ef
@@ -414,7 +414,7 @@
   <data name="infoDrop.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAc0AAAC6CAYAAADMFRbQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAIlBJREFUeF7tnV2MXVd1xyF4PGPPHeMxjgcHJ7GxTYLzQRInkJg4TCBAPpx4oLiJ
+        EAAACxABrSO9dQAAIlBJREFUeF7tnV2MXVd1xyF4PGPPHeMxjgcHJ7GxTYLzQRInkJg4TCBAPpx4oLiJ
         HT9EbUkfE9Q+hUjmISriJSHwAJGMUsVVkoKMhY3lVCpQggRIpE2kkkqkqhOKWqBUooimD+3DdP239zpe
         Z9+9zz33nHPv3HvPf0s/7X3219n3jH3/d639cd7SZLjvxNLWQ6eXHrj/20tPSHzi/tNLrx/+9tJv5XqZ
         EEIIKYPXjZcPnVr6O+GLh04uPfCA6Mvy8vJbRWreqrFhfIJ8kPWHTy19DgIZfnBCCCGkMU4tvXLo5P4n
@@ -578,7 +578,7 @@
   <data name="infoFilterLabel.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAZ4AAABbCAYAAABDLuO8AAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EgAACxIB0t1+/AAAHFxJREFUeF7tnUuMHcd1himJ8yBnhm+KIjnk3KHIIU1RtKShHlYoiRICLywHUmQw
+        EQAACxEBf2RfkQAAHFxJREFUeF7tnUuMHcd1himJ8yBnhm+KIjnk3KHIIU1RtKShHlYoiRICLywHUmQw
         lgUoGlJAFomBZOEYRrIgIkA2vImEMAgQxNZjowCRodgrw5KBLOzA0SL2ylKALJxITrJIAMExsp6cv6ZO
         8/S5p/p1u+9tzpwCPlR3vbu6qv6u6rp9t1U1g7XBnjNXB2srLw5eX7m6/LPTV5c/IdYdx3Gcm5pPMKav
         XD3xOsb4488d37u+vn4LDfsZ8TxnyA2YfiObM2uDwamrg1dQOFVYx3EcZxOy8uLyGydfOHYnScDU6upq

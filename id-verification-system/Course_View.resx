@@ -121,7 +121,7 @@
   <data name="courseDelete.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAc0AAAC6CAYAAADMFRbQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        EQAACxEBf2RfkQAAI/1JREFUeF7tnV2sHkd5xyH4+Bz7HBvbOD44OImDbRKcD5I4gcTE4QQC5NsHipvE
+        DwAACw8BkvkDpQAAI/1JREFUeF7tnV2sHkd5xyH4+Bz7HBvbOD44OImDbRKcD5I4gcTE4QQC5NsHipvE
         8UXUlvQyidqrgBQuEBE3CYGLEskoVVyRFGQsYiyD1ECTSAUpaYPUUIlUTVJQC5RKUFF60V64z388z/rZ
         eWf23X3f3ffsu/sf6aeZnZ2ZnV0f7/99nvnYt9QZ7jq2vP3gieV77/nO8mMSH7vnxPIbh76z/Bs5PkUI
         IYSUwevGKwePL/+t8KWDzy7fe6/oy6lTp94qUvNWjQ3TE+RGNhw6vvw5CGR444QQQkhtHF/+8cFn9z9+
@@ -281,7 +281,7 @@
   <data name="courseEdit.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAc0AAAC6CAYAAADMFRbQAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAL
-        DgAACw4BQL7hQQAAHyhJREFUeF7t3W+sXVd553FIfX2vfa/d2HV8azDBwTEJJgkEB5oETC8t0AD5c9vi
+        DAAACwwBP0AiyAAAHyhJREFUeF7t3W+sXVd553FIfX2vfa/d2HV8azDBwTEJJgkEB5oETC8t0AD5c9vi
         JnHyIuoMzEsSzbxKkYI00aC+aRr6oiCloiIjyBSFiATLVGppAxKtBG0itVQqVVPaqmU6rVRVJfOi88Lz
         /FbWs/PsddY+9xzfc33+7O+WPlr7/9nnXMwva+21137NJKd7ntk8dvbc5gP3fW3zMSufue/c5t/c/7XN
         f7XlCwAAjCLnxgtnn9v8Q/PrZ5/dfOABy5cLFy681qLmtV4G8zPZF7n8/uc2P6WALL84AAAT89zmi2ef

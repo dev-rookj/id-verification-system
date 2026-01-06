@@ -30,13 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Course_View));
             this.infoLabel = new System.Windows.Forms.Label();
-            this.courseName = new System.Windows.Forms.Label();
             this.courseSchedule = new System.Windows.Forms.Label();
             this.courseInstructor = new System.Windows.Forms.Label();
             this.courseClose = new System.Windows.Forms.Label();
             this.courseDelete = new System.Windows.Forms.PictureBox();
             this.courseEdit = new System.Windows.Forms.PictureBox();
             this.courseCode = new System.Windows.Forms.Label();
+            this.courseMajor = new System.Windows.Forms.Label();
+            this.courseSchedType = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.courseDelete)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.courseEdit)).BeginInit();
             this.SuspendLayout();
@@ -51,21 +52,10 @@
             this.infoLabel.Text = "COURSE INFORMATION";
             this.infoLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // courseName
-            // 
-            this.courseName.Font = new System.Drawing.Font("Arial", 18F);
-            this.courseName.Location = new System.Drawing.Point(98, 177);
-            this.courseName.Name = "courseName";
-            this.courseName.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
-            this.courseName.Size = new System.Drawing.Size(714, 51);
-            this.courseName.TabIndex = 2;
-            this.courseName.Text = "Course Name: -";
-            this.courseName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
             // courseSchedule
             // 
             this.courseSchedule.Font = new System.Drawing.Font("Arial", 18F);
-            this.courseSchedule.Location = new System.Drawing.Point(98, 279);
+            this.courseSchedule.Location = new System.Drawing.Point(98, 228);
             this.courseSchedule.Name = "courseSchedule";
             this.courseSchedule.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.courseSchedule.Size = new System.Drawing.Size(714, 51);
@@ -77,7 +67,7 @@
             // courseInstructor
             // 
             this.courseInstructor.Font = new System.Drawing.Font("Arial", 18F);
-            this.courseInstructor.Location = new System.Drawing.Point(98, 228);
+            this.courseInstructor.Location = new System.Drawing.Point(98, 177);
             this.courseInstructor.Name = "courseInstructor";
             this.courseInstructor.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.courseInstructor.Size = new System.Drawing.Size(714, 51);
@@ -121,14 +111,36 @@
             // 
             // courseCode
             // 
-            this.courseCode.Font = new System.Drawing.Font("Arial", 18F);
+            this.courseCode.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold);
             this.courseCode.Location = new System.Drawing.Point(98, 126);
             this.courseCode.Name = "courseCode";
             this.courseCode.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
             this.courseCode.Size = new System.Drawing.Size(714, 51);
             this.courseCode.TabIndex = 33;
-            this.courseCode.Text = "Course Code: -";
+            this.courseCode.Text = "[ID] - [CODE] COURSE NAME";
             this.courseCode.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // courseMajor
+            // 
+            this.courseMajor.Font = new System.Drawing.Font("Arial", 18F);
+            this.courseMajor.Location = new System.Drawing.Point(98, 279);
+            this.courseMajor.Name = "courseMajor";
+            this.courseMajor.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.courseMajor.Size = new System.Drawing.Size(714, 51);
+            this.courseMajor.TabIndex = 34;
+            this.courseMajor.Text = "Major Subject? -";
+            this.courseMajor.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // courseSchedType
+            // 
+            this.courseSchedType.Font = new System.Drawing.Font("Arial", 18F);
+            this.courseSchedType.Location = new System.Drawing.Point(98, 330);
+            this.courseSchedType.Name = "courseSchedType";
+            this.courseSchedType.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.courseSchedType.Size = new System.Drawing.Size(714, 51);
+            this.courseSchedType.TabIndex = 35;
+            this.courseSchedType.Text = "Schedule Type: ";
+            this.courseSchedType.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Course_View
             // 
@@ -136,11 +148,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(929, 596);
+            this.Controls.Add(this.courseSchedType);
+            this.Controls.Add(this.courseMajor);
             this.Controls.Add(this.courseCode);
             this.Controls.Add(this.courseDelete);
             this.Controls.Add(this.courseEdit);
             this.Controls.Add(this.courseClose);
-            this.Controls.Add(this.courseName);
             this.Controls.Add(this.courseSchedule);
             this.Controls.Add(this.courseInstructor);
             this.Controls.Add(this.infoLabel);
@@ -162,13 +175,14 @@
         #endregion
 
         private System.Windows.Forms.Label infoLabel;
-        public System.Windows.Forms.Label courseName;
         public System.Windows.Forms.Label courseSchedule;
         public System.Windows.Forms.Label courseInstructor;
         private System.Windows.Forms.Label courseClose;
         private System.Windows.Forms.PictureBox courseDelete;
         private System.Windows.Forms.PictureBox courseEdit;
         public System.Windows.Forms.Label courseCode;
+        public System.Windows.Forms.Label courseMajor;
+        public System.Windows.Forms.Label courseSchedType;
     }
 }
 

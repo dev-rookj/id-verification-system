@@ -48,6 +48,8 @@
             this.cSave = new System.Windows.Forms.PictureBox();
             this.cDOTW = new System.Windows.Forms.ComboBox();
             this.cDOTWLabel = new System.Windows.Forms.PictureBox();
+            this.cIsMajorSubject = new System.Windows.Forms.CheckBox();
+            this.cSchedType = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.cCourseNameLabel)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cCourseNameBG)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cCourseCodeBG)).BeginInit();
@@ -233,7 +235,7 @@
             // cSave
             // 
             this.cSave.Image = ((System.Drawing.Image)(resources.GetObject("cSave.Image")));
-            this.cSave.Location = new System.Drawing.Point(347, 432);
+            this.cSave.Location = new System.Drawing.Point(347, 456);
             this.cSave.Name = "cSave";
             this.cSave.Size = new System.Drawing.Size(150, 48);
             this.cSave.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -243,8 +245,12 @@
             // 
             // cDOTW
             // 
+            this.cDOTW.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cDOTW.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
             this.cDOTW.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
-            this.cDOTW.Font = new System.Drawing.Font("Arial", 25F);
+            this.cDOTW.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cDOTW.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cDOTW.Font = new System.Drawing.Font("Arial", 18F);
             this.cDOTW.ForeColor = System.Drawing.Color.White;
             this.cDOTW.FormattingEnabled = true;
             this.cDOTW.Items.AddRange(new object[] {
@@ -254,20 +260,53 @@
             "Thursday",
             "Friday",
             "Saturday"});
-            this.cDOTW.Location = new System.Drawing.Point(373, 364);
+            this.cDOTW.Location = new System.Drawing.Point(268, 371);
             this.cDOTW.Name = "cDOTW";
-            this.cDOTW.Size = new System.Drawing.Size(328, 46);
+            this.cDOTW.Size = new System.Drawing.Size(229, 35);
             this.cDOTW.TabIndex = 37;
             // 
             // cDOTWLabel
             // 
             this.cDOTWLabel.Image = ((System.Drawing.Image)(resources.GetObject("cDOTWLabel.Image")));
-            this.cDOTWLabel.Location = new System.Drawing.Point(140, 361);
+            this.cDOTWLabel.Location = new System.Drawing.Point(35, 364);
             this.cDOTWLabel.Name = "cDOTWLabel";
             this.cDOTWLabel.Size = new System.Drawing.Size(218, 49);
             this.cDOTWLabel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.cDOTWLabel.TabIndex = 36;
             this.cDOTWLabel.TabStop = false;
+            // 
+            // cIsMajorSubject
+            // 
+            this.cIsMajorSubject.AutoSize = true;
+            this.cIsMajorSubject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.cIsMajorSubject.Location = new System.Drawing.Point(505, 377);
+            this.cIsMajorSubject.Name = "cIsMajorSubject";
+            this.cIsMajorSubject.Size = new System.Drawing.Size(134, 24);
+            this.cIsMajorSubject.TabIndex = 38;
+            this.cIsMajorSubject.Text = "Major Subject?";
+            this.cIsMajorSubject.UseVisualStyleBackColor = true;
+            this.cIsMajorSubject.CheckedChanged += new System.EventHandler(this.cIsMajorSubject_CheckedChanged);
+            // 
+            // cSchedType
+            // 
+            this.cSchedType.AutoCompleteCustomSource.AddRange(new string[] {
+            "Lecture",
+            "Laboratory"});
+            this.cSchedType.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
+            this.cSchedType.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems;
+            this.cSchedType.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(172)))), ((int)(((byte)(216)))), ((int)(((byte)(167)))));
+            this.cSchedType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cSchedType.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cSchedType.Font = new System.Drawing.Font("Arial", 18F);
+            this.cSchedType.ForeColor = System.Drawing.Color.White;
+            this.cSchedType.FormattingEnabled = true;
+            this.cSchedType.Items.AddRange(new object[] {
+            "Lecture",
+            "Laboratory"});
+            this.cSchedType.Location = new System.Drawing.Point(645, 371);
+            this.cSchedType.Name = "cSchedType";
+            this.cSchedType.Size = new System.Drawing.Size(162, 35);
+            this.cSchedType.TabIndex = 39;
             // 
             // Edit_Course
             // 
@@ -275,6 +314,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(240)))), ((int)(((byte)(222)))));
             this.ClientSize = new System.Drawing.Size(848, 517);
+            this.Controls.Add(this.cSchedType);
+            this.Controls.Add(this.cIsMajorSubject);
             this.Controls.Add(this.cSave);
             this.Controls.Add(this.cDOTW);
             this.Controls.Add(this.cDOTWLabel);
@@ -341,6 +382,8 @@
         private System.Windows.Forms.PictureBox cSave;
         private System.Windows.Forms.ComboBox cDOTW;
         private System.Windows.Forms.PictureBox cDOTWLabel;
+        private System.Windows.Forms.CheckBox cIsMajorSubject;
+        private System.Windows.Forms.ComboBox cSchedType;
     }
 }
 

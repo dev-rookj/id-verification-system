@@ -15,55 +15,64 @@ namespace id_verification_system
 {
     public partial class Course_View : Form
     {
-        private readonly string currentCourseCode;
-        private readonly string currentCourseName;
+        private readonly int currentCourseId;
 
-        public Course_View(string courseCode, string courseName)
+        public Course_View(int courseId)
         {
             InitializeComponent();
-            currentCourseCode = courseCode;
-            currentCourseName = courseName;
-
-            LoadCourseInfo(currentCourseCode);
-            this.FormClosing += Course_View_FormClosing; // optional auto-refresh hook
+            currentCourseId = courseId;
+            LoadCourseInfo(currentCourseId);
         }
 
-        private void LoadCourseInfo(string code)
+        private void LoadCourseInfo(int id)
         {
             string connString = "Data Source=systemDB.db;";
             using (var conn = new SQLiteConnection(connString))
             {
                 conn.Open();
-                string q = @"SELECT course_name, instructor, start_time, end_time, day_of_the_week
-                     FROM courses WHERE course_code=@Code";
+                string q = @"SELECT course_id, course_code, course_name, instructor, 
+                            start_time, end_time, day_of_the_week, 
+                            major_subject, sched_type
+                     FROM courses WHERE course_id=@Id";
                 using (var cmd = new SQLiteCommand(q, conn))
                 {
-                    cmd.Parameters.AddWithValue("@Code", code);
+                    cmd.Parameters.AddWithValue("@Id", id);
                     using (var reader = cmd.ExecuteReader())
                     {
                         if (reader.Read())
                         {
-                            string name = reader.GetString(0);
-                            string instructor = reader.GetString(1);
-                            string start24 = reader.GetString(2);
-                            string end24 = reader.GetString(3);
-                            string day = reader.GetString(4);
+                            int courseId = reader.GetInt32(0);
+                            string code = reader.GetString(1);
+                            string name = reader.GetString(2);
+                            string instructor = reader.GetString(3);
+                            string start24 = reader.GetString(4);
+                            string end24 = reader.GetString(5);
+                            string day = reader.GetString(6);
+                            bool isMajor = reader.GetBoolean(7);
+                            string schedType = reader.IsDBNull(8) ? null : reader.GetString(8);
 
                             DateTime s = DateTime.ParseExact(start24, "HH:mm", null);
                             DateTime e = DateTime.ParseExact(end24, "HH:mm", null);
 
-                            courseCode.Text = "Course Code: " + code;
-                            courseName.Text = "Course Name: " + name;
+                            // Labels
+                            courseCode.Text = $"[{courseId}] - [{code}] {name}";
                             courseInstructor.Text = "Instructor: " + instructor;
-                            courseSchedule.Text = $"Schedule: {s:hh\\:mm tt} - {e:hh\\:mm tt} (every {day})";
+                            courseSchedule.Text = $"Schedule: {s:hh\\:mm tt} - {e:hh\\:mm tt} ({day})";
+                            courseMajor.Text = $"Major Subject - {(isMajor ? "Yes" : "No")}";
+
+                            if (isMajor && !string.IsNullOrEmpty(schedType))
+                            {
+                                courseSchedType.Visible = true;
+                                courseSchedType.Text = $"Schedule Type - {schedType}";
+                            }
+                            else
+                            {
+                                courseSchedType.Visible = false;
+                            }
                         }
                     }
                 }
             }
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
         }
 
         private void courseTime_Click(object sender, EventArgs e)
@@ -73,12 +82,12 @@ namespace id_verification_system
 
         private void courseEdit_Click(object sender, EventArgs e)
         {
-            using (var editForm = new Edit_Course(currentCourseCode))
+            using (var editForm = new Edit_Course(currentCourseId))
             {
                 if (editForm.ShowDialog() == DialogResult.OK)
                 {
-                    LoadCourseInfo(currentCourseCode); // refresh details
-                    this.DialogResult = DialogResult.OK; // signal parent refresh
+                    LoadCourseInfo(currentCourseId); // refresh details
+                    this.DialogResult = DialogResult.OK;
                 }
             }
         }
@@ -99,16 +108,16 @@ namespace id_verification_system
                 using (var conn = new SQLiteConnection(connString))
                 {
                     conn.Open();
-                    string q = "DELETE FROM courses WHERE course_code=@Code";
+                    string q = "DELETE FROM courses WHERE course_id=@Id";
                     using (var cmd = new SQLiteCommand(q, conn))
                     {
-                        cmd.Parameters.AddWithValue("@Code", currentCourseCode);
+                        cmd.Parameters.AddWithValue("@Id", currentCourseId);
                         int rows = cmd.ExecuteNonQuery();
 
                         if (rows > 0)
                         {
                             MessageBox.Show("Course deleted successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            this.DialogResult = DialogResult.OK; // trigger parent refresh
+                            this.DialogResult = DialogResult.OK;
                             this.Close();
                         }
                         else

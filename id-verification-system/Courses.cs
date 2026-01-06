@@ -28,16 +28,27 @@ namespace id_verification_system
             using (var conn = new SQLiteConnection(connString))
             {
                 conn.Open();
-                string q = "SELECT course_code, course_name FROM courses ORDER BY course_code;";
+                string q = @"SELECT course_id, course_code, course_name, major_subject, sched_type 
+                     FROM courses ORDER BY course_id;";
                 using (var cmd = new SQLiteCommand(q, conn))
                 using (var reader = cmd.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        string code = reader.GetString(0);
-                        string name = reader.GetString(1);
+                        int id = reader.GetInt32(0);
+                        string code = reader.GetString(1);
+                        string name = reader.GetString(2);
+                        bool isMajor = reader.GetBoolean(3);
+                        string schedType = reader.IsDBNull(4) ? "" : reader.GetString(4);
 
-                        listMenu.Items.Add($"[{code}] {name}");
+                        // Add indicator if major subject
+                        string indicator = "";
+                        if (isMajor && !string.IsNullOrEmpty(schedType))
+                        {
+                            indicator = schedType.Equals("lecture", StringComparison.OrdinalIgnoreCase) ? "(LEC)" : "(LAB)";
+                        }
+
+                        listMenu.Items.Add($"[{id}] - [{code}] {name} {indicator}");
                     }
                 }
             }
@@ -177,15 +188,12 @@ namespace id_verification_system
             if (listMenu.SelectedItem == null) return;
 
             string selected = listMenu.SelectedItem.ToString();
-
             int startBracket = selected.IndexOf('[');
             int endBracket = selected.IndexOf(']');
-            if (startBracket == -1 || endBracket == -1) return;
+            string idStr = selected.Substring(startBracket + 1, endBracket - startBracket - 1);
+            int selectedId = int.Parse(idStr);
 
-            string selectedCode = selected.Substring(startBracket + 1, endBracket - startBracket - 1).Trim();
-            string selectedName = selected.Substring(endBracket + 1).Trim();
-
-            using (var view = new Course_View(selectedCode, selectedName))
+            using (var view = new Course_View(selectedId))
             {
                 if (view.ShowDialog() == DialogResult.OK)
                 {
