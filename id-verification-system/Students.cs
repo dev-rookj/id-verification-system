@@ -47,6 +47,28 @@ namespace id_verification_system
             }
         }
 
+        public void RefreshStudentList()
+        {
+            listMenu.Items.Clear();
+
+            string connString = "Data Source=systemDB.db;Version=3;";
+            using (SQLiteConnection conn = new SQLiteConnection(connString))
+            {
+                conn.Open();
+                string query = "SELECT student_id, name FROM students ORDER BY name ASC";
+                using (SQLiteCommand cmd = new SQLiteCommand(query, conn))
+                using (SQLiteDataReader reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string id = reader["student_id"].ToString();
+                        string name = reader["name"].ToString();
+                        listMenu.Items.Add($"{id} - {name}");
+                    }
+                }
+            }
+        }
+
         private void time_Tick(object sender, EventArgs e)
         {
             timeLabel.Text = DateTime.Now.ToString("hh:mm:ss tt").ToUpper();
@@ -124,19 +146,6 @@ namespace id_verification_system
 
         private void listMenu_DoubleClick(object sender, EventArgs e)
         {
-            /*if (listMenu.SelectedItem != null)
-            {
-                // Split "ID - Name" back into parts
-                string selectedItem = listMenu.SelectedItem.ToString();
-                string[] parts = selectedItem.Split('-');
-
-                string studentId = parts[0].Trim();   // ID
-                string studentName = parts[1].Trim(); // Name
-
-                // Pass ID (safer than name) to Student_View
-                Student_View viewForm = new Student_View(studentId);
-                viewForm.ShowDialog();
-            }*/
 
             if (listMenu.SelectedItem == null) return;
 
@@ -148,9 +157,14 @@ namespace id_verification_system
             string selectedId = parts[0].Trim();
             string selectedName = parts[1].Trim();
 
-            // Pass ID and Name into Student_View
-            Student_View view = new Student_View(selectedId, selectedName);
-            view.ShowDialog();
+            using (Student_View view = new Student_View(selectedId, selectedName))
+            {
+                if (view.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshStudentList();
+                }
+            }
+
         }
 
         private void spBackBtn_Click(object sender, EventArgs e)
@@ -184,7 +198,14 @@ namespace id_verification_system
 
         private void enrollBtn_Click(object sender, EventArgs e)
         {
-            new Enroll_Student().ShowDialog();
+            using (Enroll_Student addForm = new Enroll_Student())
+            {
+                if (addForm.ShowDialog() == DialogResult.OK)
+                {
+                    RefreshStudentList();
+                }
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -202,8 +223,7 @@ namespace id_verification_system
 
         private void refreshBtn_Click(object sender, EventArgs e)
         {
-            LoadStudents();
-            listMenu.Refresh();
+            RefreshStudentList();
         }
     }
 }

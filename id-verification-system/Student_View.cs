@@ -29,6 +29,9 @@ namespace id_verification_system
             // Show info on screen
             infoStudNum.Text = id;
             infoName.Text = name;
+
+            LoadStudentInfo(currentStudentId);
+
         }
 
         public void LoadStudentInfo(string studentId)
@@ -105,28 +108,46 @@ namespace id_verification_system
 
                         if (rowsAffected > 0)
                         {
+                            // 🔒 Release image lock early
                             if (infoPhoto.Image != null)
                             {
-                                infoPhoto.Image.Dispose(); // releases the file lock
-                                infoPhoto.Image = null;    // clears the reference
+                                infoPhoto.Image.Dispose();
+                                infoPhoto.Image = null;
                             }
-                            // Delete associated photo file
+
+                            // 🔄 Force GC to finalize any lingering image handles
+                            GC.Collect();
+                            GC.WaitForPendingFinalizers();
+
+                            // 🧹 Delete photo file with retry logic
                             string photoPath = Path.Combine(Application.StartupPath, "photos", $"{currentStudentId}.jpg");
                             if (File.Exists(photoPath))
                             {
-                                try
+                                const int maxAttempts = 3;
+                                for (int attempt = 1; attempt <= maxAttempts; attempt++)
                                 {
-                                    File.Delete(photoPath);
-                                }
-                                catch (Exception fileEx)
-                                {
-                                    MessageBox.Show($"Student record dropped, but failed to remove photo: {fileEx.Message}",
-                                                    "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                    try
+                                    {
+                                        File.Delete(photoPath);
+                                        break;
+                                    }
+                                    catch (IOException) when (attempt < maxAttempts)
+                                    {
+                                        System.Threading.Thread.Sleep(150); // wait before retry
+                                    }
+                                    catch (Exception fileEx)
+                                    {
+                                        MessageBox.Show($"Student record dropped, but failed to remove photo: {fileEx.Message}",
+                                                        "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                                        break;
+                                    }
                                 }
                             }
 
-                            MessageBox.Show($"This student record has been dropped successfully. Click the refresh button to see the updated list.",
+                            MessageBox.Show("This student record has been dropped successfully.",
                                             "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                            this.DialogResult = DialogResult.OK;
                             this.Close();
                         }
                         else
@@ -182,20 +203,34 @@ namespace id_verification_system
                 }
 
                 // Open Edit_Student form with current info
-                Edit_Student editForm = new Edit_Student(currentStudentId, currentStudentName, studentAge, photoPath);
-                editForm.ShowDialog();
-
-                string updatedPhotoPath = Path.Combine(Application.StartupPath, $"photos\\{currentStudentId}.jpg");
-                if (File.Exists(updatedPhotoPath))
+                using (Edit_Student editForm = new Edit_Student(currentStudentId, currentStudentName, studentAge, photoPath))
                 {
-                    // Load without locking the file
-                    using (FileStream fs = new FileStream(updatedPhotoPath, FileMode.Open, FileAccess.Read, FileShare.Read))
-                    using (Image img = Image.FromStream(fs))
+                    if (editForm.ShowDialog() == DialogResult.OK)
                     {
-                        infoPhoto.Image = new Bitmap(img);
+                        // If ID was changed, update currentStudentId
+                        if (editForm.Tag != null)
+                            currentStudentId = editForm.Tag.ToString();
+
+                        // 🔄 Refresh student info and logs
+                        LoadStudentInfo(currentStudentId);
+
+                        // Reload updated photo safely
+                        string updatedPhotoPath = Path.Combine(Application.StartupPath, $"photos\\{currentStudentId}.jpg");
+                        if (File.Exists(updatedPhotoPath))
+                        {
+                            using (FileStream fs = new FileStream(updatedPhotoPath, FileMode.Open, FileAccess.Read, FileShare.Read))
+                            using (Image img = Image.FromStream(fs))
+                            {
+                                infoPhoto.Image = new Bitmap(img);
+                                infoPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
+                            }
+                        }
+                        else
+                        {
+                            infoPhoto.Image = null;
+                        }
                     }
                 }
-
             }
             catch (Exception ex)
             {
@@ -211,6 +246,12 @@ namespace id_verification_system
         private void infoDrop_Click(object sender, EventArgs e)
         {
             DropStudent();
+        }
+
+        private void infoClose_Click(object sender, EventArgs e)
+        {
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }

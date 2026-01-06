@@ -255,14 +255,15 @@
             this.Controls.Add(this.stPhotoLabel);
             this.Controls.Add(this.stPhotoBG);
             this.Controls.Add(this.infoLabel);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Enroll_Student";
+            this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "ScanClass";
             ((System.ComponentModel.ISupportInitialize)(this.stIDLabel)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stIDBG)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.stNameLabel)).EndInit();

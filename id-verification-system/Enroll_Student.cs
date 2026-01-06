@@ -89,10 +89,10 @@ namespace id_verification_system
             }
 
             InsertStudent(studentID, studentName, studentAge, studentPhoto);
-            MessageBox.Show("Student record added successfully. Click the refresh button to see the updated list.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show("Student record added successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            this.Hide();
-            new Students().LoadStudents();
+            this.DialogResult = DialogResult.OK;
+            this.Close();
         }
     }
 }
