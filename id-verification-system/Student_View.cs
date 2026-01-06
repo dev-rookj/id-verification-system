@@ -31,7 +31,8 @@ namespace id_verification_system
             infoName.Text = name;
 
             LoadStudentInfo(currentStudentId);
-
+            LoadCourseFilter();
+            LoadStudentRecords(currentStudentId);
         }
 
         public void LoadStudentInfo(string studentId)
@@ -163,6 +164,79 @@ namespace id_verification_system
             }
         }
 
+        private void LoadStudentRecords(string studentId, string selectedCourse = null)
+        {
+            infoRecords.Rows.Clear();
+
+            string connString = "Data Source=systemDB.db;";
+            using (var conn = new SQLiteConnection(connString))
+            {
+                conn.Open();
+
+                string q = @"SELECT record_date, record_time, course_name, remarks
+                     FROM records
+                     WHERE student_id=@StudentId";
+
+                if (!string.IsNullOrEmpty(selectedCourse))
+                    q += " AND course_name=@CourseName";
+
+                using (var cmd = new SQLiteCommand(q, conn))
+                {
+                    cmd.Parameters.AddWithValue("@StudentId", studentId);
+                    if (!string.IsNullOrEmpty(selectedCourse))
+                        cmd.Parameters.AddWithValue("@CourseName", selectedCourse);
+
+                    using (var reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            infoRecords.Rows.Add(
+                                reader.GetString(0), // Date
+                                reader.GetString(1), // Time
+                                reader.GetString(2), // Course Name (matches filter now)
+                                reader.GetString(3)  // Remarks
+                            );
+                        }
+                    }
+                }
+            }
+        }
+
+        private void LoadCourseFilter()
+        {
+            infoFilter.Items.Clear();
+
+            string connString = "Data Source=systemDB.db;";
+            using (var conn = new SQLiteConnection(connString))
+            {
+                conn.Open();
+                string q = @"SELECT course_code, course_name, major_subject, sched_type
+                     FROM courses";
+
+                using (var cmd = new SQLiteCommand(q, conn))
+                using (var reader = cmd.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        string name = reader.GetString(1);
+                        bool isMajor = reader.GetBoolean(2);
+                        string schedType = reader.IsDBNull(3) ? "" : reader.GetString(3);
+
+                        string indicator = "";
+                        if (isMajor && !string.IsNullOrEmpty(schedType))
+                            indicator = schedType.Equals("lecture", StringComparison.OrdinalIgnoreCase) ? "(LEC)" : "(LAB)";
+
+                        // Only course name + indicator (no code)
+                        string display = $"{name} {indicator}".Trim();
+                        infoFilter.Items.Add(display);
+                    }
+                }
+            }
+
+            infoFilter.Items.Insert(0, "All Courses");
+            infoFilter.SelectedIndex = 0;
+        }
+
         private void infoEdit_Click(object sender, EventArgs e)
         {
             // Release any lock from infoPhoto before opening Edit_Student
@@ -252,6 +326,15 @@ namespace id_verification_system
         {
             this.DialogResult = DialogResult.OK;
             this.Close();
+        }
+
+        private void infoFilter_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            string selectedCourse = infoFilter.SelectedItem.ToString();
+            if (selectedCourse == "All Courses")
+                selectedCourse = null;
+
+            LoadStudentRecords(currentStudentId, selectedCourse);
         }
     }
 }

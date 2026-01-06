@@ -123,8 +123,7 @@ namespace id_verification_system
                         {
                             MessageBox.Show("Student record updated successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                            // 🔑 Signal back to Student_View that refresh is needed
-                            this.Tag = newId;              // pass back the updated ID
+                            this.Tag = newId;
                             this.DialogResult = DialogResult.OK;
                             this.Close();
                         }
